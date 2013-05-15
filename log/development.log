@@ -17594,3 +17594,184 @@ Started POST "/home/subscribe" for 127.0.0.1 at 2013-05-15 16:47:26 -0400
 Processing by HomeController#subscribe as JSON
   Parameters: {"EMAIL"=>"random@random.com"}
 Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-15 16:58:05 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (1.7ms)
+Compiled twitter-bootstrap-static/bootstrap.css  (65ms)  (pid 35831)
+Compiled twitter-bootstrap-static/fontawesome.css  (16ms)  (pid 35831)
+Compiled home.css  (24ms)  (pid 35831)
+Compiled index.css  (1ms)  (pid 35831)
+Compiled jquery.js  (5ms)  (pid 35831)
+Compiled jquery_ujs.js  (0ms)  (pid 35831)
+Compiled twitter/bootstrap/bootstrap-transition.js  (0ms)  (pid 35831)
+Compiled twitter/bootstrap/bootstrap-alert.js  (0ms)  (pid 35831)
+Compiled twitter/bootstrap/bootstrap-modal.js  (0ms)  (pid 35831)
+Compiled twitter/bootstrap/bootstrap-dropdown.js  (0ms)  (pid 35831)
+Compiled twitter/bootstrap/bootstrap-scrollspy.js  (0ms)  (pid 35831)
+Compiled twitter/bootstrap/bootstrap-tab.js  (0ms)  (pid 35831)
+Compiled twitter/bootstrap/bootstrap-tooltip.js  (0ms)  (pid 35831)
+Compiled twitter/bootstrap/bootstrap-popover.js  (0ms)  (pid 35831)
+Compiled twitter/bootstrap/bootstrap-button.js  (0ms)  (pid 35831)
+Compiled twitter/bootstrap/bootstrap-collapse.js  (0ms)  (pid 35831)
+Compiled twitter/bootstrap/bootstrap-carousel.js  (0ms)  (pid 35831)
+Compiled twitter/bootstrap/bootstrap-typeahead.js  (0ms)  (pid 35831)
+Compiled twitter/bootstrap/bootstrap-affix.js  (0ms)  (pid 35831)
+Compiled twitter/bootstrap.js  (30ms)  (pid 35831)
+Compiled bootstrap.js  (266ms)  (pid 35831)
+Compiled home.js  (96ms)  (pid 35831)
+Compiled index.js  (91ms)  (pid 35831)
+Completed 200 OK in 976ms (Views: 975.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-05-15 16:58:06 -0400
+Served asset /bootstrap_and_overrides.css - 200 OK (12ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2013-05-15 16:58:06 -0400
+Served asset /twitter-bootstrap-static/bootstrap.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-15 16:58:06 -0400
+Served asset /application.css - 304 Not Modified (74ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2013-05-15 16:58:06 -0400
+Served asset /twitter-bootstrap-static/fontawesome.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-05-15 16:58:06 -0400
+Served asset /home.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2013-05-15 16:58:06 -0400
+Served asset /index.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-15 16:58:06 -0400
+Served asset /jquery.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-15 16:58:06 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-05-15 16:58:06 -0400
+Served asset /twitter/bootstrap/bootstrap-transition.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-05-15 16:58:06 -0400
+Served asset /twitter/bootstrap/bootstrap-alert.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-05-15 16:58:06 -0400
+Served asset /twitter/bootstrap/bootstrap-modal.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-05-15 16:58:06 -0400
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-05-15 16:58:06 -0400
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-05-15 16:58:06 -0400
+Served asset /twitter/bootstrap/bootstrap-tab.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-05-15 16:58:06 -0400
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-05-15 16:58:06 -0400
+Served asset /twitter/bootstrap/bootstrap-popover.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-05-15 16:58:06 -0400
+Served asset /twitter/bootstrap/bootstrap-button.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-05-15 16:58:06 -0400
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-05-15 16:58:06 -0400
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-05-15 16:58:07 -0400
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-05-15 16:58:07 -0400
+Served asset /twitter/bootstrap/bootstrap-affix.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-05-15 16:58:07 -0400
+Served asset /twitter/bootstrap.js - 304 Not Modified (28ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-05-15 16:58:07 -0400
+Served asset /bootstrap.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-05-15 16:58:07 -0400
+Served asset /home.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/index.js?body=1" for 127.0.0.1 at 2013-05-15 16:58:07 -0400
+Served asset /index.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/script.js?body=1" for 127.0.0.1 at 2013-05-15 16:58:07 -0400
+Served asset /script.js - 200 OK (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-15 16:58:07 -0400
+Served asset /application.js - 304 Not Modified (82ms)
+
+
+Started GET "/assets/proximanova-bold-webfont.woff" for 127.0.0.1 at 2013-05-15 16:58:07 -0400
+Served asset /proximanova-bold-webfont.woff - 304 Not Modified (5ms)
+
+
+Started GET "/assets/proximanova-light-webfont.woff" for 127.0.0.1 at 2013-05-15 16:58:07 -0400
+Served asset /proximanova-light-webfont.woff - 304 Not Modified (3ms)
+
+
+Started GET "/assets/favicon.ico" for 127.0.0.1 at 2013-05-15 16:58:08 -0400
+Served asset /favicon.ico - 404 Not Found (5ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/favicon.ico"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/nimashariatian/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/nimashariatian/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/nimashariatian/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/nimashariatian/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started POST "/home/subscribe" for 127.0.0.1 at 2013-05-15 16:58:29 -0400
+Processing by HomeController#subscribe as JSON
+  Parameters: {"EMAIL"=>"n.shar@ymail.com"}
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
