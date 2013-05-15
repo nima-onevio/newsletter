@@ -1,10 +1,3 @@
-$("document").ready(function() {
-    $("#footer").remove();
-    $("#login_form").remove();
-    $("#system_status").remove();
-    $("#Login").remove();
-    $("#Login h1").remove();
-});
 var fnames = new Array();var ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='COMPANY';ftypes[3]='text';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='ADDRESS';ftypes[5]='address';fnames[6]='LAST_ORDER';ftypes[6]='date';
 try {
     var jqueryLoaded=jQuery;
@@ -16,7 +9,7 @@ var head= document.getElementsByTagName('head')[0];
 if (!jqueryLoaded) {
     var script = document.createElement('script');
     script.type = 'text/javascript';
-    script.src = 'https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js';
+    script.src = 'https://ajax.googleapis.com/ajax/libs/jquery/1.9/jquery.min.js';
     head.appendChild(script);
     if (script.readyState && script.onload!==null){
         script.onreadystatechange= function () {
@@ -66,48 +59,61 @@ function mce_preload_check(){
 }
 function mce_init_form(){
     jQuery(document).ready( function($) {
-        var options = { errorClass: 'mce_inline_error', errorElement: 'div', onkeyup: function(){}, onfocusout:function(){}, onblur:function(){}  };
+        var options = {
+            errorClass: 'mce_inline_error',
+            errorElement: 'div',
+            onkeyup: function(){},
+            onfocusout:function(){},
+            onblur:function(){}
+        };
         var mce_validator = $("#mc-embedded-subscribe-form").validate(options);
         $("#mc-embedded-subscribe-form").unbind('submit');//remove the validator so we can get into beforeSubmit on the ajaxform, which then calls the validator
-        options = { url: 'http://onevio.us7.list-manage.com/subscribe/post-json?u=d89bc392d783cc3a21598fe4a&id=82f2bd1a58&c=?', type: 'GET', dataType: 'json', contentType: "application/json; charset=utf-8",
-            beforeSubmit: function(){
-                $('#mce_tmp_error_msg').remove();
-                $('.datefield','#mc_embed_signup').each(
-                    function(){
-                        var txt = 'filled';
-                        var fields = new Array();
-                        var i = 0;
-                        $(':text', this).each(
-                            function(){
-                                fields[i] = this;
-                                i++;
-                            });
-                        $(':hidden', this).each(
-                            function(){
-                                var bday = false;
-                                if (fields.length == 2){
-                                    bday = true;
-                                    fields[2] = {'value':1970};//trick birthdays into having years
-                                }
-                                if ( fields[0].value=='MM' && fields[1].value=='DD' && (fields[2].value=='YYYY' || (bday && fields[2].value==1970) ) ){
-                                    this.value = '';
-                                } else if ( fields[0].value=='' && fields[1].value=='' && (fields[2].value=='' || (bday && fields[2].value==1970) ) ){
-                                    this.value = '';
-                                } else {
-                                    if (/\[day\]/.test(fields[0].name)){
-                                        this.value = fields[1].value+'/'+fields[0].value+'/'+fields[2].value;
-                                    } else {
-                                        this.value = fields[0].value+'/'+fields[1].value+'/'+fields[2].value;
-                                    }
-                                }
-                            });
-                    });
-                return mce_validator.form();
-            },
-            success: mce_success_cb
-        };
-        $('#mc-embedded-subscribe-form').ajaxForm(options);
 
+        $('#mc-embedded-subscribe-form').submit(function() {
+            if (!mce_validator.form()) {
+                 return false;
+            }
+            $.ajax({ url: '/home/subscribe',
+                type: 'POST',
+                dataType: 'json',
+                beforeSubmit: function() {
+                    $('#mce_tmp_error_msg').remove();
+                    $('.datefield','#mc_embed_signup').each(
+                        function(){
+                            var txt = 'filled';
+                            var fields = new Array();
+                            var i = 0;
+                            $(':text', this).each(
+                                function(){
+                                    fields[i] = this;
+                                    i++;
+                                });
+                            $(':hidden', this).each(
+                                function(){
+                                    var bday = false;
+                                    if (fields.length == 2){
+                                        bday = true;
+                                        fields[2] = {'value':1970};//trick birthdays into having years
+                                    }
+                                    if ( fields[0].value=='MM' && fields[1].value=='DD' && (fields[2].value=='YYYY' || (bday && fields[2].value==1970) ) ){
+                                        this.value = '';
+                                    } else if ( fields[0].value=='' && fields[1].value=='' && (fields[2].value=='' || (bday && fields[2].value==1970) ) ){
+                                        this.value = '';
+                                    } else {
+                                        if (/\[day\]/.test(fields[0].name)){
+                                            this.value = fields[1].value+'/'+fields[0].value+'/'+fields[2].value;
+                                        } else {
+                                            this.value = fields[0].value+'/'+fields[1].value+'/'+fields[2].value;
+                                        }
+                                    }
+                                });
+                        });
+                },
+                data: $("#mc-embedded-subscribe-form").serialize(),
+                success: mce_success_cb
+            });
+            return false;
+        });
 
     });
 }

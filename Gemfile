@@ -24,10 +24,11 @@ group :assets do
 
   gem 'uglifier', '>= 1.0.3'
 end
-
+gem 'mailchimp'
+#gem 'hominid'
+gem 'gibbon'
 gem 'jquery-rails'
-
-gem "twitter-bootstrap-rails"
+gem 'twitter-bootstrap-rails'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -42,4 +43,4 @@ gem "twitter-bootstrap-rails"
 # gem 'capistrano'
 
 # To use debugger
-# gem 'debugger'
+ gem 'debugger'
