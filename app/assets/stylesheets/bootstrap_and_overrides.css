@@ -8,7 +8,6 @@
 
 /*#Fonts
 ================================================== */
-
 @font-face {
     font-family: 'proxima_novablack';
     src: url('proximanova-black-webfont.eot');
@@ -206,7 +205,7 @@ body.thanks_body{
     background: url("https://cdn.shopify.com/s/files/1/0221/0326/t/5/assets/launch_circleLogo.png?2478") center center no-repeat;
 }
 .main {
-    width: 590px;
+    width: 445px;
     margin-top: 2.5em;
 }
 .main span {
