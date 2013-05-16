@@ -172,18 +172,22 @@
 
 }
 
-
-
 /*#Layout styles
 ================================================== */
-body{
+body.main_body{
     background: url("https://cdn.shopify.com/s/files/1/0221/0326/t/5/assets/launch_newbg.jpg?2478") center center no-repeat fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 }
-#login h1 , #footer, #system_status, #Login p, #login_form {display:none;}
+body.thanks_body{
+    background: url("http://cdn.shopify.com/s/files/1/0221/0326/t/6/assets/thanks.jpg?2524") center center no-repeat fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
 #container {
     width: 667px;
     margin: 0 auto;
@@ -198,10 +202,11 @@ body{
 .launchLogo {
     width: 65px;
     height: 67px;
-    margin: 2.7em auto 0 auto;
+    margin: 1.5em auto;
     background: url("https://cdn.shopify.com/s/files/1/0221/0326/t/5/assets/launch_circleLogo.png?2478") center center no-repeat;
 }
 .main {
+    width: 590px;
     margin-top: 2.5em;
 }
 .main span {
@@ -228,11 +233,26 @@ body{
     text-align: center;
     background: rgba(64,64,65, 0.9);
 }
+.thanks {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+}
+.thanks span,
 .tagline h2 span {
     display: block;
 }
+.thanks .bold,
 .tagline .bold {
     font-weight: bold;
+}
+.thanks .bold {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+.thanks .bold,
+.thanks .line1 {
+    color: #404041;
 }
 .circle {
     width: 120px;
@@ -300,9 +320,9 @@ div.mce_inline_error,
     font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande";
 }
 .mc-field-group {
-    width: 48%;
+    width: 280px;
     position: relative;
-    margin: 8% auto 1% auto;
+    margin: 40px auto 10px auto;
 }
 .mc-field-group .tip {
     display: block;
@@ -314,42 +334,49 @@ div.mce_inline_error,
 #mce-EMAIL,
 #mce-error-response,
 #mce-success-response,
-div.mce_inline_error
-{
+div.mce_inline_error {
     border: 0;
     border-radius: 3px;
-    width: 92.5%;
-    padding: 4.3% 0 4.4% 7.5%;
     font-size: 1em;
     background-color: white;
 }
-#mce-error-response,
-#mce-success-response,
-div.mce_inline_error {
-    padding: 2.8% 0 2.8% 7.5%;
-    margin-bottom: 3%;
+#mce-EMAIL {
+    width: 260px;
+    height: 24px;
+    padding: 10px;
+}
+.mce_inline_error {
+    width: 260px;
+    height: 20px;
+    padding: 10px;
 }
 #mce-error-response,
 #mce-success-response {
     margin: 0 auto;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding: 10px;
 }
 #mce-error-response,
 div.mce_inline_error {
-    background: white url("https://cdn.shopify.com/s/files/1/0221/0326/t/6/assets/icoLaunchInvalid.png?2478") 97.6% center no-repeat;
+    background: white url("https://cdn.shopify.com/s/files/1/0221/0326/t/6/assets/icoLaunchInvalid.png?2478") 250px center no-repeat;
+}
+#mce-error-response {
+    background-position: 555px center;
+    padding-right: 30px;
+    padding-left: 20px;
 }
 #mce-success-response {
-    background: white url("https://cdn.shopify.com/s/files/1/0221/0326/t/6/assets/icoLaunchCheck.png?2478") 94.6% center no-repeat;
+    background: white url("https://cdn.shopify.com/s/files/1/0221/0326/t/6/assets/icoLaunchCheck.png?2478") 550px center no-repeat;
+    padding-right: 26px;
+    padding-left: 30px;
 }
 #mc-embedded-subscribe {
     position: absolute;
     right: 0;
     top: 0;
-    width: 17.3%;
+    width: 48px;
     height: 36px;
     cursor: pointer;
     border: none;
     background: transparent url("https://cdn.shopify.com/s/files/1/0221/0326/t/6/assets/icoLaunchEmail.png?2478") center center no-repeat;
-    margin-top: 5.5%;
+    margin-top: 15px;
 }
