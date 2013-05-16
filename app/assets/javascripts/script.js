@@ -1,10 +1,3 @@
-$("document").ready(function() {
-    $("#footer").remove();
-    $("#login_form").remove();
-    $("#system_status").remove();
-    $("#Login").remove();
-    $("#Login h1").remove();
-});
 var fnames = new Array();var ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='COMPANY';ftypes[3]='text';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='ADDRESS';ftypes[5]='address';fnames[6]='LAST_ORDER';ftypes[6]='date';
 try {
     var jqueryLoaded=jQuery;
@@ -71,7 +64,7 @@ function mce_init_form(){
         $("#mc-embedded-subscribe-form").unbind('submit');//remove the validator so we can get into beforeSubmit on the ajaxform, which then calls the validator
         options = { url: 'http://onevio.us7.list-manage.com/subscribe/post-json?u=d89bc392d783cc3a21598fe4a&id=82f2bd1a58&c=?', type: 'GET', dataType: 'json', contentType: "application/json; charset=utf-8",
             beforeSubmit: function(){
-                $('#mce_tmp_error_msg').remove();
+                $('#mce_tmp_error_msg').fadeOut();
                 $('.datefield','#mc_embed_signup').each(
                     function(){
                         var txt = 'filled';
@@ -117,7 +110,7 @@ function mce_success_cb(resp){
     $('#mce-error-response').hide();
     if (resp.result=="success"){
         $('#mce-'+resp.result+'-response').show();
-        $('#mce-'+resp.result+'-response').html(resp.msg);
+        $('#mce-'+resp.result+'-response').html(resp.msg).fadeIn();
         $('#mc-embedded-subscribe-form').each(function(){
             this.reset();
         });
@@ -144,8 +137,8 @@ function mce_success_cb(resp){
         }
         try{
             if (index== -1){
-                $('#mce-'+resp.result+'-response').show();
-                $('#mce-'+resp.result+'-response').html(msg);
+                $('#mce-'+resp.result+'-response').hide();
+                $('#mce-'+resp.result+'-response').html(msg).fadeIn();
             } else {
                 err_id = 'mce_tmp_error_msg';
                 html = '<div id="'+err_id+'" style="'+err_style+'"> '+msg+'</div>';
@@ -166,13 +159,13 @@ function mce_success_cb(resp){
                     $(f).append(html);
                     $(input_id).focus();
                 } else {
-                    $('#mce-'+resp.result+'-response').show();
-                    $('#mce-'+resp.result+'-response').html(msg);
+                    $('#mce-'+resp.result+'-response').hide();
+                    $('#mce-'+resp.result+'-response').html(msg).fadeIn();
                 }
             }
         } catch(e){
-            $('#mce-'+resp.result+'-response').show();
-            $('#mce-'+resp.result+'-response').html(msg);
+            $('#mce-'+resp.result+'-response').hide();
+            $('#mce-'+resp.result+'-response').html(msg).fadeIn();
         }
     }
 }
