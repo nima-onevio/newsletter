@@ -8,7 +8,6 @@
 
 /*#Fonts
 ================================================== */
-
 @font-face {
     font-family: 'proxima_novablack';
     src: url('proximanova-black-webfont.eot');
@@ -174,8 +173,15 @@
 
 /*#Layout styles
 ================================================== */
-body{
+body.main_body{
     background: url("https://cdn.shopify.com/s/files/1/0221/0326/t/5/assets/launch_newbg.jpg?2478") center center no-repeat fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+body.thanks_body{
+    background: url("http://cdn.shopify.com/s/files/1/0221/0326/t/6/assets/thanks.jpg?2524") center center no-repeat fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -195,10 +201,11 @@ body{
 .launchLogo {
     width: 65px;
     height: 67px;
-    margin: 2.7em auto 0 auto;
+    margin: 1.5em auto;
     background: url("https://cdn.shopify.com/s/files/1/0221/0326/t/5/assets/launch_circleLogo.png?2478") center center no-repeat;
 }
 .main {
+    width: 445px;
     margin-top: 2.5em;
 }
 .main span {
@@ -225,11 +232,26 @@ body{
     text-align: center;
     background: rgba(64,64,65, 0.9);
 }
+.thanks {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+}
+.thanks span,
 .tagline h2 span {
     display: block;
 }
+.thanks .bold,
 .tagline .bold {
     font-weight: bold;
+}
+.thanks .bold {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+.thanks .bold,
+.thanks .line1 {
+    color: #404041;
 }
 .circle {
     width: 120px;
@@ -297,9 +319,9 @@ div.mce_inline_error,
     font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande";
 }
 .mc-field-group {
-    width: 48%;
+    width: 280px;
     position: relative;
-    margin: 8% auto 1% auto;
+    margin: 40px auto 10px auto;
 }
 .mc-field-group .tip {
     display: block;
