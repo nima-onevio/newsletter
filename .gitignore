@@ -42,3 +42,4 @@ db/*.sqlite3
 log/*.log
 tmp/**/*
 .gitignore~
+.idea/scopes/scope_settings.xml
