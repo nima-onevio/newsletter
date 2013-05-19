@@ -28,6 +28,7 @@ end
 gem 'jquery-rails'
 
 gem "twitter-bootstrap-rails"
+gem 'newrelic_rpm'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -36,7 +37,7 @@ gem "twitter-bootstrap-rails"
 # gem 'jbuilder'
 
 # Use unicorn as the app server
-# gem 'unicorn'
+# gem 'unicorn'                                                            s
 
 # Deploy with Capistrano
 # gem 'capistrano'
