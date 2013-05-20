@@ -206,7 +206,7 @@ body.thanks_body{
 }
 .main {
     width: 445px;
-    margin-top: 2.5em;
+    margin: 2.5em auto;
 }
 .main span {
     line-height: 1em;
