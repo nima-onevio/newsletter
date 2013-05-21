@@ -4,6 +4,7 @@ class HomeController < ApplicationController
   end
   def thanks
     @body_class = "thanks_body"
+<<<<<<< HEAD
   end
   def subscribe
     #debugger
@@ -14,5 +15,7 @@ class HomeController < ApplicationController
       format.js  { render :text => @email}
       format.json { render :json => { :email => "got your email" } }
     end
+=======
+>>>>>>> master
   end
 end

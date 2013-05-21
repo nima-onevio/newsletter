@@ -41,5 +41,9 @@ Thumbs.db
 db/*.sqlite3
 log/*.log
 tmp/**/*
+<<<<<<< HEAD
 .gitignore~
 .idea/scopes/scope_settings.xml
+=======
+.idea/workspace.xml
+>>>>>>> master

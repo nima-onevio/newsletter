@@ -68,6 +68,7 @@ function mce_init_form(){
         };
         var mce_validator = $("#mc-embedded-subscribe-form").validate(options);
         $("#mc-embedded-subscribe-form").unbind('submit');//remove the validator so we can get into beforeSubmit on the ajaxform, which then calls the validator
+<<<<<<< HEAD
 
         $('#mc-embedded-subscribe-form').submit(function() {
             if (!mce_validator.form()) {
@@ -99,6 +100,35 @@ function mce_init_form(){
                                         this.value = '';
                                     } else if ( fields[0].value=='' && fields[1].value=='' && (fields[2].value=='' || (bday && fields[2].value==1970) ) ){
                                         this.value = '';
+=======
+        options = { url: 'http://onevio.us7.list-manage.com/subscribe/post-json?u=d89bc392d783cc3a21598fe4a&id=82f2bd1a58&c=?', type: 'GET', dataType: 'json', contentType: "application/json; charset=utf-8",
+            beforeSubmit: function(){
+                $('#mce_tmp_error_msg').fadeOut();
+                $('.datefield','#mc_embed_signup').each(
+                    function(){
+                        var txt = 'filled';
+                        var fields = new Array();
+                        var i = 0;
+                        $(':text', this).each(
+                            function(){
+                                fields[i] = this;
+                                i++;
+                            });
+                        $(':hidden', this).each(
+                            function(){
+                                var bday = false;
+                                if (fields.length == 2){
+                                    bday = true;
+                                    fields[2] = {'value':1970};//trick birthdays into having years
+                                }
+                                if ( fields[0].value=='MM' && fields[1].value=='DD' && (fields[2].value=='YYYY' || (bday && fields[2].value==1970) ) ){
+                                    this.value = '';
+                                } else if ( fields[0].value=='' && fields[1].value=='' && (fields[2].value=='' || (bday && fields[2].value==1970) ) ){
+                                    this.value = '';
+                                } else {
+                                    if (/\[day\]/.test(fields[0].name)){
+                                        this.value = fields[1].value+'/'+fields[0].value+'/'+fields[2].value;
+>>>>>>> master
                                     } else {
                                         if (/\[day\]/.test(fields[0].name)){
                                             this.value = fields[1].value+'/'+fields[0].value+'/'+fields[2].value;
@@ -123,7 +153,7 @@ function mce_success_cb(resp){
     $('#mce-error-response').hide();
     if (resp.result=="success"){
         $('#mce-'+resp.result+'-response').show();
-        $('#mce-'+resp.result+'-response').html(resp.msg);
+        $('#mce-'+resp.result+'-response').html(resp.msg).fadeIn();
         $('#mc-embedded-subscribe-form').each(function(){
             this.reset();
         });
@@ -150,8 +180,8 @@ function mce_success_cb(resp){
         }
         try{
             if (index== -1){
-                $('#mce-'+resp.result+'-response').show();
-                $('#mce-'+resp.result+'-response').html(msg);
+                $('#mce-'+resp.result+'-response').hide();
+                $('#mce-'+resp.result+'-response').html(msg).fadeIn();
             } else {
                 err_id = 'mce_tmp_error_msg';
                 html = '<div id="'+err_id+'" style="'+err_style+'"> '+msg+'</div>';
@@ -172,13 +202,13 @@ function mce_success_cb(resp){
                     $(f).append(html);
                     $(input_id).focus();
                 } else {
-                    $('#mce-'+resp.result+'-response').show();
-                    $('#mce-'+resp.result+'-response').html(msg);
+                    $('#mce-'+resp.result+'-response').hide();
+                    $('#mce-'+resp.result+'-response').html(msg).fadeIn();
                 }
             }
         } catch(e){
-            $('#mce-'+resp.result+'-response').show();
-            $('#mce-'+resp.result+'-response').html(msg);
+            $('#mce-'+resp.result+'-response').hide();
+            $('#mce-'+resp.result+'-response').html(msg).fadeIn();
         }
     }
 }

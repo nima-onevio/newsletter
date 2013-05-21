@@ -30,6 +30,10 @@ gem 'gibbon'
 gem 'jquery-rails'
 gem 'twitter-bootstrap-rails'
 
+<<<<<<< HEAD
+=======
+gem "twitter-bootstrap-rails"
+>>>>>>> master
 gem 'newrelic_rpm'
 
 # To use ActiveModel has_secure_password
@@ -39,7 +43,7 @@ gem 'newrelic_rpm'
 # gem 'jbuilder'
 
 # Use unicorn as the app server
-# gem 'unicorn'
+# gem 'unicorn'                                                            s
 
 # Deploy with Capistrano
 # gem 'capistrano'
