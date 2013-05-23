@@ -278,23 +278,24 @@ body.thanks_body{
     opacity: 0.99;
 }
 .tagline h2 {
-    margin-top: 2.9em;
+    margin-top: 2.5em;
 }
 .tagline h2 .bold {
     font-size: 1.5em; /* 47px */
-    margin-bottom: 0.35em;
+    margin-bottom: 0.33em;
     font-weight: normal;
 }
 .tagline .line1 {
     margin-bottom: 0.5em;
+    line-height: 1.3em;
 }
 .tagline .line1,
 .tagline .line2 {
-    margin-bottom: 0.5em;
+    margin-bottom: 1em;
     font-size: 0.6em;
 }
 .tagline .line2 {
-    margin-bottom: 2em;
+    margin-bottom: 1.8em;
 }
 .tagline h3 {
     font-size: 1.8em; /* 25px */
