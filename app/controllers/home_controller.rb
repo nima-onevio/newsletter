@@ -16,18 +16,42 @@ class HomeController < ApplicationController
       if valid_email? @email
 
         #does this email exists in our list already?
-        #success = gb.listSubscribe({:id => '82f2bd1a58', :email_address => @email})
         user_info = gb.listMemberInfo({:id => '82f2bd1a58',  :email_address => @email})
 
+        resend_link = "<a class='resendMail' data-email='#{@email}' data-link='/revalidate' href='#'>Re-send validation E-mail</a>"
+
         if user_info["success"] == 1
-          format.json { render :json => { email: @email, status: 0, message: "you are already subscribed"} }
+          #pending user?
+          user_status = user_info["data"][0]["status"]
+
+          if user_status == "pending"
+            format.json { render :json => { email: @email, status: 2, message: "You've already signed up! Please check your emails to confirm your subscription. #{resend_link}", info: user_info} }
+          else
+            format.json { render :json => { email: @email, status: 0, message: "You are already subscribed", info: user_info} }
+          end
+
         else
-          # gb.listSubscribe({:id => '82f2bd1a58', :email_address => @email})
-          format.json { render :json => { email: @email, status: 1, message: user_info } }
+          # attempt to subscribe the user
+          result = gb.listSubscribe({:id => '82f2bd1a58', :email_address => @email})
+          format.json { render :json => { email: @email, status: 1, message: "We've sent you an E-mail!", info: result } }
         end
 
       else
-        format.json { render :json => { email: @email, status: 0, message: "invalid email" } }
+        format.json { render :json => { email: @email, status: 0, message: "Invalid E-mail" } }
+      end
+    end
+  end
+
+  def revalidate
+    @email = params[:email]
+
+    respond_to do |format|
+      if valid_email? @email
+        gb  = Gibbon.new
+        gb.listSubscribe({:id => '82f2bd1a58', :email_address => @email, :double_optin => true})
+        format.json { render :json => { email: @email, status: 1, message: "Email validation sent, please check your email" } }
+      else
+        format.json { render :json => { email: @email, status: 0, message: "Invalid E-mail" } }
       end
     end
   end

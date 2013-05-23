@@ -55,6 +55,7 @@ OnevioNewsletter::Application.routes.draw do
   # See how all your routes lay out with "rake routes"
    match '/thanks' => 'home#thanks'
    match '/subscribe' => 'home#subscribe'
+   match '/revalidate' => 'home#revalidate'
 
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.

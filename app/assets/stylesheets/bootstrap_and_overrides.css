@@ -319,6 +319,7 @@ div.mce_inline_error,
     color: rgb(153,153,153);
     font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande";
 }
+.mce_inline_error { display: none; }
 .mc-field-group {
     width: 280px;
     position: relative;
@@ -365,7 +366,7 @@ div.mce_inline_error {
     padding-left: 20px;
 }
 #mce-success-response {
-    background: white url("https://cdn.shopify.com/s/files/1/0221/0326/t/6/assets/icoLaunchCheck.png?2478") 550px center no-repeat;
+    background: white url("https://cdn.shopify.com/s/files/1/0221/0326/t/6/assets/icoLaunchCheck.png?2478") 250px center no-repeat;
     padding-right: 26px;
     padding-left: 30px;
 }
