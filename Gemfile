@@ -26,9 +26,10 @@ group :assets do
 end
 
 gem 'jquery-rails'
-
+gem "gibbon"
 gem "twitter-bootstrap-rails"
 gem 'newrelic_rpm'
+
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
