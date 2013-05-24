@@ -204,6 +204,10 @@ body.thanks_body{
     margin: 1.5em auto;
     background: url("https://cdn.shopify.com/s/files/1/0221/0326/t/5/assets/launch_circleLogo.png?2478") center center no-repeat;
 }
+.loader {
+    text-align: center;
+    display: none;
+}
 .main {
     width: 445px;
     margin: 2.5em auto;
@@ -368,7 +372,7 @@ div.mce_inline_error {
 #mce-success-response {
     background: white url("https://cdn.shopify.com/s/files/1/0221/0326/t/6/assets/icoLaunchCheck.png?2478") 250px center no-repeat;
     padding-right: 26px;
-    padding-left: 30px;
+    padding-left: 15px;
 }
 #mc-embedded-subscribe {
     position: absolute;

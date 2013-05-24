@@ -7,17 +7,18 @@ class HomeController < ApplicationController
     @body_class = "thanks_body"
   end
 
+  #this method will attempt to subscribe the user
   def subscribe
     gb     = Gibbon.new
     @email = params[:EMAIL]
     @lists = gb.lists({:start => 0, :limit=> 100})
+    status = 1
 
     respond_to do |format|
       if valid_email? @email
 
         #does this email exists in our list already?
         user_info = gb.listMemberInfo({:id => '82f2bd1a58',  :email_address => @email})
-
         resend_link = "<a class='resendMail' data-email='#{@email}' data-link='/revalidate' href='#'>Re-send validation E-mail</a>"
 
         if user_info["success"] == 1
@@ -25,23 +26,26 @@ class HomeController < ApplicationController
           user_status = user_info["data"][0]["status"]
 
           if user_status == "pending"
-            format.json { render :json => { email: @email, status: 2, message: "You've already signed up! Please check your emails to confirm your subscription. #{resend_link}", info: user_info} }
+            status = 2
+            message = "You've already signed up! Please check your email to confirm your subscription. #{resend_link}"
           else
-            format.json { render :json => { email: @email, status: 0, message: "You are already subscribed", info: user_info} }
+            message = "You are already subscribed"
           end
-
         else
           # attempt to subscribe the user
           result = gb.listSubscribe({:id => '82f2bd1a58', :email_address => @email})
-          format.json { render :json => { email: @email, status: 1, message: "We've sent you an E-mail!", info: result } }
+          message = "Thanks! We've sent you an email!"
         end
 
       else
-        format.json { render :json => { email: @email, status: 0, message: "Invalid E-mail" } }
+        status = 0
+        message = "Invalid E-mail"
       end
+      format.json { render :json => { email: @email, status: status, message: message } }
     end
   end
 
+  #this method will resend the validation email to a given address
   def revalidate
     @email = params[:email]
 
@@ -49,10 +53,13 @@ class HomeController < ApplicationController
       if valid_email? @email
         gb  = Gibbon.new
         gb.listSubscribe({:id => '82f2bd1a58', :email_address => @email, :double_optin => true})
-        format.json { render :json => { email: @email, status: 1, message: "Email validation sent, please check your email" } }
+        status = 1
+        message = "Thanks! We've sent you an email!"
       else
-        format.json { render :json => { email: @email, status: 0, message: "Invalid E-mail" } }
+        status = 0
+        message = "Invalid E-mail"
       end
+      format.json { render :json => { email: @email, status: status, message: message } }
     end
   end
 
