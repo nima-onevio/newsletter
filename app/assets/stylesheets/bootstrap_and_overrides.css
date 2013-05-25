@@ -174,14 +174,14 @@
 /*#Layout styles
 ================================================== */
 body.main_body{
-    background: url("https://cdn.shopify.com/s/files/1/0221/0326/t/5/assets/launch_newbg.jpg?2478") center center no-repeat fixed;
+    background: url("launch_newbg.jpg") center center no-repeat fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 }
 body.thanks_body{
-    background: url("http://cdn.shopify.com/s/files/1/0221/0326/t/6/assets/thanks.jpg?2524") center center no-repeat fixed;
+    background: url("thanks.jpg") center center no-repeat fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -202,7 +202,7 @@ body.thanks_body{
     width: 65px;
     height: 67px;
     margin: 1.5em auto;
-    background: url("https://cdn.shopify.com/s/files/1/0221/0326/t/5/assets/launch_circleLogo.png?2478") center center no-repeat;
+    background: url("launch_circleLogo.png") center center no-repeat;
 }
 .loader {
     text-align: center;
@@ -264,14 +264,14 @@ body.thanks_body{
     bottom: -3.7em;
     left: 50%;
     margin-left: -60px;
-    background: url("https://cdn.shopify.com/s/files/1/0221/0326/t/6/assets/circleLaunchEmail.png?2513") bottom center no-repeat;
+    background: url("circleLaunchEmail.png") bottom center no-repeat;
 }
 .question {
     width: 280px;
     padding: 7px 10px;
     position: absolute;
     left: 0;
-    background: url("https://cdn.shopify.com/s/files/1/0221/0326/t/5/assets/bg_question.png?2478") center center no-repeat;
+    background: url("bg_question.png") center center no-repeat;
 }
 .question h3,
 .tagline h2,
@@ -334,7 +334,7 @@ div.mce_inline_error,
     width: 23px;
     height: 10px;
     margin: 0 auto;
-    background: transparent url("https://cdn.shopify.com/s/files/1/0221/0326/t/6/assets/pointerSlice.png?2478") center center no-repeat;
+    background: transparent url("pointerSlice.png") center center no-repeat;
 }
 #mce-EMAIL,
 #mce-error-response,
@@ -362,7 +362,7 @@ div.mce_inline_error {
 }
 #mce-error-response,
 div.mce_inline_error {
-    background: white url("https://cdn.shopify.com/s/files/1/0221/0326/t/6/assets/icoLaunchInvalid.png?2478") 250px center no-repeat;
+    background: white url("icoLaunchInvalid.png") 250px center no-repeat;
 }
 #mce-error-response {
     background-position: 420px center;
@@ -370,7 +370,7 @@ div.mce_inline_error {
     padding-left: 20px;
 }
 #mce-success-response {
-    background: white url("https://cdn.shopify.com/s/files/1/0221/0326/t/6/assets/icoLaunchCheck.png?2478") 250px center no-repeat;
+    background: white url("icoLaunchCheck.png") 250px center no-repeat;
     padding-right: 26px;
     padding-left: 15px;
 }
@@ -382,6 +382,6 @@ div.mce_inline_error {
     height: 36px;
     cursor: pointer;
     border: none;
-    background: transparent url("https://cdn.shopify.com/s/files/1/0221/0326/t/6/assets/icoLaunchEmail.png?2478") center center no-repeat;
+    background: transparent url("icoLaunchEmail.png") center center no-repeat;
     margin-top: 15px;
 }
