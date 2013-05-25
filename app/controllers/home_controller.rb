@@ -44,7 +44,7 @@ class HomeController < ApplicationController
         status = 0
         message = "Invalid E-mail"
       end
-      format.json { render :json => { email: @email, status: status, message: message } }
+      format.json { render :json => { :email => @email, :status => status, :message => message } }
     end
   end
 
@@ -62,7 +62,7 @@ class HomeController < ApplicationController
         status = 0
         message = "Invalid E-mail"
       end
-      format.json { render :json => { email: @email, status: status, message: message } }
+      format.json { render :json => { :email => @email, :status => status, :message => message } }
     end
   end
 
