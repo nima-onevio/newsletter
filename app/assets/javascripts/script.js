@@ -1,171 +1,194 @@
-var fnames = new Array();var ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='COMPANY';ftypes[3]='text';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='ADDRESS';ftypes[5]='address';fnames[6]='LAST_ORDER';ftypes[6]='date';
-try {
-    var jqueryLoaded=jQuery;
-    jqueryLoaded=true;
-} catch(err) {
-    var jqueryLoaded=false;
-}
-var head= document.getElementsByTagName('head')[0];
-if (!jqueryLoaded) {
-    var script = document.createElement('script');
-    script.type = 'text/javascript';
-    script.src = 'https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js';
-    head.appendChild(script);
-    if (script.readyState && script.onload!==null){
-        script.onreadystatechange= function () {
-            if (this.readyState == 'complete') mce_preload_check();
+"use strict";
+
+var onevio       = onevio || {};
+onevio.email     = onevio.email || {};
+onevio.loader    = onevio.loader || {};
+
+onevio.loader = {
+    setup: function (options) {
+        var t = this,
+            defaults = {
+                containerClass: ".loader"
+            };
+        t.o          = $.extend(options, defaults);
+        t.$container = $(t.o.containerClass);
+
+        if (!t.$container.length) {
+            console.log("unable to find loader container");
+            return false;
         }
-    }
-}
-var script = document.createElement('script');
-script.type = 'text/javascript';
-script.src = 'https://cdn.shopify.com/s/files/1/0221/0326/t/6/assets/jquery.form-n-validate.js';
-head.appendChild(script);
-var err_style = '';
-try{
-    err_style = mc_custom_error_style;
-} catch(e){
-    //err_style = '#mc_embed_signup input.mce_inline_error{border-color:#6B0505;} #mc_embed_signup div.mce_inline_error{margin: 0 0 1em 0; padding: 5px 10px; background-color:#6B0505; font-weight: bold; z-index: 1; color:#fff;}';
-    err_style = '';
-}
-var head= document.getElementsByTagName('head')[0];
-var style= document.createElement('style');
-style.type= 'text/css';
-if (style.styleSheet) {
-    style.styleSheet.cssText = err_style;
-} else {
-    style.appendChild(document.createTextNode(err_style));
-}
-head.appendChild(style);
-setTimeout('mce_preload_check();', 250);
+    },
 
-var mce_preload_checks = 0;
-function mce_preload_check(){
-    if (mce_preload_checks>40) return;
-    mce_preload_checks++;
-    try {
-        var jqueryLoaded=jQuery;
-    } catch(err) {
-        setTimeout('mce_preload_check();', 250);
-        return;
-    }
-    try {
-        var validatorLoaded=jQuery("#fake-form").validate({});
-    } catch(err) {
-        setTimeout('mce_preload_check();', 250);
-        return;
-    }
-    mce_init_form();
-}
-function mce_init_form(){
-    jQuery(document).ready( function($) {
-        var options = { errorClass: 'mce_inline_error', errorElement: 'div', onkeyup: function(){}, onfocusout:function(){}, onblur:function(){}  };
-        var mce_validator = $("#mc-embedded-subscribe-form").validate(options);
-        $("#mc-embedded-subscribe-form").unbind('submit');//remove the validator so we can get into beforeSubmit on the ajaxform, which then calls the validator
-        options = { url: 'http://onevio.us7.list-manage.com/subscribe/post-json?u=d89bc392d783cc3a21598fe4a&id=82f2bd1a58&c=?', type: 'GET', dataType: 'json', contentType: "application/json; charset=utf-8",
-            beforeSubmit: function(){
-                $('#mce_tmp_error_msg').fadeOut();
-                $('.datefield','#mc_embed_signup').each(
-                    function(){
-                        var txt = 'filled';
-                        var fields = new Array();
-                        var i = 0;
-                        $(':text', this).each(
-                            function(){
-                                fields[i] = this;
-                                i++;
-                            });
-                        $(':hidden', this).each(
-                            function(){
-                                var bday = false;
-                                if (fields.length == 2){
-                                    bday = true;
-                                    fields[2] = {'value':1970};//trick birthdays into having years
-                                }
-                                if ( fields[0].value=='MM' && fields[1].value=='DD' && (fields[2].value=='YYYY' || (bday && fields[2].value==1970) ) ){
-                                    this.value = '';
-                                } else if ( fields[0].value=='' && fields[1].value=='' && (fields[2].value=='' || (bday && fields[2].value==1970) ) ){
-                                    this.value = '';
-                                } else {
-                                    if (/\[day\]/.test(fields[0].name)){
-                                        this.value = fields[1].value+'/'+fields[0].value+'/'+fields[2].value;
-                                    } else {
-                                        this.value = fields[0].value+'/'+fields[1].value+'/'+fields[2].value;
-                                    }
-                                }
-                            });
-                    });
-                return mce_validator.form();
-            },
-            success: mce_success_cb
-        };
-        $('#mc-embedded-subscribe-form').ajaxForm(options);
+    show: function () {
+        var t = this;
+        t.$container.stop(true, true).fadeIn();
+    },
 
+    hide: function () {
+        var t = this;
+        t.$container.stop(true, true).fadeOut();
+    }
+};
 
-    });
-}
-function mce_success_cb(resp){
-    console.log(resp);
-    $('#mce-success-response').hide();
-    $('#mce-error-response').hide();
-    if (resp.result=="success"){
-        $('#mce-'+resp.result+'-response').show();
-        $('#mce-'+resp.result+'-response').html(resp.msg).fadeIn();
-        $('#mc-embedded-subscribe-form').each(function(){
-            this.reset();
+onevio.email = {
+    setup: function () {
+        var t = this;
+
+        onevio.loader.setup();
+        t.initVars();
+        t.updateAnimated();
+
+        if (t.$form.length) {
+            if (t.$email.length) {
+                t.$email.focus();
+            }
+            t.bindEvents();
+        }
+    },
+
+    initVars: function () {
+        var t = this;
+
+        t.$form     = $("#mc-embedded-subscribe-form");
+        t.$error    = $(".mce_inline_error");
+        t.$lError   = $("#mce-error-response");
+        t.$success  = $("#mce-success-response");
+        t.$body     = $("body");
+        t.$email    = t.$form.find("#mce-EMAIL");
+        t.valid     = false;
+        t.emailData = '';
+        t.linkData  = '';
+    },
+
+    bindEvents: function () {
+        var t = this;
+
+        //bind the event
+        t.$body.on('click', ".resendMail", function (e) {
+            var $t        = $(this),
+                emailData = {email: $t.data("email")},
+                linkData  = $t.data("link");
+
+            e.preventDefault();
+            e.stopPropagation();
+            e.stopImmediatePropagation();
+
+            t.updateAnimated();
+            t.hideAll();
+
+            $(":animated").promise().done(function () {
+                onevio.loader.show();
+                $(":animated").promise().done(function () {
+                    t.performAjax(linkData, emailData);
+                });
+            });
+
         });
-    } else {
-        var index = -1;
-        var msg;
-        try {
-            var parts = resp.msg.split(' - ',2);
-            if (parts[1]==undefined){
-                msg = resp.msg;
-            } else {
-                i = parseInt(parts[0]);
-                if (i.toString() == parts[0]){
-                    index = parts[0];
-                    msg = parts[1];
-                } else {
-                    index = -1;
-                    msg = resp.msg;
-                }
-            }
-        } catch(e){
-            index = -1;
-            msg = resp.msg;
-        }
-        try{
-            if (index== -1){
-                $('#mce-'+resp.result+'-response').hide();
-                $('#mce-'+resp.result+'-response').html(msg).fadeIn();
-            } else {
-                err_id = 'mce_tmp_error_msg';
-                html = '<div id="'+err_id+'" style="'+err_style+'"> '+msg+'</div>';
 
-                var input_id = '#mc_embed_signup';
-                var f = $(input_id);
-                if (ftypes[index]=='address'){
-                    input_id = '#mce-'+fnames[index]+'-addr1';
-                    f = $(input_id).parent().parent().get(0);
-                } else if (ftypes[index]=='date'){
-                    input_id = '#mce-'+fnames[index]+'-month';
-                    f = $(input_id).parent().parent().get(0);
-                } else {
-                    input_id = '#mce-'+fnames[index];
-                    f = $().parent(input_id).get(0);
-                }
-                if (f){
-                    $(f).append(html);
-                    $(input_id).focus();
-                } else {
-                    $('#mce-'+resp.result+'-response').hide();
-                    $('#mce-'+resp.result+'-response').html(msg).fadeIn();
-                }
+        t.$form.on({
+            submit: function (e) {
+                e.stopImmediatePropagation();
+                e.preventDefault();
+                e.stopPropagation();
+
+                t.updateAnimated();
+                t.hideAll();
+
+                $(":animated").promise().done(function () {
+                    onevio.loader.show();
+                    $(":animated").promise().done(function () {
+                        if (t.validateEmail(t.$email) === true) {
+                            t.performAjax("/subscribe", t.$form.serialize());
+                        }
+                    });
+
+                });
             }
-        } catch(e){
-            $('#mce-'+resp.result+'-response').hide();
-            $('#mce-'+resp.result+'-response').html(msg).fadeIn();
+        });
+    },
+
+    validateEmail: function ($email) {
+        var t     = this,
+            email = $.trim($email.val()),
+            valid = false,
+            re    = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+        if (email === '') {
+            t.displayMessage(0, "Invalid E-mail");
+        } else if (re.test(email)) {
+            valid = true;
         }
+
+        return valid;
+    },
+
+    performAjax: function (ajaxUrl, theData) {
+        var t = this;
+
+        t.hideAll();
+
+        $.ajax({
+            url: ajaxUrl,
+            type: "POST",
+            dataType: 'json',
+            data: theData
+        }).done(function (resp) {
+            t.displayMessage(resp.status, resp.message);
+        });
+    },
+
+    displayMessage: function (status, message) {
+        var t = this;
+
+        t.updateAnimated();
+
+        switch (status) {
+        case 0:
+            t.$animated.promise().done(function () {
+                onevio.loader.hide();
+                $(":animated").promise().done(function () {
+                    t.$error.html(message).stop().fadeIn();
+                });
+
+            });
+            break;
+
+        case 1:
+            t.$animated.promise().done(function () {
+                onevio.loader.hide();
+                $(":animated").promise().done(function () {
+                    t.$success.html(message).stop().fadeIn();
+                });
+
+            });
+            break;
+
+        case 2:
+            t.$animated.promise().done(function () {
+                onevio.loader.hide();
+                $(":animated").promise().done(function () {
+                    t.$lError.html(message).stop().fadeIn();
+                });
+
+            });
+            break;
+        }
+    },
+
+    hideAll: function () {
+        var t = this;
+
+        t.$error.fadeOut();
+        t.$success.fadeOut();
+        t.$lError.fadeOut();
+    },
+
+    updateAnimated: function () {
+        var t = this;
+        t.$animated = $(":animated");
     }
-}
+};
+
+$(function () {
+    onevio.email.setup();
+});
