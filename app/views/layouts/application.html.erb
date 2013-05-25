@@ -33,6 +33,8 @@
     <!-- For all other devices -->
     <!-- Size should be 32 x 32 pixels -->
     <%= favicon_link_tag 'favicon.ico', :rel => 'shortcut icon' %>
+    <%= favicon_link_tag 'favicon.ico', :rel => 'icon' %>
+    <%= render :partial => 'layouts/ga' %>
   </head>
   <body  <%= "class=#{@body_class}" if @body_class %>>
 
@@ -55,6 +57,5 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <%= javascript_include_tag "//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"  %>
     <%= javascript_include_tag "script" %>
-    <%= render :partial => 'layouts/ga' %>
   </body>
 </html>
