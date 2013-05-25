@@ -1,4 +1,7 @@
 class HomeController < ApplicationController
+  caches_page :index
+  caches_page :thanks
+
   def index
     @body_class = "main_body"
   end

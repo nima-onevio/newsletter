@@ -13,6 +13,8 @@ group :production do
   gem 'pg'
 end
 
+
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -25,9 +27,14 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'jquery-rails'
+#mailchimp API
 gem "gibbon"
+
+#bootstrap and jquery
+gem 'jquery-rails'
 gem "twitter-bootstrap-rails"
+
+#new relic analytics
 gem 'newrelic_rpm'
 
 
@@ -38,7 +45,7 @@ gem 'newrelic_rpm'
 # gem 'jbuilder'
 
 # Use unicorn as the app server
-# gem 'unicorn'                                                            s
+gem 'unicorn'
 
 # Deploy with Capistrano
 # gem 'capistrano'
