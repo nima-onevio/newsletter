@@ -423,9 +423,13 @@ div.mce_inline_error {
     border: none;
     background: transparent url("icoLaunchEmail.png") center center no-repeat;
     margin-top: 15px;
+    outline: none;
 }
-#mc-embedded-subscribe-form,
-.icons {
+#mc-embedded-subscribe:focus {
+    outline: none;
+}
+.cssanimations #mc-embedded-subscribe-form,
+.cssanimations .icons {
     opacity: 0;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
