@@ -370,6 +370,8 @@ div.mce_inline_error,
     width: 23px;
     height: 10px;
     margin: 0 auto;
+    position: relative;
+    z-index: 1;
     background: transparent url("pointerSlice.png") center center no-repeat;
 }
 #mce-EMAIL,
@@ -440,7 +442,8 @@ div.mce_inline_error {
     -moz-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
 }
-.icons a:last-child {
+.icons a:last-child,
+.icons .last {
     margin-right: 0;
 }
 @keyframes login {

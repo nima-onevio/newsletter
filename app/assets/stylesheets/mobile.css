@@ -13,6 +13,7 @@ and (max-device-width : 800px) {
         background: url("bg_mobile.jpg") center center no-repeat fixed;
     }
     .span4 {
+        margin: 0;
         float: none;
     }
     .main {
@@ -27,6 +28,8 @@ and (max-device-width : 800px) {
         background: none;
         padding: 0;
         height: 280px;
+        margin: 0;
+        width: 100%;
     }
     .question h3,
     .tagline h2,
@@ -34,8 +37,8 @@ and (max-device-width : 800px) {
         color: white;
     }
     .tagline h2 {
-        margin-top: 0.5em;
-        font-size: 0.7em;
+        margin-top: 0.7em;
+        font-size: 2em;
     }
     .thanks {
         position: relative;
@@ -60,8 +63,8 @@ and (max-device-width : 800px) {
     }
     .thanks .bold {
         font-size: 1em;
-        margin-top: 40px;
-        margin-bottom: 40px;
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
     .thanks .bold,
     .thanks .line1 {
@@ -69,6 +72,16 @@ and (max-device-width : 800px) {
     }
     .thanks .line1 {
         font-size: 0.75em;
+    }
+    .circle {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        margin: 0 auto;
+        width: 90px;
+    }
+    .mc-field-group {
+        margin: 45px auto 10px auto;
     }
     .icons .twitter {
         background: url("twitter_mobile.png") center center no-repeat;
