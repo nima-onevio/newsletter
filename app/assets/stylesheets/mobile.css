@@ -70,16 +70,16 @@ and (max-device-width : 800px) {
     .thanks .line1 {
         font-size: 0.75em;
     }
-    .twitter {
+    .icons .twitter {
         background: url("twitter_mobile.png") center center no-repeat;
     }
-    .facebook {
+    .icons .facebook {
         background: url("facebook_mobile.png") center center no-repeat;
     }
-    .google {
+    .icons .google {
         background: url("google_mobile.png") center center no-repeat;
     }
-    .email {
+    .icons .email {
         background: url("email_mobile.png") center center no-repeat;
     }
 }
@@ -164,16 +164,16 @@ and (max-device-width : 480px) {
     .thanks .line1 {
         font-size: 0.75em;
     }
-    .twitter {
+    .icons .twitter {
         background: url("twitter_mobile.png") center center no-repeat;
     }
-    .facebook {
+    .icons .facebook {
         background: url("facebook_mobile.png") center center no-repeat;
     }
-    .google {
+    .icons .google {
         background: url("google_mobile.png") center center no-repeat;
     }
-    .email {
+    .icons .email {
         background: url("email_mobile.png") center center no-repeat;
     }
 }
