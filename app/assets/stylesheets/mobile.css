@@ -70,6 +70,18 @@ and (max-device-width : 800px) {
     .thanks .line1 {
         font-size: 0.75em;
     }
+    .twitter {
+        background: url("twitter_mobile.png") center center no-repeat;
+    }
+    .facebook {
+        background: url("facebook_mobile.png") center center no-repeat;
+    }
+    .google {
+        background: url("google_mobile.png") center center no-repeat;
+    }
+    .email {
+        background: url("email_mobile.png") center center no-repeat;
+    }
 }
 /* Iphone
 ================================================== */
@@ -151,5 +163,17 @@ and (max-device-width : 480px) {
     }
     .thanks .line1 {
         font-size: 0.75em;
+    }
+    .twitter {
+        background: url("twitter_mobile.png") center center no-repeat;
+    }
+    .facebook {
+        background: url("facebook_mobile.png") center center no-repeat;
+    }
+    .google {
+        background: url("google_mobile.png") center center no-repeat;
+    }
+    .email {
+        background: url("email_mobile.png") center center no-repeat;
     }
 }
