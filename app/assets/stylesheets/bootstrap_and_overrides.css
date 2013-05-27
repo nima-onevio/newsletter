@@ -220,18 +220,19 @@ body.thanks_body .icons {
     text-indent: -9999;
     color: transparent;
     border: 0;
-}
-.icons .twitter {
-    background: url("twitter.png") center center no-repeat;
-}
-.icons .facebook {
-    background: url("facebook.png") center center no-repeat;
+    background: transparent url("socialmedia-sprite.png") top left no-repeat;
 }
 .icons .google {
-    background: url("google.png") center center no-repeat;
+    background-position: left top;
+}
+.icons .facebook {
+    background-position: left -43px;
+}
+.icons .twitter {
+    background-position: left -86px;
 }
 .icons .email {
-    background: url("email.png") center center no-repeat;
+    background-position: left -128px;
 }
 .launchLogo {
     width: 65px;

@@ -83,18 +83,6 @@ and (max-device-width : 800px) {
     .mc-field-group {
         margin: 45px auto 10px auto;
     }
-    .icons .twitter {
-        background: url("twitter_mobile.png") center center no-repeat;
-    }
-    .icons .facebook {
-        background: url("facebook_mobile.png") center center no-repeat;
-    }
-    .icons .google {
-        background: url("google_mobile.png") center center no-repeat;
-    }
-    .icons .email {
-        background: url("email_mobile.png") center center no-repeat;
-    }
 }
 /* Iphone
 ================================================== */
@@ -104,10 +92,10 @@ and (max-device-width : 480px) {
     body {
         padding: 0;
     }
-    body.main_body{
+    body.main_body {
         background: url("bg_mobile.jpg") center center no-repeat fixed;
     }
-    body.thanks_body{
+    body.thanks_body {
         background: url("bg_mobile.jpg") center center no-repeat fixed;
     }
     .span4 {
@@ -176,17 +164,5 @@ and (max-device-width : 480px) {
     }
     .thanks .line1 {
         font-size: 0.75em;
-    }
-    .icons .twitter {
-        background: url("twitter_mobile.png") center center no-repeat;
-    }
-    .icons .facebook {
-        background: url("facebook_mobile.png") center center no-repeat;
-    }
-    .icons .google {
-        background: url("google_mobile.png") center center no-repeat;
-    }
-    .icons .email {
-        background: url("email_mobile.png") center center no-repeat;
     }
 }
