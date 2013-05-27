@@ -221,16 +221,16 @@ body.thanks_body .icons {
     color: transparent;
     border: 0;
 }
-.twitter {
+.icons .twitter {
     background: url("twitter.png") center center no-repeat;
 }
-.facebook {
+.icons .facebook {
     background: url("facebook.png") center center no-repeat;
 }
-.google {
+.icons .google {
     background: url("google.png") center center no-repeat;
 }
-.email {
+.icons .email {
     background: url("email.png") center center no-repeat;
 }
 .launchLogo {
