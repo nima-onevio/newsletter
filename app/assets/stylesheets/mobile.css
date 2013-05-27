@@ -1,0 +1,97 @@
+/*Android S2
+================================================== */
+@media only screen
+and (min-device-width : 480px)
+and (max-device-width : 800px) {
+    body {
+        padding: 0;
+    }
+    body.main_body{
+        background: url("bg_mobile.jpg") center center no-repeat fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    body.thanks_body{
+        background: url("bg_mobile.jpg") center center no-repeat fixed;
+    }
+    .span4 {
+        float: none;
+    }
+    .main {
+        width: 100%;
+        margin: 0;
+    }
+    .launchLogo {
+        padding: 0;
+        margin: 0 auto;
+    }
+    .tagline {
+        background: none;
+        padding: 0;
+        height: 280px;
+    }
+    .question h3,
+    .tagline h2,
+    .tagline h3 {
+        color: white;
+    }
+    .tagline h2 {
+        margin-top: 0.5em;
+    }
+    .thanks {
+        position: absolute;
+        top: 22%;
+        left: 30%;
+    }
+}
+/* Iphone
+================================================== */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+    body {
+        padding: 0;
+    }
+    body.main_body{
+        background: url("bg_mobile.jpg") center center no-repeat fixed;
+    }
+    body.thanks_body{
+        background: url("bg_mobile.jpg") center center no-repeat fixed;
+    }
+    .span4 {
+        float: none;
+    }
+    .main {
+        width: 100%;
+        margin: 0;
+    }
+    .launchLogo {
+        padding: 0;
+        margin: 0 auto;
+    }
+    .tagline {
+        background: none;
+        padding: 0;
+        height: 280px;
+        width: 100%;
+    }
+    .question h3,
+    .tagline h2,
+    .tagline h3 {
+        color: white;
+    }
+    .tagline h2 {
+        margin-top: 0.5em;
+    }
+    .tagline .line2 {
+        margin-bottom: 1em;
+    }
+    .tagline h2 .bold {
+        font-size: 1em;
+    }
+    .tagline h3 {
+        font-size: 1.5em;
+    }
+}

@@ -187,6 +187,11 @@ body.thanks_body{
     -o-background-size: cover;
     background-size: cover;
 }
+body.thanks_body .icons {
+    position: absolute;
+    top: 380px;
+    left: 50%;
+}
 #container {
     width: 667px;
     margin: 0 auto;
@@ -197,6 +202,36 @@ body.thanks_body{
     border: none;
     box-shadow: none;
     margin: 0;
+}
+.icons {
+    text-align: center;
+    width: 260px;
+    margin: 0 auto;
+}
+.icon,
+.icon:hover,
+.icon:focus,
+.icon:visited {
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    margin-right: 2em;
+    outline: none;
+    text-indent: -9999;
+    color: transparent;
+    border: 0;
+}
+.twitter {
+    background: url("twitter.png") center center no-repeat;
+}
+.facebook {
+    background: url("facebook.png") center center no-repeat;
+}
+.google {
+    background: url("google.png") center center no-repeat;
+}
+.email {
+    background: url("email.png") center center no-repeat;
 }
 .launchLogo {
     width: 65px;
@@ -210,7 +245,7 @@ body.thanks_body{
 }
 .main {
     width: 445px;
-    margin: 2.5em auto;
+    margin: 2.5em auto 1em auto;
 }
 .main span {
     line-height: 1em;
@@ -238,7 +273,8 @@ body.thanks_body{
 }
 .thanks {
     position: absolute;
-    top: 40%;
+    /*top: 40%;*/
+    top: 200px;
     left: 50%;
 }
 .thanks span,
@@ -385,7 +421,8 @@ div.mce_inline_error {
     background: transparent url("icoLaunchEmail.png") center center no-repeat;
     margin-top: 15px;
 }
-#mc-embedded-subscribe-form {
+#mc-embedded-subscribe-form,
+.icons {
     opacity: 0;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
@@ -402,6 +439,9 @@ div.mce_inline_error {
     -webkit-animation-fill-mode: forwards;  /* retain last keyframe */
     -moz-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
+}
+.icons a:last-child {
+    margin-right: 0;
 }
 @keyframes login {
     0% {

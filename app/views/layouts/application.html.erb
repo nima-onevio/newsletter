@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="user-scalable=no, width=device-width, minimum-scale=1, maximum-scale=1">
     <title><%= content_for?(:title) ? yield(:title) : "Onevio.org" %></title>
     <%= csrf_meta_tags %>
 
@@ -13,6 +13,7 @@
     <![endif]-->
 
     <%= stylesheet_link_tag "application", :media => "all" %>
+    <%= stylesheet_link_tag "mobile" %>
 
     <!-- For third-generation iPad with high-resolution Retina display: -->
     <!-- Size should be 144 x 144 pixels -->
@@ -45,6 +46,12 @@
         <div class="span4">
           <%= bootstrap_flash %>
           <%= yield %>
+          <div class="icons">
+            <a href="http://facebook.com/onevio/" target="_blank" class="icon facebook">Facebook</a>
+            <a href="http://twitter.com/tweetonevio" target="_blank" class="icon twitter">Twitter</a>
+            <a href="https://plus.google.com/u/0/117799793876632923467/posts" target="_blank" class="icon google">Google+</a>
+            <a href="mailto:info@onevio.org" target="_blank" class="icon email">Email</a>
+          </div>
         </div>
         <div class="span4">
         </div>
