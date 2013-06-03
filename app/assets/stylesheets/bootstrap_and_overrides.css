@@ -340,6 +340,23 @@ body.thanks_body .icons {
     -webkit-animation-name: rotate;
     -webkit-animation-duration: 200s;
     -webkit-animation-iteration-count: infinite;
+
+    -mo-animation-name: rotate;
+    -mo-animation-duration: 200s;
+    -mo-animation-iteration-count: infinite;
+
+    -ms-animation-name: rotate;
+    -ms-animation-duration: 200s;
+    -ms-animation-iteration-count: infinite;
+
+    -o-animation-name: rotate;
+    -o-animation-duration: 200s;
+    -o-animation-iteration-count: infinite;
+
+    animation-name: rotate;
+    animation-duration: 200s;
+    animation-iteration-count: infinite;
+
     margin-left: -600px;
 }
 @-webkit-keyframes rotate {
@@ -348,6 +365,39 @@ body.thanks_body .icons {
     }
     to {
         -webkit-transform: rotate(360deg);
+    }
+}
+@-mo-keyframes rotate {
+    from {
+        -mo-transform: rotate(0deg);
+
+    }
+    to {
+        -mo-transform: rotate(360deg);
+   }
+}
+@-ms-keyframes rotate {
+    from {
+        -ms-transform: rotate(0deg);
+    }
+    to {
+        -ms-transform: rotate(360deg);
+    }
+}
+@-o-keyframes rotate {
+    from {
+        -o-transform: rotate(0deg);
+    }
+    to {
+        -o-transform: rotate(360deg);
+    }
+}
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
     }
 }
 /*--- Form Styles ---*/
