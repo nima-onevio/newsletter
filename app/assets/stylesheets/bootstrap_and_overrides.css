@@ -335,11 +335,12 @@ body.thanks_body .icons {
     height: 1287px;
     position: fixed;
     top: 450px;
-    left: 100px;
+    left: 50%;
     background: url("imgGlobe.png") no-repeat;
-    -webkit-animation-name:             rotate;
-    -webkit-animation-duration:         200s;
-    -webkit-animation-iteration-count:  infinite;
+    -webkit-animation-name: rotate;
+    -webkit-animation-duration: 200s;
+    -webkit-animation-iteration-count: infinite;
+    margin-left: -600px;
 }
 @-webkit-keyframes rotate {
     from {
