@@ -175,25 +175,11 @@
 ================================================== */
 body {
     position: relative;
-}
-body.main_body{
     background: url("bg_sky.jpg") center center no-repeat fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-}
-body.thanks_body{
-    background: url("thanks.jpg") center center no-repeat fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-body.thanks_body .icons {
-    position: absolute;
-    top: 380px;
-    left: 50%;
 }
 #container {
     width: 667px;
@@ -274,6 +260,9 @@ body.thanks_body .icons {
     position: relative;
     font-family: "proxima_novalight";
     text-align: center;
+}
+body.thanks_body .tagline {
+    margin-bottom: 20px;
 }
 .thanks {
     position: absolute;
