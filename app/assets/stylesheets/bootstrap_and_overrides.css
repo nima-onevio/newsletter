@@ -173,24 +173,13 @@
 
 /*#Layout styles
 ================================================== */
-body.main_body{
-    background: url("launch_newbg.jpg") center center no-repeat fixed;
+body {
+    position: relative;
+    background: url("bg_sky.jpg") center center no-repeat fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-}
-body.thanks_body{
-    background: url("thanks.jpg") center center no-repeat fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-body.thanks_body .icons {
-    position: absolute;
-    top: 380px;
-    left: 50%;
 }
 #container {
     width: 667px;
@@ -203,6 +192,16 @@ body.thanks_body .icons {
     box-shadow: none;
     margin: 0;
 }
+.span5.main {
+    margin: 0 auto !important;
+    float: none;
+}
+.bold {
+    font-family: "proxima_nova_rgbold";
+}
+.clear {
+    clear: both !important;
+}
 .icons {
     text-align: center;
     width: 260px;
@@ -212,8 +211,8 @@ body.thanks_body .icons {
 .icon:hover,
 .icon:focus,
 .icon:visited {
-    width: 32px;
-    height: 32px;
+    width: 38px;
+    height: 38px;
     display: inline-block;
     margin-right: 2em;
     outline: none;
@@ -223,30 +222,26 @@ body.thanks_body .icons {
     background: transparent url("socialmedia-sprite.png") top left no-repeat;
 }
 .icons .google {
-    background-position: left top;
+    background-position: 1px -81px;
 }
 .icons .facebook {
-    background-position: left -43px;
+    background-position: 1px -41px;
 }
 .icons .twitter {
-    background-position: left -86px;
+    background-position: 1px -121px;
 }
 .icons .email {
-    background-position: left -128px;
+    background-position: 1px top;
 }
 .launchLogo {
-    width: 65px;
-    height: 67px;
-    margin: 1.5em auto;
-    background: url("launch_circleLogo.png") center center no-repeat;
+    width: 120px;
+    height: 135px;
+    margin: 30px auto;
+    background: url("new_logo.png") center center no-repeat;
 }
 .loader {
     text-align: center;
     display: none;
-}
-.main {
-    width: 445px;
-    margin: 2.5em auto 1em auto;
 }
 .main span {
     line-height: 1em;
@@ -262,24 +257,19 @@ body.thanks_body .icons {
     text-align: left;
 }
 .tagline {
-    width: 374px;
-    height: 374px;
     position: relative;
-    border-radius: 20em;
-    padding: 20px;
-    margin: 0 auto 2em auto;
     font-family: "proxima_novalight";
     text-align: center;
-    background: rgba(64,64,65, 0.9);
+}
+body.thanks_body .tagline {
+    margin-bottom: 20px;
 }
 .thanks {
     position: absolute;
-    /*top: 40%;*/
     top: 200px;
     left: 50%;
 }
-.thanks span,
-.tagline h2 span {
+.block {
     display: block;
 }
 .thanks .bold,
@@ -293,15 +283,6 @@ body.thanks_body .icons {
 .thanks .bold,
 .thanks .line1 {
     color: #404041;
-}
-.circle {
-    width: 120px;
-    height: 120px;
-    position: absolute;
-    bottom: -3.7em;
-    left: 50%;
-    margin-left: -60px;
-    background: url("circleLaunchEmail.png") bottom center no-repeat;
 }
 .question {
     width: 280px;
@@ -318,11 +299,8 @@ body.thanks_body .icons {
     font-weight: normal;
     opacity: 0.99;
 }
-.tagline h2 {
-    margin-top: 2.5em;
-}
 .tagline h2 .bold {
-    font-size: 1.5em; /* 47px */
+    font-size: 1.15em; /* 36px */
     margin-bottom: 0.33em;
     font-weight: normal;
 }
@@ -333,21 +311,84 @@ body.thanks_body .icons {
 .tagline .line1,
 .tagline .line2 {
     margin-bottom: 1em;
-    font-size: 0.6em;
+    font-size: 0.75em;
 }
 .tagline .line2 {
     margin-bottom: 1.8em;
 }
 .tagline h3 {
-    font-size: 1.8em; /* 25px */
+    font-size: 1.7em; /* 24px */
 }
-.bold {
-    font-family: "proxima_nova_rgbold";
-}
-.clear {
-    clear: both !important;
-}
+.earth {
+    width: 1280px;
+    height: 1287px;
+    position: fixed;
+    top: 450px;
+    left: 50%;
+    background: url("imgGlobe.png") no-repeat;
+    -webkit-animation-name: rotate;
+    -webkit-animation-duration: 200s;
+    -webkit-animation-iteration-count: infinite;
 
+    -mo-animation-name: rotate;
+    -mo-animation-duration: 200s;
+    -mo-animation-iteration-count: infinite;
+
+    -ms-animation-name: rotate;
+    -ms-animation-duration: 200s;
+    -ms-animation-iteration-count: infinite;
+
+    -o-animation-name: rotate;
+    -o-animation-duration: 200s;
+    -o-animation-iteration-count: infinite;
+
+    animation-name: rotate;
+    animation-duration: 200s;
+    animation-iteration-count: infinite;
+
+    margin-left: -640px;
+}
+@-webkit-keyframes rotate {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+@-mo-keyframes rotate {
+    from {
+        -mo-transform: rotate(0deg);
+
+    }
+    to {
+        -mo-transform: rotate(360deg);
+   }
+}
+@-ms-keyframes rotate {
+    from {
+        -ms-transform: rotate(0deg);
+    }
+    to {
+        -ms-transform: rotate(360deg);
+    }
+}
+@-o-keyframes rotate {
+    from {
+        -o-transform: rotate(0deg);
+    }
+    to {
+        -o-transform: rotate(360deg);
+    }
+}
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
 /*--- Form Styles ---*/
 textarea,
 input,
@@ -364,16 +405,7 @@ div.mce_inline_error,
 .mc-field-group {
     width: 280px;
     position: relative;
-    margin: 40px auto 10px auto;
-}
-.mc-field-group .tip {
-    display: block;
-    width: 23px;
-    height: 10px;
-    margin: 0 auto;
-    position: relative;
-    z-index: 1;
-    background: transparent url("pointerSlice.png") center center no-repeat;
+    margin: 37px auto 10px auto;
 }
 #mce-EMAIL,
 #mce-error-response,
@@ -418,7 +450,7 @@ div.mce_inline_error {
     right: 0;
     top: 0;
     width: 48px;
-    height: 36px;
+    height: 16px;
     cursor: pointer;
     border: none;
     background: transparent url("icoLaunchEmail.png") center center no-repeat;
