@@ -479,6 +479,7 @@ div.mce_inline_error {
     -webkit-animation-fill-mode: forwards;  /* retain last keyframe */
     -moz-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
+    position: relative;
 }
 .icons a:last-child,
 .icons .last {
@@ -496,6 +497,7 @@ div.mce_inline_error {
         filter: alpha(opacity=100);
         opacity: 1;
         margin-top: 0;
+        z-index: 1;
     }
 }
 @-moz-keyframes login {
@@ -508,6 +510,7 @@ div.mce_inline_error {
         filter: alpha(opacity=100);
         opacity: 1;
         margin-top: 0;
+        z-index: 1;
     }
 }
 @-webkit-keyframes login {
@@ -520,6 +523,7 @@ div.mce_inline_error {
         filter: alpha(opacity=100);
         opacity: 1;
         margin-top: 0;
+        z-index: 1;
     }
 }
 @-ms-keyframes login {
@@ -534,6 +538,7 @@ div.mce_inline_error {
         filter: alpha(opacity=100);
         opacity: 1;
         margin-top: 0;
+        z-index: 1;
     }
 }
 @-o-keyframes login {
@@ -546,5 +551,6 @@ div.mce_inline_error {
         filter: alpha(opacity=100);
         opacity: 1;
         margin-top: 0;
+        z-index: 1;
     }
 }
