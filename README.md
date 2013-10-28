@@ -1,4 +1,4 @@
-newsletter
+newsletter!
 ==========
 This is the development branch of the newsletter (luanch) project of Onevio.org
 Please make sure to PULL all before committing anythign to make sure you have the latest version.
