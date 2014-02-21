@@ -1,11 +1,3 @@
-/*
-  =require twitter-bootstrap-static/bootstrap
-
-  Use Font Awesome icons (default)
-  To use Glyphicons sprites instead of Font Awesome, replace with "require twitter-bootstrap-static/sprites"
-  =require twitter-bootstrap-static/fontawesome
-  */
-
 /*#Fonts
 ================================================== */
 @font-face {
@@ -170,16 +162,159 @@
     font-style: normal;
 
 }
+@font-face {
+    font-family: 'droid_serifregular';
+    src: url('droidserif-webfont.eot');
+    src: url('droidserif-webfont.eot?#iefix') format('embedded-opentype'),
+    url('droidserif-webfont.woff') format('woff'),
+    url('droidserif-webfont.ttf') format('truetype'),
+    url('droidserif-webfont.svg#droid_serifregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'droid_serifbold';
+    src: url('droidserif-bold-webfont.eot');
+    src: url('droidserif-bold-webfont.eot?#iefix') format('embedded-opentype'),
+    url('droidserif-bold-webfont.woff') format('woff'),
+    url('droidserif-bold-webfont.ttf') format('truetype'),
+    url('droidserif-bold-webfont.svg#droid_serifbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'droid_serifbold_italic';
+    src: url('droidserif-bolditalic-webfont.eot');
+    src: url('droidserif-bolditalic-webfont.eot?#iefix') format('embedded-opentype'),
+    url('droidserif-bolditalic-webfont.woff') format('woff'),
+    url('droidserif-bolditalic-webfont.ttf') format('truetype'),
+    url('droidserif-bolditalic-webfont.svg#droid_serifbold_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'droid_serifitalic';
+    src: url('droidserif-italic-webfont.eot');
+    src: url('droidserif-italic-webfont.eot?#iefix') format('embedded-opentype'),
+    url('droidserif-italic-webfont.woff') format('woff'),
+    url('droidserif-italic-webfont.ttf') format('truetype'),
+    url('droidserif-italic-webfont.svg#droid_serifitalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'league_gothicCnRg';
+    src: url('leaguegothic-condensedregular-webfont.eot');
+    src: url('leaguegothic-condensedregular-webfont.eot?#iefix') format('embedded-opentype'),
+    url('leaguegothic-condensedregular-webfont.woff') format('woff'),
+    url('leaguegothic-condensedregular-webfont.ttf') format('truetype'),
+    url('leaguegothic-condensedregular-webfont.svg#league_gothicCnRg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'league_gothicitalic';
+    src: url('leaguegothic-italic-webfont.eot');
+    src: url('leaguegothic-italic-webfont.eot?#iefix') format('embedded-opentype'),
+    url('leaguegothic-italic-webfont.woff') format('woff'),
+    url('leaguegothic-italic-webfont.ttf') format('truetype'),
+    url('leaguegothic-italic-webfont.svg#league_gothicitalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'league_gothicregular';
+    src: url('leaguegothic-regular-webfont.eot');
+    src: url('leaguegothic-regular-webfont.eot?#iefix') format('embedded-opentype'),
+    url('leaguegothic-regular-webfont.woff') format('woff'),
+    url('leaguegothic-regular-webfont.ttf') format('truetype'),
+    url('leaguegothic-regular-webfont.svg#league_gothicregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'league_gothiccondensed_italic';
+    src: url('leaguegothic-condenseditalic-webfont.eot');
+    src: url('leaguegothic-condenseditalic-webfont.eot?#iefix') format('embedded-opentype'),
+    url('leaguegothic-condenseditalic-webfont.woff') format('woff'),
+    url('leaguegothic-condenseditalic-webfont.ttf') format('truetype'),
+    url('leaguegothic-condenseditalic-webfont.svg#league_gothiccondensed_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'thirsty_script_lightregular';
+    src: url('thirstyscriptlight-webfont.eot');
+    src: url('thirstyscriptlight-webfont.eot?#iefix') format('embedded-opentype'),
+    url('thirstyscriptlight-webfont.woff') format('woff'),
+    url('thirstyscriptlight-webfont.ttf') format('truetype'),
+    url('thirstyscriptlight-webfont.svg#thirsty_script_lightregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'thirsty_script_mediumregular';
+    src: url('thirstyscriptmedium-webfont.eot');
+    src: url('thirstyscriptmedium-webfont.eot?#iefix') format('embedded-opentype'),
+    url('thirstyscriptmedium-webfont.woff') format('woff'),
+    url('thirstyscriptmedium-webfont.ttf') format('truetype'),
+    url('thirstyscriptmedium-webfont.svg#thirsty_script_mediumregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'thirsty_script_regularregular';
+    src: url('thirstyscriptregular-webfont.eot');
+    src: url('thirstyscriptregular-webfont.eot?#iefix') format('embedded-opentype'),
+    url('thirstyscriptregular-webfont.woff') format('woff'),
+    url('thirstyscriptregular-webfont.ttf') format('truetype'),
+    url('thirstyscriptregular-webfont.svg#thirsty_script_regularregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'thirsty_script_blackregular';
+    src: url('thirstyscriptblack-webfont.eot');
+    src: url('thirstyscriptblack-webfont.eot?#iefix') format('embedded-opentype'),
+    url('thirstyscriptblack-webfont.woff') format('woff'),
+    url('thirstyscriptblack-webfont.ttf') format('truetype'),
+    url('thirstyscriptblack-webfont.svg#thirsty_script_blackregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'thirsty_script_boldregular';
+    src: url('thirstyscriptbold-webfont.eot');
+    src: url('thirstyscriptbold-webfont.eot?#iefix') format('embedded-opentype'),
+    url('thirstyscriptbold-webfont.woff') format('woff'),
+    url('thirstyscriptbold-webfont.ttf') format('truetype'),
+    url('thirstyscriptbold-webfont.svg#thirsty_script_boldregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'thirsty_script_extra_boldRg';
+    src: url('thirstyscriptextrabold-webfont.eot');
+    src: url('thirstyscriptextrabold-webfont.eot?#iefix') format('embedded-opentype'),
+    url('thirstyscriptextrabold-webfont.woff') format('woff'),
+    url('thirstyscriptextrabold-webfont.ttf') format('truetype'),
+    url('thirstyscriptextrabold-webfont.svg#thirsty_script_extra_boldRg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
 
 /*#Layout styles
 ================================================== */
 body {
     position: relative;
-    background: url("bg_sky.jpg") center center no-repeat fixed;
+    background: url("new_bg.jpg") center center no-repeat fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+}
+body, p {
+    font-family: "proxima_novalight";
 }
 #container {
     width: 667px;
@@ -285,111 +420,24 @@ body.thanks_body .tagline {
 .thanks .line1 {
     color: #404041;
 }
-.question {
-    width: 280px;
-    padding: 7px 10px;
-    position: absolute;
-    left: 0;
-    background: url("bg_question.png") center center no-repeat;
+.beta {
+    width: 121px;
+    height: 118px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("img_launch.png");
 }
-.question h3,
-.tagline h2,
-.tagline h3 {
-    color: white;
-    font-family: "proxima_novalight";
-    font-weight: normal;
-    opacity: 0.99;
+.family a {
+    display: block;
+    width: 40px;
+    height: 90px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("img_join.png");
 }
-.tagline h2 .bold {
-    font-size: 1.15em; /* 36px */
-    margin-bottom: 0.33em;
-    font-weight: normal;
-}
-.tagline .line1 {
-    margin-bottom: 0.5em;
-    line-height: 1.3em;
-}
-.tagline .line1,
-.tagline .line2 {
-    margin-bottom: 1em;
-    font-size: 0.75em;
-}
-.tagline .line2 {
-    margin-bottom: 1.8em;
-}
-.tagline h3 {
-    font-size: 1.7em; /* 24px */
-}
-.earth {
-    width: 1280px;
-    height: 1287px;
-    position: fixed;
-    top: 450px;
-    left: 50%;
-    background: url("imgGlobe.png") no-repeat;
-    -webkit-animation-name: rotate;
-    -webkit-animation-duration: 200s;
-    -webkit-animation-iteration-count: infinite;
 
-    -mo-animation-name: rotate;
-    -mo-animation-duration: 200s;
-    -mo-animation-iteration-count: infinite;
-
-    -ms-animation-name: rotate;
-    -ms-animation-duration: 200s;
-    -ms-animation-iteration-count: infinite;
-
-    -o-animation-name: rotate;
-    -o-animation-duration: 200s;
-    -o-animation-iteration-count: infinite;
-
-    animation-name: rotate;
-    animation-duration: 200s;
-    animation-iteration-count: infinite;
-
-    margin-left: -640px;
-}
-@-webkit-keyframes rotate {
-    from {
-        -webkit-transform: rotate(0deg);
-    }
-    to {
-        -webkit-transform: rotate(360deg);
-    }
-}
-@-mo-keyframes rotate {
-    from {
-        -mo-transform: rotate(0deg);
-
-    }
-    to {
-        -mo-transform: rotate(360deg);
-   }
-}
-@-ms-keyframes rotate {
-    from {
-        -ms-transform: rotate(0deg);
-    }
-    to {
-        -ms-transform: rotate(360deg);
-    }
-}
-@-o-keyframes rotate {
-    from {
-        -o-transform: rotate(0deg);
-    }
-    to {
-        -o-transform: rotate(360deg);
-    }
-}
-@keyframes rotate {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
 /*--- Form Styles ---*/
 textarea,
 input,
