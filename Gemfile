@@ -46,6 +46,7 @@ gem 'newrelic_rpm'
 # To use debugger
 gem 'debugger'
 
+gem 'rack-cache'
 gem 'arel', '~> 4.0.2'
 gem 'builder', '~> 3.1.4'
 gem 'mime-types', '~> 1.25.1'
