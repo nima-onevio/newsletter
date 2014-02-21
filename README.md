@@ -9,3 +9,5 @@ If you are pushing a branch using heroku make sure to follow :
 $ git push heroku development:master 
 
 Finally dont forget to create additional heroku remotes for staging, dev enviroments.
+
+https://www.codeship.io/projects/274bb200-7cab-0131-f722-32020ff1c937/status
