@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
+ruby '2.0.0'
 
-gem 'rails', '3.2.13'
+gem 'rails', '4.0.3'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -19,17 +20,9 @@ end
 gem 'memcachier'
 gem 'dalli'
 
-# Gems used only for assets and not required
-# in production environments by default.
-group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
-
-  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', :platforms => :ruby
-
-  gem 'uglifier', '>= 1.0.3'
-end
+gem 'sass-rails',   '~> 4.0.0'
+gem 'coffee-rails', '~> 4.0.0'
+gem 'uglifier', '>= 1.0.3'
 
 #mailchimp API
 gem "gibbon"
@@ -41,7 +34,6 @@ gem "twitter-bootstrap-rails"
 #new relic analytics
 gem 'newrelic_rpm'
 
-
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
@@ -52,4 +44,19 @@ gem 'newrelic_rpm'
 # gem 'capistrano'
 
 # To use debugger
-# gem 'debugger'
+gem 'debugger'
+
+gem 'arel', '~> 4.0.2'
+gem 'builder', '~> 3.1.4'
+gem 'mime-types', '~> 1.25.1'
+gem 'minitest-reporters'
+gem 'minitest', '~> 4.7.5'
+gem 'tilt', '~> 1.4.1'
+gem 'tzinfo', '~> 0.3.38'
+
+#Rails 3 support
+gem 'protected_attributes'
+gem 'rails-observers'
+gem 'actionpack-page_caching'
+gem 'actionpack-action_caching'
+gem 'activerecord-deprecated_finders'
