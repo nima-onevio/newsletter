@@ -307,12 +307,14 @@
 ================================================== */
 body {
     position: relative;
-    background: url("new_bg.jpg") center center no-repeat fixed;
+    background: url("new_bg.jpg") center center no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    overflow-x: hidden;
 }
+
 body, p {
     font-family: "proxima_novalight";
 }
@@ -332,59 +334,196 @@ body, p {
     float: none;
 }
 .bold {
-    font-family: "proxima_nova_rgbold";
+    font-weight: bold;
 }
 .clear {
     clear: both !important;
 }
 .icons {
+    margin-top: 6px;
+    margin-bottom: 0;
+}
+.icons-container {
+    width: 242px; /*desktop only*/
+}
+.icons li {
+    padding: 0;
+    margin-right: 4%;
+    vertical-align: top;
     text-align: center;
-    width: 260px;
-    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.11);
+}
+.icons li:hover {
+    background: rgba(255, 255, 255, 0.18);
+}
+.icons li,
+.icons li a {
+    width: 40px;
+    height: 40px;
+}
+.icons li a:hover {
+    background-color: rgba(0, 0, 0, 0.5);
 }
 .icon,
 .icon:hover,
 .icon:focus,
 .icon:visited {
-    width: 38px;
-    height: 38px;
-    display: inline-block;
     margin-right: 2em;
-    outline: none;
-    text-indent: -9999;
-    color: transparent;
     border: 0;
-    background: transparent url("socialmedia-sprite.png") top left no-repeat;
+    outline: none;
+    color: transparent;
+    text-indent: -9999;
 }
-.icons .google {
-    background-position: 1px -81px;
+
+.icons .facebook,
+.icons .facebook:hover {
+    background: url("logo_facebook.png") center no-repeat;
 }
-.icons .facebook {
-    background-position: 1px -41px;
+.icons .pinterest,
+.icons .pinterest:hover {
+    background: url("logo_pinterest.png") center no-repeat;
 }
-.icons .twitter {
-    background-position: 1px -121px;
+.icons .instagram,
+.icons .instagram:hover {
+    background: url("logo_instagram.png") center no-repeat;
 }
-.icons .email {
-    background-position: 1px top;
+.icons .twitter,
+.icons .twitter:hover {
+    background: url("logo_twitter.png") center no-repeat;
 }
 .launchLogo {
-    width: 120px;
-    height: 135px;
-    margin: 30px auto;
-    background: url("new_logo.png") center center no-repeat;
+    width: 32px;
+    height: 37px;
+    margin: 54px auto;
+    background-size: contain;
+    background: url("logo_onevio.png") center center no-repeat;
 }
 .loader {
     text-align: center;
     display: none;
 }
+.main {
+    margin-bottom: 100px;
+}
 .main span {
     line-height: 1em;
+}
+.main .info {
+    text-align: center;
+}
+.main .info p {
+    margin-bottom: 100px;
+    font-size: 1em;
+    color: white;
+    text-align: center;
+    font-family: "droid_serifregular";
+}
+.main .stats p {
+    margin-bottom: inherit;
+    font-family: "montserratregular";
+}
+.main .stats span {
+    display: block;
+}
+.main .stats .counter {
+    margin-bottom: 0.3em;
+    font-size: 1.15em; /*16px*/
+}
+.main .stats .description {
+    font-size: 0.85em; /*12px*/
+    text-transform: uppercase;
+}
+.main .stats hr {
+    margin: 20px auto;
+    width: 198px;
+    border: 0;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.5);
+}
+.main .info h1 {
+    margin-top: 250px;
+    margin-bottom: 120px;
+    color: white;
+    font-size: 1.5em; /*21px*/
+    font-family: "thirsty_script_mediumregular";
 }
 .main h2 {
     color: white;
     font-weight: normal;
     font-family: "proxima_novalight";
+}
+.circle.badge {
+    display: block;
+    width: 121px;
+    height: 120px;
+    background: url("circle_badge.png") center no-repeat;
+}
+.page .col-split .circle.badge {
+    margin: 0 auto 40px auto;
+}
+.page .col-split {
+    text-align: center;
+    border-right: 1px solid rgba(255, 255, 255, 0.8);
+}
+.page .col-split.last {
+    border-right: 0;
+}
+.page .col-split p {
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    opacity: 0.9;
+    font-family: "proxima_novalight";
+}
+.page .col-split h2 {
+    margin-bottom: 25px;
+    font-size: 1.5em; /*21px*/
+    font-family: "league_gothicregular";
+}
+.footer .links {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.footer .join {
+    height: 100px;
+    padding-top: 29px;
+    background-color: rgba(0, 0, 0, 0.65);
+}
+.footer .join h3 {
+    color: white;
+    font-size: 1.5em; /*21px*/
+    text-align: right;
+    margin-top: 15px;
+    font-family: "thirsty_script_lightregular";
+}
+.footer .left {
+    padding-left: 0;
+    text-align: left;
+}
+.footer .left a {
+    padding-left: 15px;
+}
+.footer .right a {
+    padding-right: 15px;
+}
+.footer .right {
+    padding-right: 0;
+    text-align: right;
+}
+.footer a {
+    display: block;
+    color: white;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    font-size: 1.5em; /*21px*/
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "league_gothicregular";
+}
+.footer a:hover,
+.footer a.active {
+    background: #8BCFC3;
 }
 .center {
     position: relative;
@@ -421,184 +560,78 @@ body.thanks_body .tagline {
     color: #404041;
 }
 .beta {
+    position: absolute;
+    left: 0;
     width: 121px;
     height: 118px;
+    margin-top: 45px;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     background-image: url("img_launch.png");
 }
 .family a {
-    display: block;
-    width: 40px;
-    height: 90px;
-    background-size: contain;
+    position: absolute;
+    right: 0;
+    width: 60px;
+    height: 150px;
+    background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: 0 -34px;
     background-image: url("img_join.png");
 }
 
 /*--- Form Styles ---*/
-textarea,
-input,
-div.mce_inline_error,
-#mce-error-response,
-#mce-success-response {
-    outline: none;
-    font-size: 1em;
-    /*color: rgb(65,64,65); */
-    color: rgb(153,153,153);
-    font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande";
+#mc_embed_signup {
+    padding-left: 0;
 }
-.mce_inline_error { display: none; }
-.mc-field-group {
-    width: 280px;
+#mc-embedded-subscribe-form {
     position: relative;
-    margin: 37px auto 10px auto;
 }
-#mce-EMAIL,
-#mce-error-response,
-#mce-success-response,
-div.mce_inline_error {
-    border: 0;
-    border-radius: 3px;
-    font-size: 1em;
-    background-color: white;
+#mc-embedded-subscribe-form .email:focus {
+    outline: none;
 }
-#mce-EMAIL {
-    width: 260px;
-    height: 24px;
-    padding: 10px;
-}
-.mce_inline_error {
-    width: 260px;
-    height: 20px;
-    padding: 10px;
-}
-#mce-error-response,
-#mce-success-response {
-    margin: 0 auto;
-    padding: 10px;
-}
-#mce-error-response,
-div.mce_inline_error {
-    background: white url("icoLaunchInvalid.png") 250px center no-repeat;
-}
-#mce-error-response {
-    background-position: 420px center;
-    padding-right: 30px;
+#mc-embedded-subscribe-form .email {
+    width: 293px; /*desktop only*/
+    height: 40px;
     padding-left: 20px;
+    padding-right: 71px;
+    border: 0;
+    border-radius: 6px;
+    color: white;
+    font-family: "montserratregular";
+    background: rgba(255, 255, 255, 0.11);
+    /*font-size: 0.85em; *//*12px*/
 }
-#mce-success-response {
-    background: white url("icoLaunchCheck.png") 250px center no-repeat;
-    padding-right: 26px;
-    padding-left: 15px;
+#mc-embedded-subscribe-form .btn {
+    position: absolute;  /*desktop only style*/
+    right: -26px;
+    top: 5px;
+    background: #8BCFC3;
+    border: 0;
+    color: white;
+    width: 60px;
+    height: 30px;
 }
-#mc-embedded-subscribe {
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 48px;
-    height: 16px;
-    cursor: pointer;
-    border: none;
-    background: transparent url("icoLaunchEmail.png") center center no-repeat;
-    margin-top: 15px;
-    outline: none;
+#mc-embedded-subscribe-form .btn:hover {
+    background: #74AA9F;
 }
-#mc-embedded-subscribe:focus {
-    outline: none;
+#mc-embedded-subscribe-form .help-block {
+    width: 300px; /*desktop only*/
+    margin-left: 10px;
+    margin-bottom: 0;
+    color: #E5E9EA;
+    opacity: 0.5;
+    font-size: 0.7em; /*10px*/
+    font-family: "proxima_nova_rgregular";
 }
-.cssanimations #mc-embedded-subscribe-form,
-.cssanimations .icons {
-    opacity: 0;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    -webkit-animation: login 2s ease-out;
-    -moz-animation: login 2s ease-out;
-    -ms-animation: login 2s ease-out;
-    -o-animation: login 2s ease-out;
-    animation: login 2s ease-out;
-    animation-delay: 1s;
-    -webkit-animation-delay: 1s;
-    -mo-animation-delay: 1;
-    -ms-animation-delay: 1s;
-    -o-animation-delay: 1s;
-    -webkit-animation-fill-mode: forwards;  /* retain last keyframe */
-    -moz-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-    position: relative;
+
+@media(min-width:1200px){
+
 }
-.icons a:last-child,
-.icons .last {
-    margin-right: 0;
+@media(min-width:768px){
+
 }
-@keyframes login {
-    0% {
-        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-        filter: alpha(opacity=0);
-        opacity: 0;
-        margin-top: 75px;
-    }
-    100% {
-        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-        filter: alpha(opacity=100);
-        opacity: 1;
-        margin-top: 0;
-        z-index: 1;
-    }
-}
-@-moz-keyframes login {
-    0% {
-        filter: alpha(opacity=0);
-        opacity: 0;
-        margin-top: 75px;
-    }
-    100% {
-        filter: alpha(opacity=100);
-        opacity: 1;
-        margin-top: 0;
-        z-index: 1;
-    }
-}
-@-webkit-keyframes login {
-    0% {
-        filter: alpha(opacity=0);
-        opacity: 0;
-        margin-top: 75px;
-    }
-    100% {
-        filter: alpha(opacity=100);
-        opacity: 1;
-        margin-top: 0;
-        z-index: 1;
-    }
-}
-@-ms-keyframes login {
-    0% {
-        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-        filter: alpha(opacity=0);
-        opacity: 0;
-        margin-top: 75px;
-    }
-    100% {
-        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-        filter: alpha(opacity=100);
-        opacity: 1;
-        margin-top: 0;
-        z-index: 1;
-    }
-}
-@-o-keyframes login {
-    0% {
-        filter: alpha(opacity=0);
-        opacity: 0;
-        margin-top: 75px;
-    }
-    100% {
-        filter: alpha(opacity=100);
-        opacity: 1;
-        margin-top: 0;
-        z-index: 1;
-    }
+@media(min-width:992px){
+
 }
