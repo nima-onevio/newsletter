@@ -605,7 +605,7 @@ body.thanks_body .tagline {
 }
 #mc-embedded-subscribe-form .btn {
     position: absolute;  /*desktop only style*/
-    right: -26px;
+    right: 13px;
     top: 5px;
     background: #8BCFC3;
     border: 0;
