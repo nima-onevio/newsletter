@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.0.0'
+ruby '2.1.0'
 
 gem 'rails', '4.0.3'
 
@@ -43,8 +43,8 @@ gem 'newrelic_rpm'
 # Deploy with Capistrano
 # gem 'capistrano'
 
-# To use debugger
-gem 'debugger'
+# To use debugger  1.6.5
+gem 'debugger', '~> 1.6.5'
 
 gem 'rack-cache'
 gem 'arel', '~> 4.0.2'

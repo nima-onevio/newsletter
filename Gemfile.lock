@@ -152,7 +152,7 @@ DEPENDENCIES
   builder (~> 3.1.4)
   coffee-rails (~> 4.0.0)
   dalli
-  debugger
+  debugger (~> 1.6.5)
   gibbon
   jquery-rails
   memcachier
