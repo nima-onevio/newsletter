@@ -3,6 +3,13 @@
 var onevio       = onevio || {};
 onevio.email     = onevio.email || {};
 onevio.loader    = onevio.loader || {};
+onevio.modal     = onevio.modal || {};
+
+onevio.modal = {
+    setup: function () {
+        $(".cboxInline").colorbox({inline:true, width:"50%"});
+    }
+};
 
 onevio.loader = {
     setup: function (options) {
@@ -191,4 +198,5 @@ onevio.email = {
 
 $(function () {
     onevio.email.setup();
+    onevio.modal.setup();
 });

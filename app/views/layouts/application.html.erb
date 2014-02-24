@@ -55,8 +55,8 @@
 <div class="row footer">
 
   <div class="row links">
-      <span class="col-md-6 right"><a href="#" class="active">about onevio</a></span>
-      <span class="col-md-6 left"><a href="#">how it works</a></span>
+      <div class="col-md-6 right"><a href="#" class="active">about onevio</a></div>
+      <div class="col-md-6 left"><a href="#">how it works</a></div>
   </div>
 
   <div class="row join">
@@ -99,12 +99,32 @@
 </div>
 <!-- ./footer-->
 
+<!-- Modal -->
+<div id="launch">
+  <%= image_tag "logo_overlay.png" %>
+  <h3>Mailing</h3>
+  <p>Spam-free goodness.</p>
+  <form action="http://onevio.us7.list-manage.com/subscribe/post?u=d89bc392d783cc3a21598fe4a&amp;id=82f2bd1a58" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" role="form" target="_blank" novalidate>
+    <div class="mc-field-group form-group">
+      <input type="email" value="" name="EMAIL" class="form-contro required email" id="exampleInputEmail2" placeholder="Please enter your email" id="mce-EMAIL">
+
+      <div class="mce_inline_error" style=""></div>
+    </div>
+    <p class="help-block">&copy; Copyright 2014. Onevio inc. All rights reserved. Privacy Policy.</p>
+    <button type="submit" name="subscribe" id="mc-embedded-subscribe" class="btn btn-default">Send me ocassional email</button>
+
+    <div id="mce-responses" class="clear">
+      <div class="response" id="mce-success-response" style="display:none"></div>
+      <div class="response" id="mce-error-response" style="display:none"></div>
+    </div>
+    <div class="loader"><%= image_tag "ajax-loader.gif" %></div>
+  </form>
+</div>
+
 
 <!-- Javascripts
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<%= javascript_include_tag "//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" %>
-<%= javascript_include_tag "modernizer" %>
-<%= javascript_include_tag "script" %>
+<%= javascript_include_tag "application" %>
 </body>
 </html>

@@ -312,7 +312,6 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    overflow-x: hidden;
 }
 
 body, p {
@@ -398,14 +397,18 @@ body, p {
     background-size: contain;
     background: url("logo_onevio.png") center center no-repeat;
 }
-.greenBtn {
+.greenBtn,
+.greenBtn:focus,
+.greenBtn:visited {
     display: block;
     margin-top: 50px;
     width: 100%;
     height: 30px;
     line-height: 30px;
     color: white;
+    outline: none;
     text-align: center;
+    text-decoration: none;
     background-color: rgba(140, 208, 196, 1);
     font-family: "montserratregular";
 }
@@ -533,6 +536,10 @@ body, p {
     margin-bottom: 25px;
     font-size: 1.5em; /*21px*/
     font-family: "league_gothicregular";
+}
+body.modal-open .footer,
+.footer {
+    width: 100%;
 }
 .footer .links {
     background-color: rgba(0, 0, 0, 0.3);
@@ -686,6 +693,44 @@ body.thanks_body .tagline {
 .unite {
     margin-bottom: 65px;
     text-align: center;
+}
+
+#launch {
+    /*display: none;*/
+    padding: 20px;
+    padding-top: 48px;
+
+}
+#launch img {
+    text-align: center;
+    margin-bottom: 20px;
+}
+#launch h3 {
+    color: #4D4D4D;
+    text-transform: uppercase;
+    font-family: "league_gothicregular";
+}
+#launch p {
+    margin-top: 40px;
+    margin-bottom: 16px;
+    color: #B2B2B2;
+    font-family: "droid_serifregular";
+}
+#launch .email {
+    height: 40px;
+    color: #919191;
+    border-radius: 0;
+    background: transparent;
+    border: 1px solid #919191;
+    font-family: "proxima_novalight";
+}
+#launch #mc-embedded-subscribe {
+    height: 40px;
+    line-height: 40px;
+    color: white;
+    text-align: center;
+    background: #8CD0C4;
+    font-family: "proxima_novasemibold";
 }
 
 @media(min-width:1200px) {
