@@ -45,7 +45,7 @@ gem 'newrelic_rpm'
 
 # To use debugger  1.6.5
 gem 'debugger', '~> 1.6.5'
-
+gem 'rails_12factor'
 gem 'rack-cache'
 gem 'arel', '~> 4.0.2'
 gem 'builder', '~> 3.1.4'
