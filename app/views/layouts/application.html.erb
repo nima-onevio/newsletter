@@ -37,72 +37,74 @@
   <%= favicon_link_tag 'favicon.ico', :rel => 'icon' %>
   <%= render :partial => 'layouts/ga' %>
 </head>
-<body  <%= "class=#{@body_class}" if @body_class %>>
+<body <%= "class=#{@body_class}" if @body_class %>>
+<div class="container relative">
+  <div class="row">
+    <div class="beta"></div>
+    <div class="family"><a href="#"></a></div>
+  </div>
+</div>
 
-    <div class="row">
-      <div class="col-md-6 col-md-offset-3 clearfix">
-        <div class="beta"></div>
-        <div class="family"><a href="#"></a></div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-6 col-md-offset-3 page">
-        <%= yield %>
-      </div>
-    </div>
-    <!--/row-->
-    <div class="row footer">
-      <div class="row links">
-          <span class="col-md-6 right">
-             <a href="#">about onevio</a>
-          </span>
-          <span class="col-md-6 left">
-            <a href="#" class="active">how it works</a>
-          </span>
-      </div>
+<div class="container">
+  <div class="row">
+    <%= yield %>
+  </div>
+  <!--/row-->
+</div>
 
-      <div class="row join">
-        <div class="col-md-6 col-md-offset-3">
-          <div class="col-md-4">
-            <h3>Join the family</h3>
-          </div>
-          <div class="col-md-4 icons-container">
-            <ul class="list-inline icons">
-              <li><a href="http://facebook.com/onevio/" target="_blank" title="Facebook" class="icon facebook"></a></li>
-              <li><a href="http://facebook.com/onevio/" target="_blank" title="Pinterest" class="icon pinterest"></a></li>
-              <li><a href="http://facebook.com/onevio/" target="_blank" title="Instagram" class="icon instagram"></a></li>
-              <li><a href="http://twitter.com/tweetonevio" target="_blank" title="Twitter" class="icon twitter"></a></li>
-            </ul>
-          </div>
-          <div class="col-md-4" id="mc_embed_signup">
-            <form action="http://onevio.us7.list-manage.com/subscribe/post?u=d89bc392d783cc3a21598fe4a&amp;id=82f2bd1a58" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="form-inline validate" role="form" target="_blank" novalidate>
-              <div class="mc-field-group form-group">
-                <input type="email" value="" name="EMAIL" class="form-contro required email" id="exampleInputEmail2" placeholder="Please enter your email" id="mce-EMAIL">
+<div class="row footer">
 
-                <div class="mce_inline_error" style=""></div>
-              </div>
-              <p class="help-block">&copy; Copyright 2014. Onevio inc. All rights reserved. Privacy Policy.</p>
-              <button type="submit" name="subscribe" id="mc-embedded-subscribe" class="btn btn-default">Go</button>
+  <div class="row links">
+      <span class="col-md-6 right"><a href="#" class="active">about onevio</a></span>
+      <span class="col-md-6 left"><a href="#">how it works</a></span>
+  </div>
 
-              <div id="mce-responses" class="clear">
-                <div class="response" id="mce-success-response" style="display:none"></div>
-                <div class="response" id="mce-error-response" style="display:none"></div>
-              </div>
-              <div class="loader"><%= image_tag "ajax-loader.gif" %></div>
-            </form>
-          </div>
-          <!-- ./#mc_embed_signup -->
+  <div class="row join">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h3>Join the family</h3>
         </div>
-      </div>
-      <!-- ./join -->
-    </div>
-    <!-- ./footer-->
+        <div class="col-md-4">
+          <ul class="list-inline icons">
+            <li><a href="http://facebook.com/onevio/" target="_blank" title="Facebook" class="icon facebook"></a></li>
+            <li><a href="http://facebook.com/onevio/" target="_blank" title="Pinterest" class="icon pinterest"></a></li>
+            <li><a href="http://facebook.com/onevio/" target="_blank" title="Instagram" class="icon instagram"></a></li>
+            <li><a href="http://twitter.com/tweetonevio" target="_blank" title="Twitter" class="icon twitter"></a></li>
+          </ul>
+        </div>
+        <div class="col-md-4" id="mc_embed_signup">
+          <form action="http://onevio.us7.list-manage.com/subscribe/post?u=d89bc392d783cc3a21598fe4a&amp;id=82f2bd1a58" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="form-inline validate" role="form" target="_blank" novalidate>
+            <div class="mc-field-group form-group">
+              <input type="email" value="" name="EMAIL" class="form-contro required email" id="exampleInputEmail2" placeholder="Please enter your email" id="mce-EMAIL">
 
-    <!-- Javascripts
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <%= javascript_include_tag "//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" %>
-    <%= javascript_include_tag "modernizer" %>
-    <%= javascript_include_tag "script" %>
+              <div class="mce_inline_error" style=""></div>
+            </div>
+            <p class="help-block">&copy; Copyright 2014. Onevio inc. All rights reserved. Privacy Policy.</p>
+            <button type="submit" name="subscribe" id="mc-embedded-subscribe" class="btn btn-default">Go</button>
+
+            <div id="mce-responses" class="clear">
+              <div class="response" id="mce-success-response" style="display:none"></div>
+              <div class="response" id="mce-error-response" style="display:none"></div>
+            </div>
+            <div class="loader"><%= image_tag "ajax-loader.gif" %></div>
+          </form>
+        </div>
+        <!-- ./#mc_embed_signup -->
+      </div>
+    </div>
+  </div>
+  <!-- ./join -->
+
+</div>
+<!-- ./footer-->
+
+
+<!-- Javascripts
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<%= javascript_include_tag "//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" %>
+<%= javascript_include_tag "modernizer" %>
+<%= javascript_include_tag "script" %>
 </body>
 </html>

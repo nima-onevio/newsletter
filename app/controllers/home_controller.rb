@@ -4,6 +4,10 @@ class HomeController < ApplicationController
     @body_class = "main_body"
   end
 
+  def works
+    @body_class = "main_works"
+  end
+
   def thanks
     @body_class = "thanks_body"
   end
