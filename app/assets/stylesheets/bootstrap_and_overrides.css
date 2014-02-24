@@ -696,7 +696,7 @@ body.thanks_body .tagline {
 }
 
 #launch {
-    /*display: none;*/
+    display: none;
     padding: 20px;
     padding-top: 48px;
 
