@@ -1,22 +1,23 @@
 "use strict";
 
-var onevio        = onevio || {};
-onevio.email      = onevio.email || {};
-onevio.loader     = onevio.loader || {};
-onevio.modal      = onevio.modal || {};
+var onevio = onevio || {};
+onevio.email = onevio.email || {};
+onevio.loader = onevio.loader || {};
+onevio.modal = onevio.modal || {};
 onevio.navigation = onevio.navigation || {};
+onevio.$page = $("html");
 
 onevio.navgigation = {
     setup: function (options) {
         var t = this,
             defaults = {
                 containerClass: ".links",
-                activeClass: "active",
-                dataAttr: 'page',
-                worksPage: "#works",
-                homePage: "#home"
+                activeClass:    "active",
+                dataAttr:       'page',
+                worksPage:      "#works",
+                homePage:       "#home"
             };
-        t.o          = $.extend(options, defaults);
+        t.o = $.extend(options, defaults);
         t.$container = $(t.o.containerClass);
 
         if (!t.$container.length) {
@@ -30,13 +31,13 @@ onevio.navgigation = {
 
     initVars: function () {
         var t = this;
-        t.$page      = $("body");
-        t.$links     = t.$container.find('a');
-        t.$homePage  = $(t.o.homePage);
+        t.$page = onevio.$page;
+        t.$links = t.$container.find('a');
+        t.$homePage = $(t.o.homePage);
         t.$worksPage = $(t.o.worksPage);
     },
 
-    setPageHeights: function() {
+    setPageHeights: function () {
         var t = this,
             height = $(window).height() - t.$container.height(),
             row_heights = 0,
@@ -47,18 +48,17 @@ onevio.navgigation = {
         t.$homePage.height(height);
 //        t.$page.scrollTop(t.$homePage.offset().top)
 
-
         $rows = t.$homePage.find("> row");
         $rows.each(function (i, el) {
-           row_heights += $(e).height();
+            row_heights += $(e).height();
         });
-         padding = ((height - row_heights) / 8);
+        padding = ((height - row_heights) / 8);
         t.$homePage.css('padding-top', padding + 'px');
 
         row_heights = 0;
         $rows = t.$homePage.find("> row");
         $rows.each(function (i, el) {
-            row_heights += $(e).height();
+            row_heights += $(el).height();
         });
         padding = ((height - row_heights) / 8);
         t.$worksPage.css('padding-top', padding + 'px');
@@ -70,33 +70,26 @@ onevio.navgigation = {
         var t = this,
             $t,
             data;
+
         t.$links.on({
-           click: function(e) {
-               e.preventDefault();
-               $t = $(this);
-               data = $t.data(t.o.dataAttr);
+            click: function (e) {
+                e.preventDefault();
+                $t = $(this);
+                data = $t.data(t.o.dataAttr);
 
-               t.$links.removeClass(t.o.activeClass);
-               $t.addClass(t.o.activeClass);
+                t.$links.removeClass(t.o.activeClass);
+                $t.addClass(t.o.activeClass);
 
-               if (data === "home") {
-                   t.$worksPage.stop().fadeOut(500, function() {
-
-                       t.$homePage.fadeIn(500, function () {
-                           t.$page.animate({ scrollTop: t.$homePage.offset().top }, 1000);
-                       });
-
-                   });
-               } else {
-                   t.$homePage.stop().fadeOut(500, function() {
-
-                       t.$worksPage.fadeIn(500, function () {
-                           t.$page.animate({ scrollTop: t.$worksPage.offset().top }, 1000);
-                       });
-                   });
-               }
-
-           }
+                if (data === "home") {
+                    t.$worksPage.stop().fadeOut(500, function () {
+                        t.$homePage.fadeIn();
+                    });
+                } else {
+                    t.$homePage.stop().fadeOut(500, function () {
+                        t.$worksPage.fadeIn();
+                    });
+                }
+            }
         });
     },
 
@@ -113,7 +106,7 @@ onevio.navgigation = {
 
 onevio.modal = {
     setup: function () {
-        $(".cboxInline").colorbox({inline:true, width:"362px" });
+        $(".cboxInline").colorbox({inline: true, width: "362px" });
     }
 };
 
@@ -123,12 +116,15 @@ onevio.loader = {
             defaults = {
                 containerClass: ".loader"
             };
-        t.o          = $.extend(options, defaults);
+        t.o = $.extend(options, defaults);
         t.$container = $(t.o.containerClass);
 
         if (!t.$container.length) {
             console.log("unable to find loader container");
             return false;
+        }
+        if (onevio.$page.hasClass("cssanimations") && onevio.$page.hasClass("csstransitions")) {
+            t.$container.html('&there4;');
         }
     },
 
@@ -162,15 +158,18 @@ onevio.email = {
     initVars: function () {
         var t = this;
 
-        t.$form     = $("#mc-embedded-subscribe-form");
-        t.$error    = $(".mce_inline_error");
-        t.$lError   = $("#mce-error-response");
-        t.$success  = $("#mce-success-response");
-        t.$body     = $("body");
-        t.$email    = t.$form.find("#mce-EMAIL");
-        t.valid     = false;
+        t.$form = $("form[name='mc-embedded-subscribe-form']");
+        t.$error = $(".mce_inline_error");
+        t.$errorMsg = t.$error.find(".err");
+        t.$lError = $(".mce-error-response");
+        t.$success = $(".mce-success-response");
+        t.$successMsg = t.$success.find('.successMsg');
+        t.$body = $("body");
+        t.$email = t.$form.find(".mce-EMAIL");
+        t.valid = false;
         t.emailData = '';
-        t.linkData  = '';
+        t.linkData = '';
+        t.$result = $(".result");
     },
 
     bindEvents: function () {
@@ -178,9 +177,9 @@ onevio.email = {
 
         //bind the event
         t.$body.on('click', ".resendMail", function (e) {
-            var $t        = $(this),
+            var $t = $(this),
                 emailData = {email: $t.data("email")},
-                linkData  = $t.data("link");
+                linkData = $t.data("link");
 
             e.preventDefault();
             e.stopPropagation();
@@ -198,8 +197,18 @@ onevio.email = {
 
         });
 
+        t.$result.on({
+            click: function (e) {
+                e.preventDefault();
+                $(this).fadeOut();
+            }
+        });
+
         t.$form.on({
             submit: function (e) {
+                var $form  = $(this);
+                var $email = $form.find(".mce-EMAIL");
+
                 e.stopImmediatePropagation();
                 e.preventDefault();
                 e.stopPropagation();
@@ -207,12 +216,15 @@ onevio.email = {
                 t.updateAnimated();
                 t.hideAll();
 
+
                 $(":animated").promise().done(function () {
-                    onevio.loader.show();
-                    $(":animated").promise().done(function () {
-                        if (t.validateEmail(t.$email) === true) {
-                            t.performAjax("/subscribe", t.$form.serialize());
-                        }
+                    t.$result.stop().fadeIn(500, function () {
+                        onevio.loader.show();
+                        $(":animated").promise().done(function () {
+                            if (t.validateEmail($email) === true) {
+                                t.performAjax("/subscribe", $form.serialize());
+                            }
+                        });
                     });
 
                 });
@@ -221,10 +233,10 @@ onevio.email = {
     },
 
     validateEmail: function ($email) {
-        var t     = this,
+        var t = this,
             email = $.trim($email.val()),
             valid = false,
-            re    = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
         if (email === '') {
             t.displayMessage(0, "Invalid E-mail");
@@ -241,13 +253,13 @@ onevio.email = {
         t.hideAll();
 
         $.ajax({
-            url: ajaxUrl,
-            type: "POST",
+            url:      ajaxUrl,
+            type:     "POST",
             dataType: 'json',
-            data: theData
+            data:     theData
         }).done(function (resp) {
-            t.displayMessage(resp.status, resp.message);
-        });
+                t.displayMessage(resp.status, resp.message);
+            });
     },
 
     displayMessage: function (status, message) {
@@ -256,35 +268,38 @@ onevio.email = {
         t.updateAnimated();
 
         switch (status) {
-        case 0:
-            t.$animated.promise().done(function () {
-                onevio.loader.hide();
-                $(":animated").promise().done(function () {
-                    t.$error.html(message).stop().fadeIn();
+            case 0:
+                t.$animated.promise().done(function () {
+                    onevio.loader.hide();
+                    $(":animated").promise().done(function () {
+                        t.$errorMsg.html(message);
+                        t.$error.stop().fadeIn();
+                    });
+
                 });
+                break;
 
-            });
-            break;
+            case 1:
+                t.$animated.promise().done(function () {
+                    onevio.loader.hide();
+                    $(":animated").promise().done(function () {
+                        t.$successMsg.html(message);
+                        t.$success.stop().fadeIn();
+                    });
 
-        case 1:
-            t.$animated.promise().done(function () {
-                onevio.loader.hide();
-                $(":animated").promise().done(function () {
-                    t.$success.html(message).stop().fadeIn();
                 });
+                break;
 
-            });
-            break;
+            case 2:
+                t.$animated.promise().done(function () {
+                    onevio.loader.hide();
+                    $(":animated").promise().done(function () {
+                        t.$errorMsg.html(message);
+                        t.$error.stop().fadeIn();
+                    });
 
-        case 2:
-            t.$animated.promise().done(function () {
-                onevio.loader.hide();
-                $(":animated").promise().done(function () {
-                    t.$lError.html(message).stop().fadeIn();
                 });
-
-            });
-            break;
+                break;
         }
     },
 
