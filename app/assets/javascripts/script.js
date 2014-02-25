@@ -1,13 +1,119 @@
 "use strict";
 
-var onevio       = onevio || {};
-onevio.email     = onevio.email || {};
-onevio.loader    = onevio.loader || {};
-onevio.modal     = onevio.modal || {};
+var onevio        = onevio || {};
+onevio.email      = onevio.email || {};
+onevio.loader     = onevio.loader || {};
+onevio.modal      = onevio.modal || {};
+onevio.navigation = onevio.navigation || {};
+
+onevio.navgigation = {
+    setup: function (options) {
+        var t = this,
+            defaults = {
+                containerClass: ".links",
+                activeClass: "active",
+                dataAttr: 'page',
+                worksPage: "#works",
+                homePage: "#home"
+            };
+        t.o          = $.extend(options, defaults);
+        t.$container = $(t.o.containerClass);
+
+        if (!t.$container.length) {
+            console.log("unable to find loader container");
+            return false;
+        }
+        t.initVars();
+        t.setPageHeights();
+        t.bindEvents();
+    },
+
+    initVars: function () {
+        var t = this;
+        t.$page      = $("body");
+        t.$links     = t.$container.find('a');
+        t.$homePage  = $(t.o.homePage);
+        t.$worksPage = $(t.o.worksPage);
+    },
+
+    setPageHeights: function() {
+        var t = this,
+            height = $(window).height() - t.$container.height(),
+            row_heights = 0,
+            padding,
+            $rows;
+
+        t.$worksPage.height(height);
+        t.$homePage.height(height);
+//        t.$page.scrollTop(t.$homePage.offset().top)
+
+
+        $rows = t.$homePage.find("> row");
+        $rows.each(function (i, el) {
+           row_heights += $(e).height();
+        });
+         padding = ((height - row_heights) / 8);
+        t.$homePage.css('padding-top', padding + 'px');
+
+        row_heights = 0;
+        $rows = t.$homePage.find("> row");
+        $rows.each(function (i, el) {
+            row_heights += $(e).height();
+        });
+        padding = ((height - row_heights) / 8);
+        t.$worksPage.css('padding-top', padding + 'px');
+
+        t.$page.animate({ scrollTop: t.$homePage.offset().top }, 1000);
+    },
+
+    bindEvents: function () {
+        var t = this,
+            $t,
+            data;
+        t.$links.on({
+           click: function(e) {
+               e.preventDefault();
+               $t = $(this);
+               data = $t.data(t.o.dataAttr);
+
+               t.$links.removeClass(t.o.activeClass);
+               $t.addClass(t.o.activeClass);
+
+               if (data === "home") {
+                   t.$worksPage.stop().fadeOut(500, function() {
+
+                       t.$homePage.fadeIn(500, function () {
+                           t.$page.animate({ scrollTop: t.$homePage.offset().top }, 1000);
+                       });
+
+                   });
+               } else {
+                   t.$homePage.stop().fadeOut(500, function() {
+
+                       t.$worksPage.fadeIn(500, function () {
+                           t.$page.animate({ scrollTop: t.$worksPage.offset().top }, 1000);
+                       });
+                   });
+               }
+
+           }
+        });
+    },
+
+    show: function () {
+        var t = this;
+        t.$container.stop(true, true).fadeIn();
+    },
+
+    hide: function () {
+        var t = this;
+        t.$container.stop(true, true).fadeOut();
+    }
+};
 
 onevio.modal = {
     setup: function () {
-        $(".cboxInline").colorbox({inline:true, width:"50%"});
+        $(".cboxInline").colorbox({inline:true, width:"362px" });
     }
 };
 
@@ -197,6 +303,7 @@ onevio.email = {
 };
 
 $(function () {
+    onevio.navgigation.setup();
     onevio.email.setup();
     onevio.modal.setup();
 });

@@ -337,6 +337,9 @@ body {
 body, p {
     font-family: "proxima_novalight";
 }
+a:focus {
+    outline: none;
+}
 .relative {
     position: relative;
 }
@@ -356,6 +359,9 @@ body, p {
 }
 .clear {
     clear: both !important;
+}
+.center-text {
+    text-align: center;
 }
 .icons {
     margin-top: 6px;
@@ -423,8 +429,8 @@ body, p {
     display: block;
     margin-top: 50px;
     width: 100%;
-    height: 30px;
-    line-height: 30px;
+    height: 35px;
+    line-height: 35px;
     color: white;
     outline: none;
     text-align: center;
@@ -466,6 +472,9 @@ body, p {
     text-align: right;
     position: relative;
 }
+#works {
+    display: none;
+}
 .fancy-border {
     width: 14px;
     height: 90px;
@@ -479,7 +488,7 @@ body, p {
     display: none;
 }
 .main {
-    margin-bottom: 100px;
+    /*margin-bottom: 100px;*/
 }
 .main span {
     line-height: 1em;
@@ -516,8 +525,8 @@ body, p {
     height: 1px;
     background: rgba(255, 255, 255, 0.5);
 }
-.main .info h1 {
-    margin-top: 250px;
+.main .brands-title {
+    /*margin-top: 250px;*/
     margin-bottom: 120px;
     color: white;
     font-size: 1.5em; /*21px*/
@@ -682,12 +691,11 @@ body.thanks_body .tagline {
     height: 40px;
     padding-left: 20px;
     padding-right: 71px;
-    border: 0;
     border-radius: 6px;
     color: white;
     font-family: "montserratregular";
+    border: 0;
     background: rgba(255, 255, 255, 0.11);
-    /*font-size: 0.85em; *//*12px*/
 }
 #mc-embedded-subscribe-form .btn {
     position: absolute;  /*desktop only style*/
@@ -716,42 +724,104 @@ body.thanks_body .tagline {
     text-align: center;
 }
 
-#launch {
+#cboxClose {
     display: none;
-    padding: 20px;
-    padding-top: 48px;
+}
 
-}
-#launch img {
+.modal-window {
+    padding: 60px 10px 10px 10px;
     text-align: center;
-    margin-bottom: 20px;
 }
-#launch h3 {
+.modal-window img {
+    margin-bottom: 30px;
+}
+.modal-window h3 {
+    margin-top: 0;
+    margin-bottom: 60px;
     color: #4D4D4D;
     text-transform: uppercase;
     font-family: "league_gothicregular";
 }
-#launch p {
+.modal-window p {
     margin-top: 40px;
-    margin-bottom: 16px;
+    margin-bottom: 46px;
     color: #B2B2B2;
+    font-size: 1.3em; /*18px*/
     font-family: "droid_serifregular";
 }
-#launch .email {
-    height: 40px;
+.modal-window #mc-embedded-subscribe-form .email {
+    height: 50px;
+    margin-bottom: 30px;
     color: #919191;
+    font-size: 1.3em; /*18px*/
     border-radius: 0;
     background: transparent;
-    border: 1px solid #919191;
+    border: 1px solid rgba(178, 178, 178, 0.4);
     font-family: "proxima_novalight";
 }
-#launch #mc-embedded-subscribe {
-    height: 40px;
-    line-height: 40px;
+.modal-window #mc-embedded-subscribe {
+    width: 100%;
+    height: 50px;
+    padding-top: 0;
+    line-height: 50px;
+    position: relative;
+    top: inherit;
+    right: inherit;
+    left: inherit;
     color: white;
+    font-size: 1.3em; /*18px*/
     text-align: center;
     background: #8CD0C4;
     font-family: "proxima_novasemibold";
+}
+#cboxLoadedContent {
+    margin-bottom: 0 !important;
+}
+.modal-window #mc-embedded-subscribe:focus {
+    outline: none;
+}
+.modal-window .row {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+}
+.follow-box {
+    height: 208px;
+    padding: 37px;
+    text-align: center;
+}
+.follow-box.top-left,
+.follow-box.bottom-left {
+    border-top: 1px dotted #CCC;
+    border-right: 1px dotted #CCC;;
+}
+.follow-box.top-right,
+.follow-box.bottom-right {
+    border-top: 1px dotted #CCC;
+}
+.follow-box p {
+    margin-top: 30px;
+    margin-bottom: 0;
+    color: #919191;
+    font-size: 1.3em; /*18px*/
+    font-family: "proxima_novalight";
+}
+.follow-icon {
+    display: block;
+    width: 65px;
+    height: 65px;
+}
+.follow-facebook {
+    background: #507CBD url("facebook_overlay.png") center center no-repeat;
+}
+.follow-twitter {
+    background: #64CBEE url("twitter_overlay.png") center center no-repeat;
+}
+.follow-instagram {
+    background: #F06361 url("instagram_overlay.png") center center no-repeat;
+}
+.follow-subscribe {
+    background: #90C8DA url("mail_overlay.png") center center no-repeat;
 }
 
 @media(min-width:1200px) {
