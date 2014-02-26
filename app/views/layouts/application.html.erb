@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <title><%= content_for?(:title) ? yield(:title) : "Onevio.org" %></title>
   <%= csrf_meta_tags %>
 
@@ -74,7 +74,7 @@
           </ul>
         </div>
         <div class="col-md-4 mc_embed_signup">
-          <form action="http://onevio.us7.list-manage.com/subscribe/post?u=d89bc392d783cc3a21598fe4a&amp;id=82f2bd1a58" method="post" name="mc-embedded-subscribe-form"  class="mc-embedded-subscribe-form form-inline validate" role="form" target="_blank" novalidate>
+          <form data-result="2" action="http://onevio.us7.list-manage.com/subscribe/post?u=d89bc392d783cc3a21598fe4a&amp;id=82f2bd1a58" method="post" name="mc-embedded-subscribe-form"  class="mc-embedded-subscribe-form form-inline validate" role="form" target="_blank" novalidate>
             <div class="mc-field-group form-group">
               <input type="email" value="" name="EMAIL" class="mce-EMAIL form-contro required email" placeholder="Please enter your email" >
             </div>
@@ -99,7 +99,7 @@
 
     <p>Spam-free goodness.</p>
 
-    <form action="http://onevio.us7.list-manage.com/subscribe/post?u=d89bc392d783cc3a21598fe4a&amp;id=82f2bd1a58" method="post" name="mc-embedded-subscribe-form" class="mc-embedded-subscribe-form validate" role="form" target="_blank" novalidate>
+    <form data-result="1" action="http://onevio.us7.list-manage.com/subscribe/post?u=d89bc392d783cc3a21598fe4a&amp;id=82f2bd1a58" method="post" name="mc-embedded-subscribe-form" class="mc-embedded-subscribe-form validate" role="form" target="_blank" novalidate>
       <div class="mc-field-group form-group">
         <input type="email" value="" name="EMAIL" class="mce-EMAIL form-control required email" placeholder="Please enter your email">
 
@@ -110,7 +110,7 @@
     </form>
 
     <!--mailchimp result modal-->
-    <div class="modal-window result" style="display: none">
+    <div data-form="1" class="modal-window result" style="display: none">
       <div class="loader"><%= image_tag "ajax-loader.gif" %></div>
       <div class="mce-responses clear">
         <div class="mce_inline_error" style=""> <span class="glyphicon glyphicon-remove"></span><span class="err"></span> </div>
@@ -150,7 +150,7 @@
 </div>
 
 <!--mailchimp result modal-->
-<div class="modal-window result" style="display: none">
+<div data-form="2" class="modal-window result" style="display: none">
     <div class="loader"><%= image_tag "ajax-loader.gif" %></div>
     <div class="mce-responses clear">
       <div class="mce_inline_error" style=""> <span class="glyphicon glyphicon-remove"></span><span class="err"></span> </div>

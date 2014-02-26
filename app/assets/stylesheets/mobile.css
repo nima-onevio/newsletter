@@ -1,73 +1,199 @@
-/*Android S2*/
+/*Android S2 and Ipad*/
 /*================================================== */
+/*Portrait*/
+/*===========================*/
 @media only screen
-and (min-device-width : 480px)
-and (max-device-width : 800px) {
-     .greenBtn {
-         margin-bottom: 90px;
-     }
+and (orientation: portrait)
+and (min-device-width: 480px)
+and (max-device-width: 800px) {
+    input[type="text"], input[type="email"], input[type="search"], input[type="password"] {
+        -webkit-appearance: caret;
+        -moz-appearance: caret; /* mobile firefox too! */
+    }
+
+    .greenBtn {
+        width: 300px !important;
+        margin: 0 auto 30px auto;
+    }
+
     .footer {
         margin-top: 130px;
     }
+
     .mc-embedded-subscribe-form .btn {
         right: 1%;
     }
+
+    #works .row {
+        /*width: 700px;*/
+        margin: 0 auto;
+    }
+
+    #works,
+    #home {
+        height: auto !important;
+    }
+
+    #works .col-split {
+        float: left;
+        padding-right: 3.5%;
+        padding-left: 3.5%;
+        border-bottom: 0;
+        margin-bottom: 80px;
+        border-right: 1px solid rgba(255, 255, 255, 0.8);
+    }
+
+    #works .col-split.last {
+        margin-right: 0;
+        border-right: 0;
+    }
+
+    body.modal-open .footer, .footer {
+        width: 100% !important;
+        margin: 0 !important;
+    }
+
+    .unite {
+        margin-bottom: 30px;
+    }
+
+    .beta {
+        left: 7%;
+    }
+
+    .family a {
+        right: 7%;
+    }
+    .footer .links a {
+        padding: 0;
+    }
+    .mc-embedded-subscribe-form {
+        position: relative;
+        width: 700px;
+        margin: 0 auto;
+    }
+    .modal-window .mc-embedded-subscribe-form {
+        width: 100%;
+    }
 }
+
+/*Landscape*/
+/*===========================*/
+@media screen
+and (orientation: landscape)
+and (min-device-width: 480px)
+and (max-device-width: 800px) {
+    input[type="text"], input[type="email"], input[type="search"], input[type="password"] {
+        -webkit-appearance: caret;
+        -moz-appearance: caret; /* mobile firefox too! */
+    }
+
+    .col-md-5 {
+        float: none;
+        width: 100%;
+    }
+
+    .greenBtn {
+        width: 300px !important;
+        margin: 25px auto 30px auto;
+    }
+
+    .footer {
+        margin-top: 130px;
+    }
+
+    .mc-embedded-subscribe-form .btn {
+        right: 1%;
+    }
+
+    #works .row {
+        /*width: 850px;*/
+        margin: 0 auto;
+    }
+
+    #works,
+    #home {
+        height: auto !important;
+    }
+
+    #works .col-split {
+        float: left;
+        margin-right: 0;
+        padding-right: 3.5%;
+        padding-left: 3.5%;
+        border-bottom: 0;
+        border-right: 1px solid rgba(255, 255, 255, 0.8);
+    }
+
+    #works .col-split.last {
+        margin-right: 0;
+        border-right: 0;
+    }
+
+    .unite {
+        margin-bottom: 30px;
+    }
+
+    .beta {
+        left: 7%;
+    }
+
+    .family a {
+        right: 7%;
+    }
+}
+
 /* Iphone*/
 /*================================================== */
-/*@media only screen*/
-/*and (min-device-width : 320px)*/
-/*and (max-device-width : 480px) {*/
-    /*body {*/
-        /*padding: 0;*/
-        /*background: url("bg_mobile.jpg") center center no-repeat fixed;*/
-    /*}*/
-    /*.span4 {*/
-        /*float: none;*/
-    /*}*/
-    /*.main {*/
-        /*width: 100%;*/
-        /*margin: 0;*/
-    /*}*/
-    /*.launchLogo {*/
-        /*padding: 0;*/
-        /*margin: 0 auto;*/
-    /*}*/
-    /*.tagline {*/
-        /*position: relative;*/
-        /*font-family: "proxima_novalight";*/
-        /*text-align: center;*/
-    /*}*/
-    /*.question h3,*/
-    /*.tagline h2,*/
-    /*.tagline h3 {*/
-        /*color: white;*/
-    /*}*/
-    /*.tagline h2 {*/
-        /*margin-top: 0.5em;*/
-    /*}*/
-    /*.tagline .line2 {*/
-        /*margin-bottom: 1em;*/
-    /*}*/
-    /*.tagline h2 .bold {*/
-        /*font-size: 1em;*/
-    /*}*/
-    /*.tagline h3 {*/
-        /*font-size: 1.5em;*/
-    /*}*/
-    /*body.thanks_body .icons {*/
-        /*position: relative  ;*/
-        /*top: 0;*/
-        /*left: 0;*/
-    /*}*/
-    /*.thanks .bold,*/
-    /*.tagline .bold {*/
-        /*font-weight: bold;*/
-    /*}*/
-    /*.mc-field-group {*/
-        /*margin: 20px auto 10px auto;*/
-    /*}*/
-    /*.earth {*/
-        /*display: none;*/
-    /*}*/
-/*}*/
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 480px) {
+    .container {
+        padding: inherit;
+        margin: inherit;
+    }
+    body {
+        padding:inherit;
+    }
+
+    body.modal-open .footer,
+    .footer {
+        width: inherit;
+    }
+    .footer .links a {
+        padding: 0;
+    }
+    .result .mce-success-response,
+    .result .mce-error-response,
+    .result .mce_inline_error {
+        left: inherit;
+        right: 5px;
+    }
+
+    .mc-embedded-subscribe-form {
+        position: relative;
+        width: 300px;
+        margin: 0 auto;
+    }
+
+    .company-description p {
+        width: 280px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .greenBtn {
+        display: none;
+    }
+}
+
+@media only screen
+and (orientation: landscape)
+and (min-device-width: 320px)
+and (max-device-width: 480px) {
+
+    .company-description p {
+        width: 380px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

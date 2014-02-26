@@ -5,6 +5,7 @@ onevio.email = onevio.email || {};
 onevio.loader = onevio.loader || {};
 onevio.modal = onevio.modal || {};
 onevio.navigation = onevio.navigation || {};
+onevio.mobile = onevio.mobile || {};
 onevio.$page = $("html");
 
 onevio.navgigation = {
@@ -46,7 +47,6 @@ onevio.navgigation = {
 
         t.$worksPage.height(height);
         t.$homePage.height(height);
-//        t.$page.scrollTop(t.$homePage.offset().top)
 
         $rows = t.$homePage.find("> row");
         $rows.each(function (i, el) {
@@ -107,6 +107,9 @@ onevio.navgigation = {
 onevio.modal = {
     setup: function () {
         $(".cboxInline").colorbox({inline: true, width: "362px" });
+        $(document).bind('cbox_closed', function () {
+            $(".result").hide();
+        });
     }
 };
 
@@ -138,6 +141,7 @@ onevio.loader = {
         t.$container.stop(true, true).fadeOut();
     }
 };
+
 
 onevio.email = {
     setup: function () {
@@ -201,13 +205,15 @@ onevio.email = {
             click: function (e) {
                 e.preventDefault();
                 $(this).fadeOut();
+                t.$result.fadeOut();
             }
         });
 
         t.$form.on({
             submit: function (e) {
-                var $form  = $(this);
-                var $email = $form.find(".mce-EMAIL");
+                var $form  = $(this),
+                    $email = $form.find(".mce-EMAIL"),
+                    $result = $("[data-form='" + $form.data('result') + "']");
 
                 e.stopImmediatePropagation();
                 e.preventDefault();
@@ -218,7 +224,7 @@ onevio.email = {
 
 
                 $(":animated").promise().done(function () {
-                    t.$result.stop().fadeIn(500, function () {
+                    $result.stop().fadeIn(500, function () {
                         onevio.loader.show();
                         $(":animated").promise().done(function () {
                             if (t.validateEmail($email) === true) {
@@ -317,8 +323,24 @@ onevio.email = {
     }
 };
 
+onevio.mobile = {
+    setup: function () {
+        if (navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i)) {
+            var viewportmeta = document.querySelector('meta[name="viewport"]');
+
+            if (viewportmeta) {
+                viewportmeta.content = 'width=device-width, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0';
+                document.body.addEventListener('gesturestart', function () {
+                    viewportmeta.content = 'width=device-width, minimum-scale=0.25, maximum-scale=1.6';
+                }, false);
+            }
+        }
+    }
+};
+
 $(function () {
     onevio.navgigation.setup();
     onevio.email.setup();
     onevio.modal.setup();
+    onevio.mobile.setup();
 });
