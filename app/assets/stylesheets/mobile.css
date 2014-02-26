@@ -1,115 +1,73 @@
-/*Android S2
-================================================== */
+/*Android S2*/
+/*================================================== */
 @media only screen
 and (min-device-width : 480px)
 and (max-device-width : 800px) {
-    body {
-        padding: 0;
-        background: url("bg_mobile.jpg") center center no-repeat fixed;
+     .greenBtn {
+         margin-bottom: 90px;
+     }
+    .footer {
+        margin-top: 130px;
     }
-    .span4 {
-        margin: 0;
-        float: none;
-    }
-    .main {
-        width: 100%;
-        margin: 0;
-    }
-    .launchLogo {
-        padding: 0;
-        margin: 0 auto;
-    }
-    .tagline {
-        position: relative;
-        font-family: "proxima_novalight";
-        text-align: center;
-    }
-    .question h3,
-    .tagline h2,
-    .tagline h3 {
-        color: white;
-    }
-    .tagline h2 {
-        margin-top: 0.7em;
-        font-size: 2.1em;
-    }
-    body.thanks_body .icons {
-        position: relative  ;
-        top: 0;
-        left: 0;
-    }
-    .tagline .bold {
-        font-weight: bold;
-    }
-    .thanks .bold,
-    .thanks .line1 {
-        color: white;
-    }
-    .thanks .line1 {
-        font-size: 0.75em;
-    }
-    .mc-field-group {
-        margin: 20px auto 10px auto;
-    }
-    .earth {
-        display: none;
+    .mc-embedded-subscribe-form .btn {
+        right: 1%;
     }
 }
-/* Iphone
-================================================== */
-@media only screen
-and (min-device-width : 320px)
-and (max-device-width : 480px) {
-    body {
-        padding: 0;
-        background: url("bg_mobile.jpg") center center no-repeat fixed;
-    }
-    .span4 {
-        float: none;
-    }
-    .main {
-        width: 100%;
-        margin: 0;
-    }
-    .launchLogo {
-        padding: 0;
-        margin: 0 auto;
-    }
-    .tagline {
-        position: relative;
-        font-family: "proxima_novalight";
-        text-align: center;
-    }
-    .question h3,
-    .tagline h2,
-    .tagline h3 {
-        color: white;
-    }
-    .tagline h2 {
-        margin-top: 0.5em;
-    }
-    .tagline .line2 {
-        margin-bottom: 1em;
-    }
-    .tagline h2 .bold {
-        font-size: 1em;
-    }
-    .tagline h3 {
-        font-size: 1.5em;
-    }
-    body.thanks_body .icons {
-        position: relative  ;
-        top: 0;
-        left: 0;
-    }
-    .thanks .bold,
-    .tagline .bold {
-        font-weight: bold;
-    }
-    .mc-field-group {
-        margin: 20px auto 10px auto;
-    }
-    .earth {
-        display: none;
-    }
-}
+/* Iphone*/
+/*================================================== */
+/*@media only screen*/
+/*and (min-device-width : 320px)*/
+/*and (max-device-width : 480px) {*/
+    /*body {*/
+        /*padding: 0;*/
+        /*background: url("bg_mobile.jpg") center center no-repeat fixed;*/
+    /*}*/
+    /*.span4 {*/
+        /*float: none;*/
+    /*}*/
+    /*.main {*/
+        /*width: 100%;*/
+        /*margin: 0;*/
+    /*}*/
+    /*.launchLogo {*/
+        /*padding: 0;*/
+        /*margin: 0 auto;*/
+    /*}*/
+    /*.tagline {*/
+        /*position: relative;*/
+        /*font-family: "proxima_novalight";*/
+        /*text-align: center;*/
+    /*}*/
+    /*.question h3,*/
+    /*.tagline h2,*/
+    /*.tagline h3 {*/
+        /*color: white;*/
+    /*}*/
+    /*.tagline h2 {*/
+        /*margin-top: 0.5em;*/
+    /*}*/
+    /*.tagline .line2 {*/
+        /*margin-bottom: 1em;*/
+    /*}*/
+    /*.tagline h2 .bold {*/
+        /*font-size: 1em;*/
+    /*}*/
+    /*.tagline h3 {*/
+        /*font-size: 1.5em;*/
+    /*}*/
+    /*body.thanks_body .icons {*/
+        /*position: relative  ;*/
+        /*top: 0;*/
+        /*left: 0;*/
+    /*}*/
+    /*.thanks .bold,*/
+    /*.tagline .bold {*/
+        /*font-weight: bold;*/
+    /*}*/
+    /*.mc-field-group {*/
+        /*margin: 20px auto 10px auto;*/
+    /*}*/
+    /*.earth {*/
+        /*display: none;*/
+    /*}*/
+/*}*/
