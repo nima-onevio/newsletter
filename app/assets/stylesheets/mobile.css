@@ -149,11 +149,11 @@ and (max-device-width: 800px) {
 and (min-device-width: 320px)
 and (max-device-width: 480px) {
     .container {
-        padding: inherit;
-        margin: inherit;
+        /*padding: inherit;*/
+        /*margin: inherit;*/
     }
     body {
-        padding:inherit;
+
     }
 
     body.modal-open .footer,
