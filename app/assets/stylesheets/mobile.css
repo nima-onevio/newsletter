@@ -69,8 +69,6 @@ and (max-device-width: 800px) {
     }
     .mc-embedded-subscribe-form {
         position: relative;
-        width: 700px;
-        margin: 0 auto;
     }
     .modal-window .mc-embedded-subscribe-form {
         width: 100%;

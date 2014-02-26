@@ -941,6 +941,7 @@ body.thanks_body .tagline {
 
 }
 @media(max-width:992px) {
+
     .main .main-stats .right,
     .main .main-stats .left,
     .footer .right,
@@ -1036,6 +1037,7 @@ body.thanks_body .tagline {
     .beta {
         left: 7%;
     }
+
 }
 @media(max-width:640px) {
     /*avoid overlap of fixed elements*/
