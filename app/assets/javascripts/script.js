@@ -6,6 +6,7 @@ onevio.loader = onevio.loader || {};
 onevio.modal = onevio.modal || {};
 onevio.navigation = onevio.navigation || {};
 onevio.mobile = onevio.mobile || {};
+onevio.counter = onevio.counter || {};
 onevio.$page = $("body");
 onevio.$html = $("html");
 
@@ -66,7 +67,7 @@ onevio.navgigation = {
         padding = ((height - row_heights) / 5);
         t.$worksPage.css('padding-top', padding + 'px');
 
-        t.$page.animate({ scrollTop: t.$homePage.offset().top + 50}, 1000);
+        t.$page.animate({ scrollTop: t.$homePage.offset().top }, 1000);
     },
 
     bindEvents: function () {
@@ -344,9 +345,175 @@ onevio.mobile = {
 
 };
 
+onevio.counter.progress = function (options) {
+    var t = this;
+    t.o = options;
+    t.nowValue = t.o.nowValue;
+    t.now2Value = t.o.now2Value;
+    t.$target = $(t.o.target);
+};
+
+onevio.counter.progress.prototype.setup = function () {
+    var t = this;
+    t.maind();
+};
+
+onevio.counter.progress.prototype.maind = function () {
+    var t = this,
+        startdate = new Date();
+
+    t.now(startdate.getYear(), startdate.getMonth(), startdate.getDate(), startdate.getHours(), startdate.getMinutes(), startdate.getSeconds());
+};
+
+onevio.counter.progress.prototype.changeValue = function (number, pv) {
+    var t = this,
+        numberstring = "",
+        i = 0,
+        j = 0;
+
+    while (number > 1) {
+
+        numberstring = (Math.round(number - 0.5) % 10) + numberstring;
+        number = number / 10;
+        j += 1;
+        if (number > 1 && j === 3) {
+            numberstring = "," + numberstring;
+            j = 0;
+        }
+        i += 1;
+    }
+
+    if (pv === 1) {
+        t.$target.html(numberstring);
+    }
+};
+
+onevio.counter.progress.prototype.now = function (year, month, date, hours, minutes, seconds) {
+    var t = this,
+        startDate = new Date(year, month, date, hours, minutes, seconds),
+        now = t.nowValue,
+        now2 = t.now2Value,
+        growRatePercentage = (now2 - now) / now * 100,
+        growRatePerSecond = t.o.growRatePerSecond || (now * (growRatePercentage / 100)) / 365.0 / 24.0 / 60.0 / 60.0,
+        nu = new Date(),
+        shouldStartAt = new Date(t.o.startYear, 1, 1),
+        secondenoppagina = (nu.getTime() - startDate.getTime()) / 1000,
+        totaleschuld = (nu.getTime() - shouldStartAt.getTime()) / 1000 * growRatePerSecond + now,
+        timerID;
+
+    t.changeValue(totaleschuld, 1);
+
+    timerID = setTimeout(function () {
+        t.now(startDate.getYear(), startDate.getMonth(), startDate.getDate(), startDate.getHours(), startDate.getMinutes(), startDate.getSeconds());
+    }, 50);
+};
+
+onevio.counter.statsPerSeconds = function (yearValue) {
+    var perDay = yearValue / 360,
+        perHour = perDay / 24,
+        perMinute = perHour / 60,
+        perSecond = perMinute / 60;
+
+    return perSecond;
+};
+
+onevio.counter.setup = {
+    co2: function () {
+        var t = this,
+            c,
+            options = {};
+
+        options.nowValue = 4714536340.0;
+        options.growRatePerSecond = onevio.counter.statsPerSeconds(options.nowValue);
+        options.now2Value = options.nowValue + options.growRatePerSecond;
+        options.startYear = 2014;
+        options.target = "#co2";
+        c = new onevio.counter.progress(options);
+        c.setup();
+    },
+
+    population: function () {
+        var t = this,
+            c,
+            options = {};
+
+        options.nowValue = 5600000000.0;
+        options.now2Value = 5690000000.0;
+        options.startYear = 96;
+        options.target = "#worldpopulation";
+        c = new onevio.counter.progress(options);
+        c.setup();
+    },
+
+    healthCare: function () {
+        var t = this,
+            c,
+            options = {};
+
+        options.nowValue = 6416071364.0;
+        options.growRatePerSecond = onevio.counter.statsPerSeconds(options.nowValue);
+        options.now2Value = options.nowValue + options.growRatePerSecond;
+        options.startYear = 2014;
+        options.target = "#health";
+        c = new onevio.counter.progress(options);
+        c.setup();
+    },
+
+    desertification: function () {
+        var t = this,
+            c,
+            options = {};
+
+        options.nowValue = (1631102.0) * 3;
+        options.growRatePerSecond = onevio.counter.statsPerSeconds(options.nowValue);
+        options.now2Value = options.nowValue + options.growRatePerSecond;
+        options.startYear = 2014;
+        options.target = "#desert";
+        c = new onevio.counter.progress(options);
+        c.setup();
+    },
+
+    energy: function () {
+        var t = this,
+            c,
+            options = {};
+
+        options.nowValue = 20005993584.0;
+        options.growRatePerSecond = onevio.counter.statsPerSeconds(options.nowValue);
+        options.now2Value = options.nowValue + options.growRatePerSecond;
+        options.startYear = 2014;
+        options.target = "#energy";
+        c = new onevio.counter.progress(options);
+        c.setup();
+
+    },
+
+    childLabor: function () {
+        var t = this,
+            c,
+            options = {};
+
+        options.nowValue = 115314000.0;
+        options.growRatePerSecond = onevio.counter.statsPerSeconds(options.nowValue);
+        options.now2Value = options.nowValue + options.growRatePerSecond;
+        options.startYear = 2014;
+        options.target = "#childLabor";
+        c = new onevio.counter.progress(options);
+        c.setup();
+    }
+};
+
 $(function () {
     onevio.mobile.setup();
     onevio.navgigation.setup();
     onevio.email.setup();
     onevio.modal.setup();
+    onevio.counter.setup.population();
+    onevio.counter.setup.co2();
+    onevio.counter.setup.healthCare();
+    onevio.counter.setup.desertification();
+    onevio.counter.setup.energy();
+    onevio.counter.setup.energy();
+    onevio.counter.setup.childLabor();
 });
+

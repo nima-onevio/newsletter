@@ -1,32 +1,32 @@
 <div class="main">
   <div class="launchLogo"></div>
   <div class="info">
-    <p>From extreme poverty to deforestation, our <br> current global condition requires a renewed <br> sense of humanity & community.</p>
-    <p>Whether we measure unsafe water sources <br> or communicable diseases, statistics <br> regarding our way of life are sobering.</p>
+    <p>From extreme poverty to deforestation, our <br> current global condition requires a renewed sense of humanity & community.</p>
+    <p>Whether we measure unsafe water sources <br> or communicable diseases, statistics regarding our way of life are sobering.</p>
     <p>Here are some global examples.</p>
     <div class="stats">
       <p>
-        <span class="counter">4,714,536,340</span>
+        <span class="counter" id="worldpopulation">4,714,536,340</span>
+        <span class="description">World population increase</span>
+      </p>
+      <hr>
+      <p>
+        <span class="counter" id="co2">4,714,536,340</span>
         <span class="description">CO2 emissions this year (tons)</span>
       </p>
       <hr>
       <p>
-        <span class="counter">$ 6,416,071,364</span>
+        <span class="counter"><span class="inline">$ </span><span class="inline" id="health">6,416,071,364</span></span>
         <span class="description">Healthcare expenditures this year</span>
       </p>
       <hr>
       <p>
-        <span class="counter">1,631,102</span>
-        <span class="description">Desertification this year (sq meters)</span>
-      </p>
-      <hr>
-      <p>
-        <span class="counter">20,005,993,584</span>
+        <span class="counter" id="energy">20,005,993,584</span>
         <span class="description">non-renewable energy consumed this year (mwh)</span>
       </p>
       <hr>
       <p>
-        <span class="counter">115,314,000</span>
+        <span class="counter" id="childLabor">115,314,000</span>
         <span class="description">Child laborers in hazardous conditions</span>
       </p>
     </div> <!-- ./ stats-->
@@ -45,7 +45,7 @@
   </div>
   <div id="home" class="page">
     <div class="row">
-        <div class="col-md-12 unite"><a href="#follow" class="cboxInline"><%= image_tag "img_social_good.png" %></a></div>
+        <div class="col-md-12 unite"><%= image_tag "img_social_good.png" %></div>
     </div>
     <div class="row">
       <div class="col-md-3"></div>
@@ -69,14 +69,12 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-md-1"></div>
-          <div class="col-md-5">
-            <a class="greenBtn cboxInline" href="#launch">Notify me of launch day</a>
+          <div class="col-md-6">
+            <a class="greenBtn cboxInline cboxElement" href="#launch">Notify me of launch day</a>
           </div>
-          <div class="col-md-5">
+          <div class="col-md-6">
             <a class="greenBtn" href="#">I’d like to partner up!</a>
           </div>
-          <div class="col-md-1"></div>
         </div>
       </div>
       <div class="col-md-3"></div>
