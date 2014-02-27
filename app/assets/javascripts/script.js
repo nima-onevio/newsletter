@@ -7,6 +7,7 @@ onevio.modal = onevio.modal || {};
 onevio.navigation = onevio.navigation || {};
 onevio.mobile = onevio.mobile || {};
 onevio.$page = $("body");
+onevio.$html = $("html");
 
 onevio.navgigation = {
     setup: function (options) {
@@ -128,7 +129,7 @@ onevio.loader = {
             console.log("unable to find loader container");
             return false;
         }
-        if (onevio.$page.hasClass("cssanimations") && onevio.$page.hasClass("csstransitions")) {
+        if (onevio.$html.hasClass("cssanimations") && onevio.$html.hasClass("csstransitions")) {
             t.$container.html('&there4;');
         }
     },

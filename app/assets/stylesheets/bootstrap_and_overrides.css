@@ -680,7 +680,9 @@ body.thanks_body .tagline {
 .thanks .line1 {
     color: #404041;
 }
-.beta {
+.beta a {
+    display: block;
+    z-index: 1;
     position: fixed;
     left: 16%;
     width: 121px;
@@ -692,6 +694,8 @@ body.thanks_body .tagline {
     background-image: url("img_launch.png");
 }
 .family a {
+    display: block;
+    z-index: 1;
     position: fixed;
     right: 16%;
     width: 60px;
