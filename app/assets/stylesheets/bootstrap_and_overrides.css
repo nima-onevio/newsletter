@@ -3,10 +3,7 @@
 @font-face {
     font-family: 'Glyphicons Halflings';
     src: url('glyphicons-halflings-regular.eot');
-    src: url('glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'),
-    url('glyphicons-halflings-regular.woff') format('woff'),
-    url('glyphicons-halflings-regular.ttf') format('truetype'),
-    url('glyphicons-halflings-regular.svg#proxima_novablack') format('svg');
+    src: url('glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('glyphicons-halflings-regular.woff') format('woff'), url('glyphicons-halflings-regular.ttf') format('truetype'), url('glyphicons-halflings-regular.svg#proxima_novablack') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -14,322 +11,257 @@
 @font-face {
     font-family: 'proxima_novablack';
     src: url('proximanova-black-webfont.eot');
-    src: url('proximanova-black-webfont.eot?#iefix') format('embedded-opentype'),
-    url('proximanova-black-webfont.woff') format('woff'),
-    url('proximanova-black-webfont.ttf') format('truetype'),
-    url('proximanova-black-webfont.svg#proxima_novablack') format('svg');
+    src: url('proximanova-black-webfont.eot?#iefix') format('embedded-opentype'), url('proximanova-black-webfont.woff') format('woff'), url('proximanova-black-webfont.ttf') format('truetype'), url('proximanova-black-webfont.svg#proxima_novablack') format('svg');
     font-weight: normal;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'proxima_nova_rgbold';
     src: url('proximanova-bold-webfont.eot');
-    src: url('proximanova-bold-webfont.eot?#iefix') format('embedded-opentype'),
-    url('proximanova-bold-webfont.woff') format('woff'),
-    url('proximanova-bold-webfont.ttf') format('truetype'),
-    url('proximanova-bold-webfont.svg#proxima_nova_rgbold') format('svg');
+    src: url('proximanova-bold-webfont.eot?#iefix') format('embedded-opentype'), url('proximanova-bold-webfont.woff') format('woff'), url('proximanova-bold-webfont.ttf') format('truetype'), url('proximanova-bold-webfont.svg#proxima_nova_rgbold') format('svg');
     font-weight: normal;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'proxima_nova_rgbold_italic';
     src: url('proximanova-boldit-webfont.eot');
-    src: url('proximanova-boldit-webfont.eot?#iefix') format('embedded-opentype'),
-    url('proximanova-boldit-webfont.woff') format('woff'),
-    url('proximanova-boldit-webfont.ttf') format('truetype'),
-    url('proximanova-boldit-webfont.svg#proxima_nova_rgbold_italic') format('svg');
+    src: url('proximanova-boldit-webfont.eot?#iefix') format('embedded-opentype'), url('proximanova-boldit-webfont.woff') format('woff'), url('proximanova-boldit-webfont.ttf') format('truetype'), url('proximanova-boldit-webfont.svg#proxima_nova_rgbold_italic') format('svg');
     font-weight: normal;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'proxima_novaextrabold';
     src: url('proximanova-extrabold-webfont.eot');
-    src: url('proximanova-extrabold-webfont.eot?#iefix') format('embedded-opentype'),
-    url('proximanova-extrabold-webfont.woff') format('woff'),
-    url('proximanova-extrabold-webfont.ttf') format('truetype'),
-    url('proximanova-extrabold-webfont.svg#proxima_novaextrabold') format('svg');
+    src: url('proximanova-extrabold-webfont.eot?#iefix') format('embedded-opentype'), url('proximanova-extrabold-webfont.woff') format('woff'), url('proximanova-extrabold-webfont.ttf') format('truetype'), url('proximanova-extrabold-webfont.svg#proxima_novaextrabold') format('svg');
     font-weight: normal;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'proxima_novalight';
     src: url('proximanova-light-webfont.eot');
-    src: url('proximanova-light-webfont.eot?#iefix') format('embedded-opentype'),
-    url('proximanova-light-webfont.woff') format('woff'),
-    url('proximanova-light-webfont.ttf') format('truetype'),
-    url('proximanova-light-webfont.svg#proxima_novalight') format('svg');
+    src: url('proximanova-light-webfont.eot?#iefix') format('embedded-opentype'), url('proximanova-light-webfont.woff') format('woff'), url('proximanova-light-webfont.ttf') format('truetype'), url('proximanova-light-webfont.svg#proxima_novalight') format('svg');
     font-weight: normal;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'proxima_novalight_italic';
     src: url('proximanova-lightitalic-webfont.eot');
-    src: url('proximanova-lightitalic-webfont.eot?#iefix') format('embedded-opentype'),
-    url('proximanova-lightitalic-webfont.woff') format('woff'),
-    url('proximanova-lightitalic-webfont.ttf') format('truetype'),
-    url('proximanova-lightitalic-webfont.svg#proxima_novalight_italic') format('svg');
+    src: url('proximanova-lightitalic-webfont.eot?#iefix') format('embedded-opentype'), url('proximanova-lightitalic-webfont.woff') format('woff'), url('proximanova-lightitalic-webfont.ttf') format('truetype'), url('proximanova-lightitalic-webfont.svg#proxima_novalight_italic') format('svg');
     font-weight: normal;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'proxima_novaregular_italic';
     src: url('proximanova-regitalic-webfont.eot');
-    src: url('proximanova-regitalic-webfont.eot?#iefix') format('embedded-opentype'),
-    url('proximanova-regitalic-webfont.woff') format('woff'),
-    url('proximanova-regitalic-webfont.ttf') format('truetype'),
-    url('proximanova-regitalic-webfont.svg#proxima_novaregular_italic') format('svg');
+    src: url('proximanova-regitalic-webfont.eot?#iefix') format('embedded-opentype'), url('proximanova-regitalic-webfont.woff') format('woff'), url('proximanova-regitalic-webfont.ttf') format('truetype'), url('proximanova-regitalic-webfont.svg#proxima_novaregular_italic') format('svg');
     font-weight: normal;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'proxima_nova_rgregular';
     src: url('proximanova-regular-webfont.eot');
-    src: url('proximanova-regular-webfont.eot?#iefix') format('embedded-opentype'),
-    url('proximanova-regular-webfont.woff') format('woff'),
-    url('proximanova-regular-webfont.ttf') format('truetype'),
-    url('proximanova-regular-webfont.svg#proxima_nova_rgregular') format('svg');
+    src: url('proximanova-regular-webfont.eot?#iefix') format('embedded-opentype'), url('proximanova-regular-webfont.woff') format('woff'), url('proximanova-regular-webfont.ttf') format('truetype'), url('proximanova-regular-webfont.svg#proxima_nova_rgregular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'proxima_novablack';
     src: url('proximanova-black-webfont.eot');
-    src: url('proximanova-black-webfont.eot?#iefix') format('embedded-opentype'),
-    url('proximanova-black-webfont.woff') format('woff'),
-    url('proximanova-black-webfont.ttf') format('truetype'),
-    url('proximanova-black-webfont.svg#proxima_novablack') format('svg');
+    src: url('proximanova-black-webfont.eot?#iefix') format('embedded-opentype'), url('proximanova-black-webfont.woff') format('woff'), url('proximanova-black-webfont.ttf') format('truetype'), url('proximanova-black-webfont.svg#proxima_novablack') format('svg');
     font-weight: normal;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'proxima_nova_rgbold';
     src: url('proximanova-bold-webfont.eot');
-    src: url('proximanova-bold-webfont.eot?#iefix') format('embedded-opentype'),
-    url('proximanova-bold-webfont.woff') format('woff'),
-    url('proximanova-bold-webfont.ttf') format('truetype'),
-    url('proximanova-bold-webfont.svg#proxima_nova_rgbold') format('svg');
+    src: url('proximanova-bold-webfont.eot?#iefix') format('embedded-opentype'), url('proximanova-bold-webfont.woff') format('woff'), url('proximanova-bold-webfont.ttf') format('truetype'), url('proximanova-bold-webfont.svg#proxima_nova_rgbold') format('svg');
     font-weight: normal;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'proxima_nova_rgbold_italic';
     src: url('proximanova-boldit-webfont.eot');
-    src: url('proximanova-boldit-webfont.eot?#iefix') format('embedded-opentype'),
-    url('proximanova-boldit-webfont.woff') format('woff'),
-    url('proximanova-boldit-webfont.ttf') format('truetype'),
-    url('proximanova-boldit-webfont.svg#proxima_nova_rgbold_italic') format('svg');
+    src: url('proximanova-boldit-webfont.eot?#iefix') format('embedded-opentype'), url('proximanova-boldit-webfont.woff') format('woff'), url('proximanova-boldit-webfont.ttf') format('truetype'), url('proximanova-boldit-webfont.svg#proxima_nova_rgbold_italic') format('svg');
     font-weight: normal;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'proxima_novaextrabold';
     src: url('proximanova-extrabold-webfont.eot');
-    src: url('proximanova-extrabold-webfont.eot?#iefix') format('embedded-opentype'),
-    url('proximanova-extrabold-webfont.woff') format('woff'),
-    url('proximanova-extrabold-webfont.ttf') format('truetype'),
-    url('proximanova-extrabold-webfont.svg#proxima_novaextrabold') format('svg');
+    src: url('proximanova-extrabold-webfont.eot?#iefix') format('embedded-opentype'), url('proximanova-extrabold-webfont.woff') format('woff'), url('proximanova-extrabold-webfont.ttf') format('truetype'), url('proximanova-extrabold-webfont.svg#proxima_novaextrabold') format('svg');
     font-weight: normal;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'proxima_novalight';
     src: url('proximanova-light-webfont.eot');
-    src: url('proximanova-light-webfont.eot?#iefix') format('embedded-opentype'),
-    url('proximanova-light-webfont.woff') format('woff'),
-    url('proximanova-light-webfont.ttf') format('truetype'),
-    url('proximanova-light-webfont.svg#proxima_novalight') format('svg');
+    src: url('proximanova-light-webfont.eot?#iefix') format('embedded-opentype'), url('proximanova-light-webfont.woff') format('woff'), url('proximanova-light-webfont.ttf') format('truetype'), url('proximanova-light-webfont.svg#proxima_novalight') format('svg');
     font-weight: normal;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'proxima_novalight_italic';
     src: url('proximanova-lightitalic-webfont.eot');
-    src: url('proximanova-lightitalic-webfont.eot?#iefix') format('embedded-opentype'),
-    url('proximanova-lightitalic-webfont.woff') format('woff'),
-    url('proximanova-lightitalic-webfont.ttf') format('truetype'),
-    url('proximanova-lightitalic-webfont.svg#proxima_novalight_italic') format('svg');
+    src: url('proximanova-lightitalic-webfont.eot?#iefix') format('embedded-opentype'), url('proximanova-lightitalic-webfont.woff') format('woff'), url('proximanova-lightitalic-webfont.ttf') format('truetype'), url('proximanova-lightitalic-webfont.svg#proxima_novalight_italic') format('svg');
     font-weight: normal;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'proxima_novaregular_italic';
     src: url('proximanova-regitalic-webfont.eot');
-    src: url('proximanova-regitalic-webfont.eot?#iefix') format('embedded-opentype'),
-    url('proximanova-regitalic-webfont.woff') format('woff'),
-    url('proximanova-regitalic-webfont.ttf') format('truetype'),
-    url('proximanova-regitalic-webfont.svg#proxima_novaregular_italic') format('svg');
+    src: url('proximanova-regitalic-webfont.eot?#iefix') format('embedded-opentype'), url('proximanova-regitalic-webfont.woff') format('woff'), url('proximanova-regitalic-webfont.ttf') format('truetype'), url('proximanova-regitalic-webfont.svg#proxima_novaregular_italic') format('svg');
     font-weight: normal;
     font-style: normal;
 
 }
+
 @font-face {
     font-family: 'proxima_nova_rgregular';
     src: url('proximanova-regular-webfont.eot');
-    src: url('proximanova-regular-webfont.eot?#iefix') format('embedded-opentype'),
-    url('proximanova-regular-webfont.woff') format('woff'),
-    url('proximanova-regular-webfont.ttf') format('truetype'),
-    url('proximanova-regular-webfont.svg#proxima_nova_rgregular') format('svg');
+    src: url('proximanova-regular-webfont.eot?#iefix') format('embedded-opentype'), url('proximanova-regular-webfont.woff') format('woff'), url('proximanova-regular-webfont.ttf') format('truetype'), url('proximanova-regular-webfont.svg#proxima_nova_rgregular') format('svg');
     font-weight: normal;
     font-style: normal;
 
 }
+
 @font-face {
     font-family: 'droid_serifregular';
     src: url('droidserif-webfont.eot');
-    src: url('droidserif-webfont.eot?#iefix') format('embedded-opentype'),
-    url('droidserif-webfont.woff') format('woff'),
-    url('droidserif-webfont.ttf') format('truetype'),
-    url('droidserif-webfont.svg#droid_serifregular') format('svg');
+    src: url('droidserif-webfont.eot?#iefix') format('embedded-opentype'), url('droidserif-webfont.woff') format('woff'), url('droidserif-webfont.ttf') format('truetype'), url('droidserif-webfont.svg#droid_serifregular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'droid_serifbold';
     src: url('droidserif-bold-webfont.eot');
-    src: url('droidserif-bold-webfont.eot?#iefix') format('embedded-opentype'),
-    url('droidserif-bold-webfont.woff') format('woff'),
-    url('droidserif-bold-webfont.ttf') format('truetype'),
-    url('droidserif-bold-webfont.svg#droid_serifbold') format('svg');
+    src: url('droidserif-bold-webfont.eot?#iefix') format('embedded-opentype'), url('droidserif-bold-webfont.woff') format('woff'), url('droidserif-bold-webfont.ttf') format('truetype'), url('droidserif-bold-webfont.svg#droid_serifbold') format('svg');
     font-weight: normal;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'droid_serifbold_italic';
     src: url('droidserif-bolditalic-webfont.eot');
-    src: url('droidserif-bolditalic-webfont.eot?#iefix') format('embedded-opentype'),
-    url('droidserif-bolditalic-webfont.woff') format('woff'),
-    url('droidserif-bolditalic-webfont.ttf') format('truetype'),
-    url('droidserif-bolditalic-webfont.svg#droid_serifbold_italic') format('svg');
+    src: url('droidserif-bolditalic-webfont.eot?#iefix') format('embedded-opentype'), url('droidserif-bolditalic-webfont.woff') format('woff'), url('droidserif-bolditalic-webfont.ttf') format('truetype'), url('droidserif-bolditalic-webfont.svg#droid_serifbold_italic') format('svg');
     font-weight: normal;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'droid_serifitalic';
     src: url('droidserif-italic-webfont.eot');
-    src: url('droidserif-italic-webfont.eot?#iefix') format('embedded-opentype'),
-    url('droidserif-italic-webfont.woff') format('woff'),
-    url('droidserif-italic-webfont.ttf') format('truetype'),
-    url('droidserif-italic-webfont.svg#droid_serifitalic') format('svg');
+    src: url('droidserif-italic-webfont.eot?#iefix') format('embedded-opentype'), url('droidserif-italic-webfont.woff') format('woff'), url('droidserif-italic-webfont.ttf') format('truetype'), url('droidserif-italic-webfont.svg#droid_serifitalic') format('svg');
     font-weight: normal;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'league_gothicCnRg';
     src: url('leaguegothic-condensedregular-webfont.eot');
-    src: url('leaguegothic-condensedregular-webfont.eot?#iefix') format('embedded-opentype'),
-    url('leaguegothic-condensedregular-webfont.woff') format('woff'),
-    url('leaguegothic-condensedregular-webfont.ttf') format('truetype'),
-    url('leaguegothic-condensedregular-webfont.svg#league_gothicCnRg') format('svg');
+    src: url('leaguegothic-condensedregular-webfont.eot?#iefix') format('embedded-opentype'), url('leaguegothic-condensedregular-webfont.woff') format('woff'), url('leaguegothic-condensedregular-webfont.ttf') format('truetype'), url('leaguegothic-condensedregular-webfont.svg#league_gothicCnRg') format('svg');
     font-weight: normal;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'league_gothicitalic';
     src: url('leaguegothic-italic-webfont.eot');
-    src: url('leaguegothic-italic-webfont.eot?#iefix') format('embedded-opentype'),
-    url('leaguegothic-italic-webfont.woff') format('woff'),
-    url('leaguegothic-italic-webfont.ttf') format('truetype'),
-    url('leaguegothic-italic-webfont.svg#league_gothicitalic') format('svg');
+    src: url('leaguegothic-italic-webfont.eot?#iefix') format('embedded-opentype'), url('leaguegothic-italic-webfont.woff') format('woff'), url('leaguegothic-italic-webfont.ttf') format('truetype'), url('leaguegothic-italic-webfont.svg#league_gothicitalic') format('svg');
     font-weight: normal;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'league_gothicregular';
     src: url('leaguegothic-regular-webfont.eot');
-    src: url('leaguegothic-regular-webfont.eot?#iefix') format('embedded-opentype'),
-    url('leaguegothic-regular-webfont.woff') format('woff'),
-    url('leaguegothic-regular-webfont.ttf') format('truetype'),
-    url('leaguegothic-regular-webfont.svg#league_gothicregular') format('svg');
+    src: url('leaguegothic-regular-webfont.eot?#iefix') format('embedded-opentype'), url('leaguegothic-regular-webfont.woff') format('woff'), url('leaguegothic-regular-webfont.ttf') format('truetype'), url('leaguegothic-regular-webfont.svg#league_gothicregular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'league_gothiccondensed_italic';
     src: url('leaguegothic-condenseditalic-webfont.eot');
-    src: url('leaguegothic-condenseditalic-webfont.eot?#iefix') format('embedded-opentype'),
-    url('leaguegothic-condenseditalic-webfont.woff') format('woff'),
-    url('leaguegothic-condenseditalic-webfont.ttf') format('truetype'),
-    url('leaguegothic-condenseditalic-webfont.svg#league_gothiccondensed_italic') format('svg');
+    src: url('leaguegothic-condenseditalic-webfont.eot?#iefix') format('embedded-opentype'), url('leaguegothic-condenseditalic-webfont.woff') format('woff'), url('leaguegothic-condenseditalic-webfont.ttf') format('truetype'), url('leaguegothic-condenseditalic-webfont.svg#league_gothiccondensed_italic') format('svg');
     font-weight: normal;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'montserratbold';
     src: url('montserrat-bold-webfont.eot');
-    src: url('montserrat-bold-webfont.eot?#iefix') format('embedded-opentype'),
-    url('montserrat-bold-webfont.woff') format('woff'),
-    url('montserrat-bold-webfont.ttf') format('truetype'),
-    url('montserrat-bold-webfont.svg.montserratbold') format('svg');
+    src: url('montserrat-bold-webfont.eot?#iefix') format('embedded-opentype'), url('montserrat-bold-webfont.woff') format('woff'), url('montserrat-bold-webfont.ttf') format('truetype'), url('montserrat-bold-webfont.svg.montserratbold') format('svg');
     font-weight: normal;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'montserratregular';
     src: url('montserrat-regular-webfont.eot');
-    src: url('montserrat-regular-webfont.eot?#iefix') format('embedded-opentype'),
-    url('montserrat-regular-webfont.woff') format('woff'),
-    url('montserrat-regular-webfont.ttf') format('truetype'),
-    url('montserrat-regular-webfont.svg.montserratregular') format('svg');
+    src: url('montserrat-regular-webfont.eot?#iefix') format('embedded-opentype'), url('montserrat-regular-webfont.woff') format('woff'), url('montserrat-regular-webfont.ttf') format('truetype'), url('montserrat-regular-webfont.svg.montserratregular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'thirsty_script_lightregular';
     src: url('thirstyscriptlight-webfont.eot');
-    src: url('thirstyscriptlight-webfont.eot?#iefix') format('embedded-opentype'),
-    url('thirstyscriptlight-webfont.woff') format('woff'),
-    url('thirstyscriptlight-webfont.ttf') format('truetype'),
-    url('thirstyscriptlight-webfont.svg#thirsty_script_lightregular') format('svg');
+    src: url('thirstyscriptlight-webfont.eot?#iefix') format('embedded-opentype'), url('thirstyscriptlight-webfont.woff') format('woff'), url('thirstyscriptlight-webfont.ttf') format('truetype'), url('thirstyscriptlight-webfont.svg#thirsty_script_lightregular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'thirsty_script_mediumregular';
     src: url('thirstyscriptmedium-webfont.eot');
-    src: url('thirstyscriptmedium-webfont.eot?#iefix') format('embedded-opentype'),
-    url('thirstyscriptmedium-webfont.woff') format('woff'),
-    url('thirstyscriptmedium-webfont.ttf') format('truetype'),
-    url('thirstyscriptmedium-webfont.svg#thirsty_script_mediumregular') format('svg');
+    src: url('thirstyscriptmedium-webfont.eot?#iefix') format('embedded-opentype'), url('thirstyscriptmedium-webfont.woff') format('woff'), url('thirstyscriptmedium-webfont.ttf') format('truetype'), url('thirstyscriptmedium-webfont.svg#thirsty_script_mediumregular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'thirsty_script_regularregular';
     src: url('thirstyscriptregular-webfont.eot');
-    src: url('thirstyscriptregular-webfont.eot?#iefix') format('embedded-opentype'),
-    url('thirstyscriptregular-webfont.woff') format('woff'),
-    url('thirstyscriptregular-webfont.ttf') format('truetype'),
-    url('thirstyscriptregular-webfont.svg#thirsty_script_regularregular') format('svg');
+    src: url('thirstyscriptregular-webfont.eot?#iefix') format('embedded-opentype'), url('thirstyscriptregular-webfont.woff') format('woff'), url('thirstyscriptregular-webfont.ttf') format('truetype'), url('thirstyscriptregular-webfont.svg#thirsty_script_regularregular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'thirsty_script_blackregular';
     src: url('thirstyscriptblack-webfont.eot');
-    src: url('thirstyscriptblack-webfont.eot?#iefix') format('embedded-opentype'),
-    url('thirstyscriptblack-webfont.woff') format('woff'),
-    url('thirstyscriptblack-webfont.ttf') format('truetype'),
-    url('thirstyscriptblack-webfont.svg#thirsty_script_blackregular') format('svg');
+    src: url('thirstyscriptblack-webfont.eot?#iefix') format('embedded-opentype'), url('thirstyscriptblack-webfont.woff') format('woff'), url('thirstyscriptblack-webfont.ttf') format('truetype'), url('thirstyscriptblack-webfont.svg#thirsty_script_blackregular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'thirsty_script_boldregular';
     src: url('thirstyscriptbold-webfont.eot');
-    src: url('thirstyscriptbold-webfont.eot?#iefix') format('embedded-opentype'),
-    url('thirstyscriptbold-webfont.woff') format('woff'),
-    url('thirstyscriptbold-webfont.ttf') format('truetype'),
-    url('thirstyscriptbold-webfont.svg#thirsty_script_boldregular') format('svg');
+    src: url('thirstyscriptbold-webfont.eot?#iefix') format('embedded-opentype'), url('thirstyscriptbold-webfont.woff') format('woff'), url('thirstyscriptbold-webfont.ttf') format('truetype'), url('thirstyscriptbold-webfont.svg#thirsty_script_boldregular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'thirsty_script_extra_boldRg';
     src: url('thirstyscriptextrabold-webfont.eot');
-    src: url('thirstyscriptextrabold-webfont.eot?#iefix') format('embedded-opentype'),
-    url('thirstyscriptextrabold-webfont.woff') format('woff'),
-    url('thirstyscriptextrabold-webfont.ttf') format('truetype'),
-    url('thirstyscriptextrabold-webfont.svg#thirsty_script_extra_boldRg') format('svg');
+    src: url('thirstyscriptextrabold-webfont.eot?#iefix') format('embedded-opentype'), url('thirstyscriptextrabold-webfont.woff') format('woff'), url('thirstyscriptextrabold-webfont.ttf') format('truetype'), url('thirstyscriptextrabold-webfont.svg#thirsty_script_extra_boldRg') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -348,12 +280,15 @@ body {
 body, p {
     font-family: "proxima_novalight";
 }
+
 a:focus {
     outline: none;
 }
+
 .relative {
     position: relative;
 }
+
 #login {
     width: 100%;
     background: transparent;
@@ -361,33 +296,42 @@ a:focus {
     box-shadow: none;
     margin: 0;
 }
+
 .span5.main {
     margin: 0 auto !important;
     float: none;
 }
+
 .bold {
     font-weight: bold;
 }
+
 .clear {
     clear: both !important;
 }
+
 .center-text {
     text-align: center;
 }
+
 .no-border {
     border: 0 !important;
 }
+
 .main .stats span.inline {
     display: inline;
 }
+
 .icons {
     margin-top: 6px;
     margin-bottom: 0;
     text-align: center;
 }
+
 .icons-container {
     width: 242px; /*desktop only*/
 }
+
 .icons li {
     padding: 0;
     margin-right: 4%;
@@ -395,17 +339,21 @@ a:focus {
     text-align: center;
     background: rgba(255, 255, 255, 0.11);
 }
+
 .icons li:hover {
     background: rgba(255, 255, 255, 0.18);
 }
+
 .icons li,
 .icons li a {
     width: 40px;
     height: 40px;
 }
+
 .icons li a:hover {
     background-color: rgba(0, 0, 0, 0.5);
 }
+
 .icon,
 .icon:hover,
 .icon:focus,
@@ -421,18 +369,22 @@ a:focus {
 .icons .facebook:hover {
     background: url("logo_facebook.png") center no-repeat;
 }
+
 .icons .pinterest,
 .icons .pinterest:hover {
     background: url("logo_pinterest.png") center no-repeat;
 }
+
 .icons .instagram,
 .icons .instagram:hover {
     background: url("logo_instagram.png") center no-repeat;
 }
+
 .icons .twitter,
 .icons .twitter:hover {
     background: url("logo_twitter.png") center no-repeat;
 }
+
 .launchLogo {
     width: 32px;
     height: 37px;
@@ -440,6 +392,7 @@ a:focus {
     background-size: contain;
     background: url("logo_onevio.png") center center no-repeat;
 }
+
 .greenBtn,
 .greenBtn:focus,
 .greenBtn:visited {
@@ -455,11 +408,13 @@ a:focus {
     border: 2px solid white;
     font-family: "montserratregular";
 }
+
 .greenBtn:hover {
     color: white;
     text-decoration: none;
     background-color: rgba(140, 208, 196, 0.7)
 }
+
 .company-description p {
     position: relative;
     right: 7px;
@@ -469,32 +424,39 @@ a:focus {
     text-align: center;
     font-family: "proxima_novalight";
 }
+
 .main .main-stats h2,
 .main .main-stats h3 {
     margin-bottom: 40px;
     color: white;
     font-family: "thirsty_script_mediumregular";
 }
+
 .main .main-stats h2 {
     margin-bottom: 0;
     font-size: 3.4em; /*48px*/
 }
+
 .main .main-stats h3 {
     margin-top: 0;
     font-size: 1.5em; /*21px*/
 }
+
 .main .main-stats .left {
     text-align: left;
     padding-left: 25px;
 }
+
 .main .main-stats .right {
     padding-right: 25px;
     text-align: right;
     position: relative;
 }
+
 #works {
     display: none;
 }
+
 .fancy-border {
     width: 14px;
     height: 90px;
@@ -503,19 +465,24 @@ a:focus {
     top: 15px;
     background: url("img_bar.png") center center no-repeat;
 }
+
 .loader {
     text-align: center;
     display: none;
 }
+
 .main {
     /*margin-bottom: 100px;*/
 }
+
 .main span {
     line-height: 1em;
 }
+
 .main .info {
     text-align: center;
 }
+
 .main .info p {
     margin-bottom: 100px;
     font-size: 1em;
@@ -523,25 +490,31 @@ a:focus {
     text-align: center;
     font-family: "droid_serifregular";
 }
+
 .main .stats {
     margin-bottom: 70px;
 }
+
 .main .stats p {
     margin-bottom: initial;
     font-family: "montserratregular";
 }
+
 .main .stats span {
     display: block;
 }
+
 .main .stats .counter {
     margin-bottom: 0.3em;
     font-size: 1.3em; /*16px*/
 }
+
 .main .stats .description {
     font-size: 0.85em;
     text-transform: uppercase;
     margin-top: 10px;
 }
+
 .main .stats hr {
     margin: 20px auto;
     width: 198px;
@@ -549,6 +522,7 @@ a:focus {
     height: 1px;
     background: rgba(255, 255, 255, 0.5);
 }
+
 .main .brands-title {
     /*margin-top: 250px;*/
     margin-bottom: 120px;
@@ -556,27 +530,33 @@ a:focus {
     font-size: 1.5em; /*21px*/
     font-family: "thirsty_script_mediumregular";
 }
+
 .main h2 {
     color: white;
     font-weight: normal;
     font-family: "proxima_novalight";
 }
+
 .circle.badge {
     display: block;
     width: 121px;
     height: 120px;
     background: url("circle_badge.png") center no-repeat;
 }
+
 .page .col-split .circle.badge {
     margin: 0 auto 40px auto;
 }
+
 .page .col-split {
     text-align: center;
     border-right: 1px solid rgba(255, 255, 255, 0.8);
 }
+
 .page .col-split.last {
     border-right: 0;
 }
+
 .page .col-split p {
     width: 200px;
     margin-left: auto;
@@ -585,29 +565,35 @@ a:focus {
     opacity: 0.9;
     font-family: "proxima_novalight";
 }
+
 .page .col-split h2 {
     margin-bottom: 25px;
     font-size: 1.5em; /*21px*/
     font-family: "league_gothicregular";
 }
+
 body.modal-open .footer,
 .footer {
     /*width: 100%;*/
 }
+
 .footer {
     margin-top: 40px;
 }
+
 .footer .links {
     display: none; /*hide the links because we changed our mind*/
     margin: 0; /*prevent overflow*/
     background-color: rgba(0, 0, 0, 0.3);
 }
+
 .footer .join {
     margin: 0; /*prevent overflow*/
     min-height: 100px;
     padding-top: 29px;
     background-color: rgba(0, 0, 0, 0.65);
 }
+
 .footer .join h3 {
     color: white;
     font-size: 1.5em; /*21px*/
@@ -615,24 +601,30 @@ body.modal-open .footer,
     margin-top: 15px;
     font-family: "thirsty_script_lightregular";
 }
+
 .footer .left,
 .footer .right {
     padding-right: 0;
     padding-left: 0;
 }
+
 .footer .left {
     text-align: left;
 }
+
 .footer .right {
     text-align: right;
 }
+
 .footer .left a {
     padding-left: 15px;
 }
+
 .footer .right a {
     padding-right: 15px;
 }
-.footer .links a {
+
+.footer a {
     display: block;
     color: white;
     width: 100%;
@@ -643,48 +635,77 @@ body.modal-open .footer,
     text-transform: uppercase;
     font-family: "league_gothicregular";
 }
-.footer .links a:hover,
-.footer .links a.active,
-.footer .links a.active:hover {
+
+.footer a:hover,
+.footer a.active,
+.footer a.active:hover {
     background: rgba(140, 208, 196, 1)
 }
-.footer .links a:hover {
+
+.footer a:hover {
     background: rgba(140, 208, 196, 0.7)
 }
+
+.footer .help-block a,
+.footer .help-block a:hover {
+    display: initial;
+    font-family: inherit;
+    color: #428bca;
+    width: initial;
+    height: initial;
+    line-height: initial;
+    text-decoration: initial;
+    text-transform: initial;
+    font-size: 1em;;
+}
+.footer .help-block a:hover {
+    display: inline;
+    background: transparent;
+    text-decoration: underline;
+}
+
 .center {
     position: relative;
     width: 100%;
     text-align: left;
     z-index: 1;
 }
+
 .tagline {
     position: relative;
     font-family: "proxima_novalight";
     text-align: center;
 }
+
 body.thanks_body .tagline {
     margin-bottom: 20px;
 }
+
 .thanks {
     position: absolute;
     top: 200px;
     left: 50%;
 }
+
 .block {
     display: block;
 }
+
 .thanks .bold,
 .tagline .bold {
     font-weight: bold;
 }
+
 .thanks .bold {
     font-size: 1.5em;
     margin-bottom: 20px;
 }
+
 .thanks .bold,
 .thanks .line1 {
     color: #404041;
 }
+
 .beta a {
     display: block;
     z-index: 1;
@@ -698,6 +719,7 @@ body.thanks_body .tagline {
     background-position: center;
     background-image: url("img_launch.png");
 }
+
 .family a {
     display: block;
     z-index: 1;
@@ -717,12 +739,15 @@ body.thanks_body .tagline {
 .mc-field-group {
     width: 100%;
 }
+
 .mc-embedded-subscribe-form {
     position: relative;
 }
+
 .mc-embedded-subscribe-form .email:focus {
     outline: none;
 }
+
 .mc-embedded-subscribe-form .email {
     height: 40px;
     padding-left: 20px;
@@ -733,8 +758,9 @@ body.thanks_body .tagline {
     border: 0;
     background: rgba(255, 255, 255, 0.11);
 }
+
 .mc-embedded-subscribe-form .btn {
-    position: absolute;  /*desktop only style*/
+    position: absolute; /*desktop only style*/
     right: 1%;
     top: 5px;
     background: #8BCFC3;
@@ -743,35 +769,43 @@ body.thanks_body .tagline {
     width: 60px;
     height: 30px;
 }
+
 .mc-embedded-subscribe-form .btn:hover {
     background: #74AA9F;
 }
+
 .mc-embedded-subscribe-form .btn:focus {
     outline: none;
 }
+
 .mc-embedded-subscribe-form .help-block {
     width: 300px; /*desktop only*/
     margin-left: 10px;
-    margin-bottom: 0;
+    margin-bottom: 10px;
     color: #E5E9EA;
     opacity: 0.5;
     font-size: 0.7em; /*10px*/
     font-family: "proxima_nova_rgregular";
 }
+
 .mce_inline_error {
     margin-top: 7px;
     margin-left: 10px;
     color: red;
 }
+
 .mce-success-response {
     color: lawngreen;
 }
+
 .successMsg {
     color: white;
 }
+
 .mce-error-response {
     color: red;
 }
+
 .unite {
     margin-bottom: 65px;
     text-align: center;
@@ -785,9 +819,11 @@ body.thanks_body .tagline {
     padding: 60px 10px 10px 10px;
     text-align: center;
 }
+
 .modal-window img {
     margin-bottom: 30px;
 }
+
 .modal-window h3 {
     margin-top: 0;
     margin-bottom: 60px;
@@ -795,6 +831,7 @@ body.thanks_body .tagline {
     text-transform: uppercase;
     font-family: "league_gothicregular";
 }
+
 .modal-window p {
     margin-top: 40px;
     margin-bottom: 46px;
@@ -802,6 +839,7 @@ body.thanks_body .tagline {
     font-size: 1.3em; /*18px*/
     font-family: "droid_serifregular";
 }
+
 .modal-window .mc-embedded-subscribe-form .email {
     height: 50px;
     margin-bottom: 30px;
@@ -812,6 +850,7 @@ body.thanks_body .tagline {
     border: 1px solid rgba(178, 178, 178, 0.4);
     font-family: "montserratregular";
 }
+
 .modal-window .mc-embedded-subscribe {
     width: 100%;
     height: 50px;
@@ -827,9 +866,11 @@ body.thanks_body .tagline {
     background: #8CD0C4;
     font-family: "montserratregular";
 }
+
 #cboxLoadedContent {
     margin-bottom: 0 !important;
 }
+
 .result {
     position: fixed;
     top: 0;
@@ -840,6 +881,7 @@ body.thanks_body .tagline {
     height: 100%;
     background: rgba(0, 0, 0, 0.6);
 }
+
 .result .mce-success-response,
 .result .mce-error-response,
 .result .mce_inline_error {
@@ -853,20 +895,24 @@ body.thanks_body .tagline {
     text-align: center;
     font-family: "montserratregular";
 }
+
 .result .mce-error-response,
 .result .mce_inline_error {
     color: #c0392b;
 }
+
 #launch.modal-window .result {
     position: absolute;
     padding: 0;
 }
+
 #launch.modal-window .mce-success-response,
 #launch.modal-window .mce-error-response,
 #launch.modal-window .mce_inline_error {
     margin: 0;
     font-size: 1.3em;
 }
+
 #launch.modal-window .successMsg {
     left: 4px;
     bottom: 1px;
@@ -875,34 +921,41 @@ body.thanks_body .tagline {
 .modal-window .mc-embedded-subscribe:focus {
     outline: none;
 }
+
 .modal-window .err,
 .modal-window .successMsg {
     position: relative;
     bottom: 3px;
     left: 8px;
 }
+
 .err {
     color: white;
 }
+
 .modal-window .row {
     width: 100%;
     margin-left: 0;
     margin-right: 0;
 }
+
 .follow-box {
     height: 208px;
     padding: 37px;
     text-align: center;
 }
+
 .follow-box.top-left,
 .follow-box.bottom-left {
     border-top: 1px dotted #CCC;
     border-right: 1px dotted #CCC;;
 }
+
 .follow-box.top-right,
 .follow-box.bottom-right {
     border-top: 1px dotted #CCC;
 }
+
 .follow-box p {
     margin-top: 30px;
     margin-bottom: 0;
@@ -910,20 +963,25 @@ body.thanks_body .tagline {
     font-size: 1.3em; /*18px*/
     font-family: "proxima_novalight";
 }
+
 .follow-icon {
     display: block;
     width: 65px;
     height: 65px;
 }
+
 .follow-facebook {
     background: #507CBD url("facebook_overlay.png") center center no-repeat;
 }
+
 .follow-twitter {
     background: #64CBEE url("twitter_overlay.png") center center no-repeat;
 }
+
 .follow-instagram {
     background: #F06361 url("instagram_overlay.png") center center no-repeat;
 }
+
 .follow-subscribe {
     background: #90C8DA url("mail_overlay.png") center center no-repeat;
 }
@@ -942,38 +1000,64 @@ body.thanks_body .tagline {
     animation: rotateglow 1.5s infinite linear;
     -webkit-animation: rotateglow 1.5s infinite linear;
 }
+
 .my-fluid-container {
     padding-left: 15px;
     padding-right: 15px;
     margin-left: auto;
     margin-right: auto;
 }
-@keyframes rotateglow
-{
-    0%   {transform: rotate(0deg); text-shadow: 0 0 2px #f00; color: #f00;}
-    50%  {text-shadow: 0 0 20px #0f0; color: #0f0;}
-    100% {transform: rotate(360deg); text-shadow: 0 0 2px #f00; color: #f00;}
+
+@keyframes rotateglow {
+    0% {
+        transform: rotate(0deg);
+        text-shadow: 0 0 2px #f00;
+        color: #f00;
+    }
+    50% {
+        text-shadow: 0 0 20px #0f0;
+        color: #0f0;
+    }
+    100% {
+        transform: rotate(360deg);
+        text-shadow: 0 0 2px #f00;
+        color: #f00;
+    }
 }
 
-@-webkit-keyframes rotateglow
-{
-    0%   {-webkit-transform: rotate(0deg); text-shadow: 0 0 2px #f00; color: #f00;}
-    50%  {text-shadow: 0 0 40px #0f0; color: #0f0;}
-    100% {-webkit-transform: rotate(360deg); text-shadow: 0 0 2px #f00; color: #f00;}
+@-webkit-keyframes rotateglow {
+    0% {
+        -webkit-transform: rotate(0deg);
+        text-shadow: 0 0 2px #f00;
+        color: #f00;
+    }
+    50% {
+        text-shadow: 0 0 40px #0f0;
+        color: #0f0;
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        text-shadow: 0 0 2px #f00;
+        color: #f00;
+    }
 }
-@media(min-width:1200px) {
+
+@media (min-width: 1200px) {
 
 }
+
 @media (max-width: 1196px) {
     .main .main-stats h3 {
         font-size: 1.45em;
     }
+
     .company-description p {
         right: 15px;
     }
 
 }
-@media(max-width:992px) {
+
+@media (max-width: 992px) {
 
     .main .main-stats .right,
     .main .main-stats .left,
@@ -984,26 +1068,31 @@ body.thanks_body .tagline {
         padding-right: inherit;
         padding-left: inherit;
     }
+
     .footer .join {
         padding-top: 15px;
         height: inherit;
     }
+
     .mc_embed_signup {
         padding-top: 30px;
     }
+
     .icons {
         margin-top: 40px;
         margin-bottom: 10px;
     }
+
     .footer .links a {
         margin-bottom: 20px;
     }
+
     .fancy-border {
         position: absolute;
         top: 54px;
         left: 50%;
-        transform:rotate(90deg);
-        -ms-transform:rotate(90deg);
+        transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
         -webkit-transform: rotate(90deg);
     }
 
@@ -1014,6 +1103,7 @@ body.thanks_body .tagline {
         padding-bottom: 15px;
         padding-top: 15px;
     }
+
     .page .col-split.last {
         border-bottom: 0;
     }
@@ -1023,7 +1113,8 @@ body.thanks_body .tagline {
         height: 100% !important;
     }
 }
-@media(max-width:768px) {
+
+@media (max-width: 768px) {
     .main .main-stats .right,
     .main .main-stats .left,
     .footer .right,
@@ -1033,24 +1124,30 @@ body.thanks_body .tagline {
         padding-right: inherit;
         padding-left: inherit;
     }
+
     .footer .join {
         padding-top: 15px;
         height: inherit;
     }
+
     .mc_embed_signup {
         padding-top: 30px;
     }
+
     .icons {
         margin-top: 40px;
         margin-bottom: 10px;
     }
+
     .footer .links a {
         margin-bottom: 20px;
     }
+
     .fancy-border {
         top: 54px;
         bottom: inherit;
     }
+
     .page .col-split {
         text-align: center;
         border-right: 0;
@@ -1058,22 +1155,27 @@ body.thanks_body .tagline {
         padding-bottom: 15px;
         padding-top: 15px;
     }
+
     .page .col-split.last {
         border-bottom: 0;
     }
+
     #works,
     #home {
         height: 100% !important;
     }
+
     .family a {
         right: 7%;
     }
+
     .beta {
         left: 7%;
     }
 
 }
-@media(max-width:640px) {
+
+@media (max-width: 640px) {
     /*avoid overlap of fixed elements*/
     .family a,
     .beta {
