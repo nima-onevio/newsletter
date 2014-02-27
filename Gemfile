@@ -29,7 +29,7 @@ gem "gibbon"
 
 #bootstrap and jquery
 gem 'jquery-rails'
-gem 'bootstrap3-rails'
+#gem 'bootstrap3-rails'
 
 #new relic analytics
 gem 'newrelic_rpm'

@@ -6,7 +6,7 @@ onevio.loader = onevio.loader || {};
 onevio.modal = onevio.modal || {};
 onevio.navigation = onevio.navigation || {};
 onevio.mobile = onevio.mobile || {};
-onevio.$page = $("html");
+onevio.$page = $("body");
 
 onevio.navgigation = {
     setup: function (options) {
@@ -26,7 +26,9 @@ onevio.navgigation = {
             return false;
         }
         t.initVars();
-        t.setPageHeights();
+        if (!onevio.mobile.isMobile()) {
+            t.setPageHeights();
+        }
         t.bindEvents();
     },
 
@@ -50,9 +52,9 @@ onevio.navgigation = {
 
         $rows = t.$homePage.find("> row");
         $rows.each(function (i, el) {
-            row_heights += $(e).height();
+            row_heights += $(el).height();
         });
-        padding = ((height - row_heights) / 8);
+        padding = ((height - row_heights) / 5);
         t.$homePage.css('padding-top', padding + 'px');
 
         row_heights = 0;
@@ -60,10 +62,10 @@ onevio.navgigation = {
         $rows.each(function (i, el) {
             row_heights += $(el).height();
         });
-        padding = ((height - row_heights) / 8);
+        padding = ((height - row_heights) / 5);
         t.$worksPage.css('padding-top', padding + 'px');
 
-        t.$page.animate({ scrollTop: t.$homePage.offset().top }, 1000);
+        t.$page.animate({ scrollTop: t.$homePage.offset().top + 50}, 1000);
     },
 
     bindEvents: function () {
@@ -142,7 +144,6 @@ onevio.loader = {
     }
 };
 
-
 onevio.email = {
     setup: function () {
         var t = this;
@@ -211,7 +212,7 @@ onevio.email = {
 
         t.$form.on({
             submit: function (e) {
-                var $form  = $(this),
+                var $form = $(this),
                     $email = $form.find(".mce-EMAIL"),
                     $result = $("[data-form='" + $form.data('result') + "']");
 
@@ -221,7 +222,6 @@ onevio.email = {
 
                 t.updateAnimated();
                 t.hideAll();
-
 
                 $(":animated").promise().done(function () {
                     $result.stop().fadeIn(500, function () {
@@ -335,12 +335,17 @@ onevio.mobile = {
                 }, false);
             }
         }
+    },
+
+    isMobile: function () {
+        return (/iphone|ipod|android|blackberry/).test(navigator.userAgent.toLowerCase());
     }
+
 };
 
 $(function () {
+    onevio.mobile.setup();
     onevio.navgigation.setup();
     onevio.email.setup();
     onevio.modal.setup();
-    onevio.mobile.setup();
 });

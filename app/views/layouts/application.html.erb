@@ -47,24 +47,26 @@
 
 <div class="container">
   <div class="row">
-    <%= yield %>
+    <div class="col-md-12">
+      <%= yield %>
+    </div>
   </div>
   <!--/row-->
 </div>
 
-<div class="row footer">
-
+<div class="footer">
   <div class="row links">
-    <div class="col-md-6 right"><%= link_to "about onevio", {controller: "home", action: "index"}, {class: "active", data: { page: 'home' }} %></div>
-    <div class="col-md-6 left"><%= link_to "how it works", {controller: "home", action: "works"}, {data: { page: "works" }} %></div>
+    <div class="col-md-6 col-sm-6 col-xs-6 right"><%= link_to "about onevio", {controller: "home", action: "index"}, {class: "active", data: {page: 'home'}} %></div>
+    <div class="col-md-6 col-sm-6 col-xs-6 left"><%= link_to "how it works", {controller: "home", action: "works"}, {data: {page: "works"}} %></div>
   </div>
 
-  <div class="row join">
+  <div class="join">
     <div class="container">
       <div class="row">
         <div class="col-md-4">
           <h3>Join the family</h3>
         </div>
+
         <div class="col-md-4">
           <ul class="list-inline icons">
             <li><a href="http://facebook.com/onevio/" target="_blank" title="Facebook" class="icon facebook"></a></li>
@@ -73,27 +75,27 @@
             <li><a href="http://twitter.com/tweetonevio" target="_blank" title="Twitter" class="icon twitter"></a></li>
           </ul>
         </div>
+
         <div class="col-md-4 mc_embed_signup">
-          <form data-result="2" action="http://onevio.us7.list-manage.com/subscribe/post?u=d89bc392d783cc3a21598fe4a&amp;id=82f2bd1a58" method="post" name="mc-embedded-subscribe-form"  class="mc-embedded-subscribe-form form-inline validate" role="form" target="_blank" novalidate>
+          <form data-result="2" action="http://onevio.us7.list-manage.com/subscribe/post?u=d89bc392d783cc3a21598fe4a&amp;id=82f2bd1a58" method="post" name="mc-embedded-subscribe-form" class="mc-embedded-subscribe-form form-inline validate" role="form" target="_blank" novalidate>
             <div class="mc-field-group form-group">
-              <input type="email" value="" name="EMAIL" class="mce-EMAIL form-contro required email" placeholder="Please enter your email" >
+              <input type="email" value="" name="EMAIL" class="mce-EMAIL form-contro required email" placeholder="Please enter your email">
             </div>
             <p class="help-block">&copy; Copyright 2014. Onevio inc. All rights reserved. Privacy Policy.</p>
             <button type="submit" name="subscribe" class="mc-embedded-subscribe btn btn-default">Go</button>
           </form>
-        </div>
-        <!-- ./#mc_embed_signup -->
+        </div><!-- ./#mc_embed_signup -->
       </div>
     </div>
-  </div>
-  <!-- ./join -->
+  </div><!-- ./join -->
 
-</div>
-<!-- ./footer-->
+</div><!-- ./footer-->
+
+
 
 <!-- Mailing Modal -->
 <div style="display: none">
-  <div class="modal-window"  id="launch">
+  <div class="modal-window" id="launch">
     <%= image_tag "logo_overlay.png" %>
     <h3>Mailing</h3>
 
@@ -105,7 +107,8 @@
 
         <div class="mce_inline_error" style=""></div>
       </div>
-      <button type="submit" name="subscribe" class="mc-embedded-subscribe btn btn-default">Send me ocassional email</button>
+      <button type="submit" name="subscribe" class="mc-embedded-subscribe btn btn-default">Send me ocassional email
+      </button>
 
     </form>
 
@@ -113,9 +116,12 @@
     <div data-form="1" class="modal-window result" style="display: none">
       <div class="loader"><%= image_tag "ajax-loader.gif" %></div>
       <div class="mce-responses clear">
-        <div class="mce_inline_error" style=""> <span class="glyphicon glyphicon-remove"></span><span class="err"></span> </div>
-        <div class="mce-success-response response"  style="display:none"><span class="glyphicon glyphicon-ok"></span> <span class="successMsg"></span> </div>
-        <div class="mce-error-response response" style="display:none"><span class="glyphicon glyphicon-remove"></span><span class="err"></span> </div>
+        <div class="mce_inline_error" style=""><span class="glyphicon glyphicon-remove"></span><span class="err"></span>
+        </div>
+        <div class="mce-success-response response" style="display:none"><span class="glyphicon glyphicon-ok"></span>
+          <span class="successMsg"></span></div>
+        <div class="mce-error-response response" style="display:none">
+          <span class="glyphicon glyphicon-remove"></span><span class="err"></span></div>
       </div>
     </div>
   </div>
@@ -123,26 +129,31 @@
 
 <!-- Follow Modal -->
 <div style="display: none">
-  <div class="modal-window"  id="follow">
+  <div class="modal-window" id="follow">
     <%= image_tag "logo_overlay.png" %>
     <h3>#tweetonevio</h3>
+
     <div class="row">
       <div class="col-md-6 follow-box top-left">
         <a href="#" class="follow-icon follow-facebook"></a>
+
         <p>Like us</p>
       </div>
       <div class="col-md-6 follow-box top-right">
         <a href="#" class="follow-icon follow-twitter"></a>
+
         <p>Follow us</p>
       </div>
     </div>
     <div class="row">
       <div class="col-md-6 follow-box bottom-left">
         <a href="#" class="follow-icon follow-instagram"></a>
+
         <p>Follow us</p>
       </div>
       <div class="col-md-6 follow-box bottom-right">
         <a href="#" class="follow-icon follow-subscribe"></a>
+
         <p>Subscribe</p>
       </div>
     </div>
@@ -151,14 +162,16 @@
 
 <!--mailchimp result modal-->
 <div data-form="2" class="modal-window result" style="display: none">
-    <div class="loader"><%= image_tag "ajax-loader.gif" %></div>
-    <div class="mce-responses clear">
-      <div class="mce_inline_error" style=""> <span class="glyphicon glyphicon-remove"></span><span class="err"></span> </div>
-      <div class="mce-success-response response"  style="display:none"><span class="glyphicon glyphicon-ok"></span> <span class="successMsg"></span> </div>
-      <div class="mce-error-response response" style="display:none"><span class="glyphicon glyphicon-remove"></span><span class="err"></span> </div>
+  <div class="loader"><%= image_tag "ajax-loader.gif" %></div>
+  <div class="mce-responses clear">
+    <div class="mce_inline_error" style=""><span class="glyphicon glyphicon-remove"></span><span class="err"></span>
     </div>
+    <div class="mce-success-response response" style="display:none"><span class="glyphicon glyphicon-ok"></span>
+      <span class="successMsg"></span></div>
+    <div class="mce-error-response response" style="display:none">
+      <span class="glyphicon glyphicon-remove"></span><span class="err"></span></div>
+  </div>
 </div>
-
 
 
 <!-- Javascripts

@@ -24,11 +24,6 @@ and (max-device-width: 800px) {
         right: 1%;
     }
 
-    #works .row {
-        /*width: 700px;*/
-        margin: 0 auto;
-    }
-
     #works,
     #home {
         height: auto !important;
@@ -48,11 +43,6 @@ and (max-device-width: 800px) {
         border-right: 0;
     }
 
-    body.modal-open .footer, .footer {
-        width: 100% !important;
-        margin: 0 !important;
-    }
-
     .unite {
         margin-bottom: 30px;
     }
@@ -70,9 +60,10 @@ and (max-device-width: 800px) {
     .mc-embedded-subscribe-form {
         position: relative;
     }
-    .modal-window .mc-embedded-subscribe-form {
-        width: 100%;
+    .company-description p {
+        right: inherit;
     }
+
 }
 
 /*Landscape*/
@@ -81,6 +72,7 @@ and (max-device-width: 800px) {
 and (orientation: landscape)
 and (min-device-width: 480px)
 and (max-device-width: 800px) {
+
     input[type="text"], input[type="email"], input[type="search"], input[type="password"] {
         -webkit-appearance: caret;
         -moz-appearance: caret; /* mobile firefox too! */
@@ -104,11 +96,6 @@ and (max-device-width: 800px) {
         right: 1%;
     }
 
-    #works .row {
-        /*width: 850px;*/
-        margin: 0 auto;
-    }
-
     #works,
     #home {
         height: auto !important;
@@ -139,6 +126,9 @@ and (max-device-width: 800px) {
     .family a {
         right: 7%;
     }
+    .company-description p {
+        right: inherit;
+    }
 }
 
 /* Iphone*/
@@ -146,10 +136,7 @@ and (max-device-width: 800px) {
 @media only screen
 and (min-device-width: 320px)
 and (max-device-width: 480px) {
-    body.modal-open .footer,
-    .footer {
-        width: inherit;
-    }
+
     .footer .links a {
         padding: 0;
     }
@@ -162,17 +149,20 @@ and (max-device-width: 480px) {
 
     .mc-embedded-subscribe-form {
         position: relative;
-        width: 300px;
         margin: 0 auto;
     }
 
     .company-description p {
+        right: inherit;
         width: 280px;
         margin-left: auto;
         margin-right: auto;
     }
     .greenBtn {
         display: none;
+    }
+    .mc-embedded-subscribe-form .help-block {
+        width: auto;
     }
 }
 
@@ -182,8 +172,12 @@ and (min-device-width: 320px)
 and (max-device-width: 480px) {
 
     .company-description p {
+        right: inherit;
         width: 380px;
         margin-left: auto;
         margin-right: auto;
+    }
+    .mc-embedded-subscribe-form .help-block {
+        width: auto;
     }
 }

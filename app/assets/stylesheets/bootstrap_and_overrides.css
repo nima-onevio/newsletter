@@ -458,8 +458,11 @@ a:focus {
     background-color: rgba(140, 208, 196, 0.7)
 }
 .company-description p {
+    position: relative;
+    right: 7px;
     margin-bottom: 30px;
     color: white;
+    font-size: 1.2em;
     text-align: center;
     font-family: "proxima_novalight";
 }
@@ -517,8 +520,11 @@ a:focus {
     text-align: center;
     font-family: "droid_serifregular";
 }
+.main .stats {
+    margin-bottom: 70px;
+}
 .main .stats p {
-    margin-bottom: inherit;
+    margin-bottom: initial;
     font-family: "montserratregular";
 }
 .main .stats span {
@@ -588,9 +594,11 @@ body.modal-open .footer,
     margin-top: 40px;
 }
 .footer .links {
+    margin: 0; /*prevent overflow*/
     background-color: rgba(0, 0, 0, 0.3);
 }
 .footer .join {
+    margin: 0; /*prevent overflow*/
     min-height: 100px;
     padding-top: 29px;
     background-color: rgba(0, 0, 0, 0.65);
@@ -602,20 +610,22 @@ body.modal-open .footer,
     margin-top: 15px;
     font-family: "thirsty_script_lightregular";
 }
-.footer .left {
-    padding-left: 0;
+.footer .left,
+.footer .right {
     padding-right: 0;
+    padding-left: 0;
+}
+.footer .left {
     text-align: left;
+}
+.footer .right {
+    text-align: right;
 }
 .footer .left a {
     padding-left: 15px;
 }
 .footer .right a {
     padding-right: 15px;
-}
-.footer .right {
-    padding-right: 0;
-    text-align: right;
 }
 .footer a {
     display: block;
@@ -923,7 +933,12 @@ body.thanks_body .tagline {
     animation: rotateglow 1.5s infinite linear;
     -webkit-animation: rotateglow 1.5s infinite linear;
 }
-
+.my-fluid-container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
 @keyframes rotateglow
 {
     0%   {transform: rotate(0deg); text-shadow: 0 0 2px #f00; color: #f00;}
@@ -938,6 +953,15 @@ body.thanks_body .tagline {
     100% {-webkit-transform: rotate(360deg); text-shadow: 0 0 2px #f00; color: #f00;}
 }
 @media(min-width:1200px) {
+
+}
+@media (max-width: 1196px) {
+    .main .main-stats h3 {
+        font-size: 1.45em;
+    }
+    .company-description p {
+        right: 15px;
+    }
 
 }
 @media(max-width:992px) {
@@ -966,14 +990,14 @@ body.thanks_body .tagline {
         margin-bottom: 20px;
     }
     .fancy-border {
+        position: absolute;
         top: 54px;
-        bottom: inherit;
-        right: inherit;
-        left: inherit;
+        left: 50%;
         transform:rotate(90deg);
         -ms-transform:rotate(90deg);
         -webkit-transform: rotate(90deg);
     }
+
     .page .col-split {
         text-align: center;
         border-right: 0;
@@ -984,6 +1008,7 @@ body.thanks_body .tagline {
     .page .col-split.last {
         border-bottom: 0;
     }
+
     #works,
     #home {
         height: 100% !important;
