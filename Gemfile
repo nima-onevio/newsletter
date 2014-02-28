@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.0.0'
+ruby '2.1.0'
 
 gem 'rails', '4.0.3'
 
@@ -29,7 +29,7 @@ gem "gibbon"
 
 #bootstrap and jquery
 gem 'jquery-rails'
-gem "twitter-bootstrap-rails"
+#gem 'bootstrap3-rails'
 
 #new relic analytics
 gem 'newrelic_rpm'
@@ -43,9 +43,9 @@ gem 'newrelic_rpm'
 # Deploy with Capistrano
 # gem 'capistrano'
 
-# To use debugger
-gem 'debugger'
-
+# To use debugger  1.6.5
+gem 'debugger', '~> 1.6.5'
+gem 'rails_12factor'
 gem 'rack-cache'
 gem 'arel', '~> 4.0.2'
 gem 'builder', '~> 3.1.4'
@@ -61,3 +61,10 @@ gem 'rails-observers'
 gem 'actionpack-page_caching'
 gem 'actionpack-action_caching'
 gem 'activerecord-deprecated_finders'
+
+#SKD and other APIS
+gem 'omniauth'
+gem 'omniauth-foursquare'
+gem 'omniauth-instagram'
+gem "instagram", '>= 0.10.0'
+

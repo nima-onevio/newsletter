@@ -53,8 +53,9 @@ OnevioNewsletter::Application.routes.draw do
    root :to => 'home#index'
 
   # See how all your routes lay out with "rake routes"
+   get '/works',  to: 'home#works'
    get '/thanks',  to: 'home#thanks'
-   get '/subscribe',  to: 'home#subscribe'
+   post '/subscribe',  to: 'home#subscribe'
    get '/revalidate',  to:'home#revalidate'
 
 
