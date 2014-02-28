@@ -63,5 +63,8 @@ gem 'actionpack-action_caching'
 gem 'activerecord-deprecated_finders'
 
 #SKD and other APIS
-gem "twitter", '>= 5.7.1'
+gem 'omniauth'
+gem 'omniauth-foursquare'
+gem 'omniauth-instagram'
+gem "instagram", '>= 0.10.0'
 

@@ -52,12 +52,12 @@
       <div class="col-md-6">
         <div class="row main-stats">
           <div class="col-md-6 right">
-            <h2><%= @family_members %></h2>
+            <h2 id="members" class="odometer" data-target="<%= @family_members %>">0</h2>
             <h3>Onevio family members</h3>
             <span class="fancy-border"></span>
           </div>
           <div class="col-md-6 left">
-            <h2>115</h2>
+            <h2 id="remaining" class="odometer" data-target="7">115</h2>
             <h3>Brand openings left </h3>
           </div>
         </div>

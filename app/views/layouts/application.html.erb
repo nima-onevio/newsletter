@@ -37,6 +37,22 @@
   <%= favicon_link_tag 'favicon.ico', :rel => 'icon' %>
   <%= render :partial => 'layouts/ga' %>
 </head>
+
+<script>
+    window.odometerOptions = {
+        format: '(ddd).dd'
+    };
+//    window.odometerOptions = {
+//        auto: true, // Don't automatically initialize everything with class 'odometer'
+//        selector: '.odometer', // Change the selector used to automatically find things to be animated
+//        format: 'd', // Change how digit groups are formatted, and how many digits are shown after the decimal point
+//        duration: 1000, // Change how long the javascript expects the CSS animation to take
+//        theme: 'default', // Specify the theme (if you have more than one theme css file on the page)
+//        animation: 'count' // Count is a simpler animation method which just increments the value,
+//        // use it when you're looking for something more subtle.
+//    };
+</script>
+
 <body <%= "class=#{@body_class}" if @body_class %>>
 <div class="container relative">
   <div class="row">
@@ -67,11 +83,13 @@
           <h3>Join the family</h3>
         </div>
 
-         <div class="col-md-4">
+        <div class="col-md-4">
           <ul class="list-inline icons">
             <li><a href="http://facebook.com/onevio/" target="_blank" title="Facebook" class="icon facebook"></a></li>
-            <li><a href="http://pinterest.com/onevio/" target="_blank" title="Pinterest" class="icon pinterest"></a></li>
-            <li><a href="http://instagram.com/onevio/" target="_blank" title="Instagram" class="icon instagram"></a></li>
+            <li><a href="http://pinterest.com/onevio/" target="_blank" title="Pinterest" class="icon pinterest"></a>
+            </li>
+            <li><a href="http://instagram.com/onevio/" target="_blank" title="Instagram" class="icon instagram"></a>
+            </li>
             <li><a href="http://twitter.com/tweetonevio" target="_blank" title="Twitter" class="icon twitter"></a></li>
           </ul>
         </div>
@@ -82,17 +100,20 @@
               <input type="email" value="" name="EMAIL" class="mce-EMAIL form-contro required email" placeholder="Please enter your email">
             </div>
             <p class="help-block">&copy; Copyright 2014. Onevio inc. All rights reserved.</p>
-            <p class="help-block">Stat sources: <a href="http://data.worldbank.org/" target="_blank">World Bank</a> <br></p>
+
+            <p class="help-block">Stat sources: <a href="http://data.worldbank.org/" target="_blank">World Bank</a> <br>
+            </p>
             <button type="submit" name="subscribe" class="mc-embedded-subscribe btn btn-default">Go</button>
           </form>
-        </div><!-- ./#mc_embed_signup -->
+        </div>
+        <!-- ./#mc_embed_signup -->
       </div>
     </div>
-  </div><!-- ./join -->
+  </div>
+  <!-- ./join -->
 
-</div><!-- ./footer-->
-
-
+</div>
+<!-- ./footer-->
 
 <!-- Mailing Modal -->
 <div style="display: none">
@@ -137,11 +158,13 @@
     <div class="row">
       <div class="col-md-6 follow-box top-left">
         <a href="http://facebook.com/onevio/" target="_blank" title="Facebook" class="follow-icon follow-facebook"></a>
+
         <p>Like us</p>
       </div>
 
       <div class="col-md-6 follow-box top-right">
         <a href="http://twitter.com/tweetonevio" target="_blank" title="Twitter" class="follow-icon follow-twitter"></a>
+
         <p>Follow us</p>
       </div>
     </div>
@@ -149,11 +172,13 @@
     <div class="row">
       <div class="col-md-6 follow-box bottom-left">
         <a href="http://instagram.com/onevio" target="_blank" title="Instagram" class="follow-icon follow-instagram"></a>
+
         <p>Follow us</p>
       </div>
 
       <div class="col-md-6 follow-box bottom-right">
         <a href="#launch" class="follow-icon follow-subscribe cboxInline"></a>
+
         <p>Subscribe</p>
       </div>
     </div>
