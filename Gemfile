@@ -61,3 +61,7 @@ gem 'rails-observers'
 gem 'actionpack-page_caching'
 gem 'actionpack-action_caching'
 gem 'activerecord-deprecated_finders'
+
+#SKD and other APIS
+gem "twitter", '>= 5.7.1'
+

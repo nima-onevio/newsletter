@@ -1,6 +1,40 @@
 class HomeController < ApplicationController
+  require 'net/http'
 
   def index
+
+    total_members = 0
+
+    #Facebook
+    uri = URI("https://graph.facebook.com/onevio")
+    data = Net::HTTP.get(uri)
+    facebook_followers = JSON.parse(data)['likes']
+
+    #Twitter
+    client = Twitter::REST::Client.new do |config|
+      config.consumer_key        = "7GjKEDMbD2Kb4Tc6EZwIw"
+      config.consumer_secret     = "VUwOT7vKLr9OelxYrRXvhLGgEDWouPsmvyniEWhyhcE"
+      config.access_token        = "1270878410-pwiwIBB8lDebcu13L8IS5fiTbqBH7fl3pkLqLDe"
+      config.access_token_secret = "Y7dpBkMgumQ8Hg0IcqlPTQlXmUr296ttpbJyuEc4oWGC9"
+    end
+    onevio = client.user('tweetonevio')
+    twitter_followers = onevio.followers_count.to_i
+    total_members = facebook_followers + twitter_followers
+
+
+    ##Instagram
+    #Instagram.configure do |config|
+    #  config.client_id = "337f21670e0d42e2bfc5c53e05621f45"
+    #  config.access_token = "f7c553798028404e8653e10182b39bb2"
+    #end
+    #
+    #puts Instagram.media_popular.inspect
+    #onevio = Instagram.user_search("onevio")
+    #
+    #puts "onevio: #{onevio.inspect}"
+
+    @family_members = total_members.to_s
+
     @body_class = "main_body"
   end
 
