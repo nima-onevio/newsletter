@@ -67,7 +67,9 @@ onevio.navgigation = {
         padding = ((height - row_heights) / 5);
         t.$worksPage.css('padding-top', padding + 'px');
 
-        t.$page.animate({ scrollTop: t.$homePage.offset().top }, 1000);
+        t.$page.animate({ scrollTop: t.$homePage.offset().top }, 1000, function () {
+            onevio.counter.initAll();
+        });
     },
 
     bindEvents: function () {
@@ -583,12 +585,7 @@ $.fn.countTo = function (options) {
     });
 };
 
-
-$(function () {
-    onevio.mobile.setup();
-    onevio.navgigation.setup();
-    onevio.email.setup();
-    onevio.modal.setup();
+onevio.counter.initAll = function () {
     onevio.counter.setup.population();
     onevio.counter.setup.co2();
     onevio.counter.setup.healthCare();
@@ -597,5 +594,12 @@ $(function () {
     onevio.counter.setup.energy();
     onevio.counter.setup.childLabor();
     onevio.counter.countTo.setup();
+};
+
+$(function () {
+    onevio.mobile.setup();
+    onevio.navgigation.setup();
+    onevio.email.setup();
+    onevio.modal.setup();
 });
 
