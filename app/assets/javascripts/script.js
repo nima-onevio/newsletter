@@ -593,7 +593,7 @@ onevio.counter.initAll = function () {
     onevio.counter.setup.energy();
     onevio.counter.setup.energy();
     onevio.counter.setup.childLabor();
-    onevio.counter.countTo.setup();
+    //onevio.counter.countTo.setup();
 };
 
 $(function () {
