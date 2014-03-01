@@ -1,27 +1,101 @@
 <div class="main">
   <div class="launchLogo"></div>
-  <div class="tagline">
-    <h2><span class="bold block">This year,</span><span class="line1">we’re putting <span class="bold">you</span> at
-      the center of world change.</span></h2>
-    <h3>Be among the first to find out how.</h3>
+  <div class="info">
+    <p>From extreme poverty to deforestation, our <br> current global condition requires a renewed sense of humanity & community.</p>
+    <p>Whether we measure unsafe water sources <br> or communicable diseases, statistics regarding our way of life are sobering.</p>
+    <p>Here are some global examples.</p>
+    <div class="stats">
+      <p>
+        <span class="counter" id="worldpopulation">4,714,536,340</span>
+        <span class="description">World population increase</span>
+      </p>
+      <hr>
+      <p>
+        <span class="counter" id="co2">4,714,536,340</span>
+        <span class="description">CO2 emissions this year (tons)</span>
+      </p>
+      <hr>
+      <p>
+        <span class="counter"><span class="inline">$ </span><span class="inline" id="health">6,416,071,364</span></span>
+        <span class="description">Healthcare expenditures this year</span>
+      </p>
+      <hr>
+      <p>
+        <span class="counter" id="energy">20,005,993,584</span>
+        <span class="description">non-renewable energy consumed this year (mwh)</span>
+      </p>
+      <hr>
+      <p>
+        <span class="counter" id="childLabor">115,314,000</span>
+        <span class="description">Child laborers in hazardous conditions</span>
+      </p>
+    </div> <!-- ./ stats-->
+    <p>[...] and shamefully, it goes on.</p>
+    <p>
+      What if our beloved fashion brands could<br>
+      join forces to help tackle these issues?<br>
+      What if we gave them, every month, a new<br>
+      humanitarian challenge to rise up to?
+    </p>
+    <p>What if looking good meant <span class="bold">doing good?</span> </p>
+    <p>
+      Welcome Onevio. <br>
+      Our mission is simple&nbsp;-
+    </p>
   </div>
-  <div class="center">
-    <div id="mc_embed_signup">
-      <form action="http://onevio.us7.list-manage.com/subscribe/post?u=d89bc392d783cc3a21598fe4a&amp;id=82f2bd1a58" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-        <div class="mc-field-group">
-          <input type="email" value="" name="EMAIL" class="required email" placeholder="Please enter your email" id="mce-EMAIL">
-          <button type="submit" value="Go" name="subscribe" id="mc-embedded-subscribe" class="button"></button>
-          <div for="mce-EMAIL" class="mce_inline_error" style=""></div>
-          <div class="response" id="mce-success-response" style="display:none"></div>
-        </div>
-
-        <div id="mce-responses" class="clear">
-          <div class="response" id="mce-error-response" style="display:none"></div>
-        </div>
-        <div class="loader"><%= image_tag "ajax-loader.gif" %></div>
-        <div class="clear"></div>
-      </form>
+  <div id="home" class="page">
+    <div class="row">
+        <div class="col-md-12 unite"><%= image_tag "img_social_good.png" %></div>
     </div>
-    <div class="clear"></div>
-  </div> <!--./center-->
+    <div class="row">
+      <div class="col-md-3"></div>
+      <div class="col-md-6">
+        <div class="row main-stats">
+          <div class="col-md-6 right">
+            <h2 id="members" class="odometer" data-target="<%= @family_members %>"><%= @family_members %></h2>
+            <h3>Onevio family members</h3>
+            <span class="fancy-border"></span>
+          </div>
+          <div class="col-md-6 left">
+            <h2 id="remaining" class="odometer" data-target="7">7</h2>
+            <h3>Brand openings left </h3>
+          </div>
+        </div>
+        <div class="row company-description">
+          <div class="col-md-12">
+            <p>We’re bringing socially conscious fashion brands together<br>for the benefit of a new humanitarian cause every month.</p>
+            <p>From sunglasses to t-shirts, every item will tell a story of hope.</p>
+            <p>One Month. One Cause. Onevio.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <a class="greenBtn cboxInline cboxElement" href="#launch">Notify me of launch day</a>
+          </div>
+          <div class="col-md-6">
+            <a class="greenBtn" href="mailto:changetheworld@onevio.org">I’d like to partner up!</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3"></div>
+    </div>
+  </div> <!-- ./page#home-->
+
+  <div id="works" class="page">
+    <div class="row center-text">
+      <h1 class="brands-title">We’re looking for amazing brands</h1>
+    </div>
+
+    <div class="row">
+      <div class="col-md-3 col-sm-3"></div>
+
+      <div class="col-md-6 col-sm-6 col-split no-border">
+        <span class="circle badge"></span>
+        <h2>we create charitable partnerships</h2>
+        <p>We’re interested in keeping our marketplace as intimate as possible. We’re selective. That means you won’t find much competition here.</p>
+      </div>
+
+      <div class="col-md-3 col-sm-3"></div>
+    </div>
+  </div> <!-- ./page#works-->
 </div> <!--./main -->

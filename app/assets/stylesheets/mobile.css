@@ -1,115 +1,183 @@
-/*Android S2
-================================================== */
+/*Android S2 and Ipad*/
+/*================================================== */
+/*Portrait*/
+/*===========================*/
 @media only screen
-and (min-device-width : 480px)
-and (max-device-width : 800px) {
-    body {
+and (orientation: portrait)
+and (min-device-width: 480px)
+and (max-device-width: 800px) {
+    input[type="text"], input[type="email"], input[type="search"], input[type="password"] {
+        -webkit-appearance: caret;
+        -moz-appearance: caret; /* mobile firefox too! */
+    }
+
+    .greenBtn {
+        width: 300px !important;
+        margin: 0 auto 30px auto;
+    }
+
+    .footer {
+        margin-top: 130px;
+    }
+
+    .mc-embedded-subscribe-form .btn {
+        right: 1%;
+    }
+
+    #works,
+    #home {
+        height: auto !important;
+    }
+
+    #works .col-split {
+        float: left;
+        padding-right: 3.5%;
+        padding-left: 3.5%;
+        border-bottom: 0;
+        margin-bottom: 80px;
+        border-right: 1px solid rgba(255, 255, 255, 0.8);
+    }
+
+    #works .col-split.last {
+        margin-right: 0;
+        border-right: 0;
+    }
+
+    .unite {
+        margin-bottom: 30px;
+    }
+
+    .beta {
+        left: 7%;
+    }
+
+    .family a {
+        right: 7%;
+    }
+    .footer .links a {
         padding: 0;
-        background: url("bg_mobile.jpg") center center no-repeat fixed;
     }
-    .span4 {
-        margin: 0;
-        float: none;
-    }
-    .main {
-        width: 100%;
-        margin: 0;
-    }
-    .launchLogo {
-        padding: 0;
-        margin: 0 auto;
-    }
-    .tagline {
+    .mc-embedded-subscribe-form {
         position: relative;
-        font-family: "proxima_novalight";
-        text-align: center;
     }
-    .question h3,
-    .tagline h2,
-    .tagline h3 {
-        color: white;
+    .company-description p {
+        right: inherit;
     }
-    .tagline h2 {
-        margin-top: 0.7em;
-        font-size: 2.1em;
+
+}
+
+/*Landscape*/
+/*===========================*/
+@media screen
+and (orientation: landscape)
+and (min-device-width: 480px)
+and (max-device-width: 800px) {
+
+    input[type="text"], input[type="email"], input[type="search"], input[type="password"] {
+        -webkit-appearance: caret;
+        -moz-appearance: caret; /* mobile firefox too! */
     }
-    body.thanks_body .icons {
-        position: relative  ;
-        top: 0;
-        left: 0;
+
+    .col-md-5 {
+        float: none;
+        width: 100%;
     }
-    .tagline .bold {
-        font-weight: bold;
+
+    .greenBtn {
+        width: 300px !important;
+        margin: 25px auto 30px auto;
     }
-    .thanks .bold,
-    .thanks .line1 {
-        color: white;
+
+    .footer {
+        margin-top: 130px;
     }
-    .thanks .line1 {
-        font-size: 0.75em;
+
+    .mc-embedded-subscribe-form .btn {
+        right: 1%;
     }
-    .mc-field-group {
-        margin: 20px auto 10px auto;
+
+    #works,
+    #home {
+        height: auto !important;
     }
-    .earth {
-        display: none;
+
+    #works .col-split {
+        float: left;
+        margin-right: 0;
+        padding-right: 3.5%;
+        padding-left: 3.5%;
+        border-bottom: 0;
+        border-right: 1px solid rgba(255, 255, 255, 0.8);
+    }
+
+    #works .col-split.last {
+        margin-right: 0;
+        border-right: 0;
+    }
+
+    .unite {
+        margin-bottom: 30px;
+    }
+
+    .beta {
+        left: 7%;
+    }
+
+    .family a {
+        right: 7%;
+    }
+    .company-description p {
+        right: inherit;
     }
 }
-/* Iphone
-================================================== */
+
+/* Iphone*/
+/*================================================== */
 @media only screen
-and (min-device-width : 320px)
-and (max-device-width : 480px) {
-    body {
+and (min-device-width: 320px)
+and (max-device-width: 480px) {
+
+    .footer .links a {
         padding: 0;
-        background: url("bg_mobile.jpg") center center no-repeat fixed;
     }
-    .span4 {
-        float: none;
+    .result .mce-success-response,
+    .result .mce-error-response,
+    .result .mce_inline_error {
+        left: inherit;
+        right: 5px;
     }
-    .main {
-        width: 100%;
-        margin: 0;
-    }
-    .launchLogo {
-        padding: 0;
+
+    .mc-embedded-subscribe-form {
+        position: relative;
         margin: 0 auto;
     }
-    .tagline {
-        position: relative;
-        font-family: "proxima_novalight";
-        text-align: center;
+
+    .company-description p {
+        right: inherit;
+        width: 280px;
+        margin-left: auto;
+        margin-right: auto;
     }
-    .question h3,
-    .tagline h2,
-    .tagline h3 {
-        color: white;
-    }
-    .tagline h2 {
-        margin-top: 0.5em;
-    }
-    .tagline .line2 {
-        margin-bottom: 1em;
-    }
-    .tagline h2 .bold {
-        font-size: 1em;
-    }
-    .tagline h3 {
-        font-size: 1.5em;
-    }
-    body.thanks_body .icons {
-        position: relative  ;
-        top: 0;
-        left: 0;
-    }
-    .thanks .bold,
-    .tagline .bold {
-        font-weight: bold;
-    }
-    .mc-field-group {
-        margin: 20px auto 10px auto;
-    }
-    .earth {
+    .greenBtn {
         display: none;
+    }
+    .mc-embedded-subscribe-form .help-block {
+        width: auto;
+    }
+}
+
+@media only screen
+and (orientation: landscape)
+and (min-device-width: 320px)
+and (max-device-width: 480px) {
+
+    .company-description p {
+        right: inherit;
+        width: 380px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .mc-embedded-subscribe-form .help-block {
+        width: auto;
     }
 }

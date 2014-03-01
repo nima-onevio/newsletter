@@ -1,5 +1,5 @@
 OnevioNewsletter::Application.routes.draw do
-  get "home/index"
+  get "home/index", :to => 'home#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -53,9 +53,10 @@ OnevioNewsletter::Application.routes.draw do
    root :to => 'home#index'
 
   # See how all your routes lay out with "rake routes"
-   match '/thanks' => 'home#thanks'
-   match '/subscribe' => 'home#subscribe'
-   match '/revalidate' => 'home#revalidate'
+   get '/works',  to: 'home#works'
+   get '/thanks',  to: 'home#thanks'
+   post '/subscribe',  to: 'home#subscribe'
+   get '/revalidate',  to:'home#revalidate'
 
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.
