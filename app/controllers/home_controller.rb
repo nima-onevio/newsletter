@@ -56,7 +56,7 @@ class HomeController < ApplicationController
       if valid_email? @email
 
         #does this email exists in our list already?
-        user_info = gb.lists.memberInfo({id: 'b290d0011d', emails: [{email: @email}]})
+        user_info = gb.lists.memberInfo({id: 'cd2eeedac8', emails: [{email: @email}]})
         resend_link = "<a class='resendMail' data-email='#{@email}' data-link='/revalidate' href='#'>Re-send validation E-mail</a>"
 
         if user_info["success_count"] == 1
@@ -71,7 +71,7 @@ class HomeController < ApplicationController
           end
         else
           # attempt to subscribe the user
-          result = gb.lists.subscribe({ id: 'b290d0011d', email: { email: @email }, merge_vars: { }, double_optin: false })
+          result = gb.lists.subscribe({ id: 'cd2eeedac8', email: { email: @email }, merge_vars: { }, double_optin: false })
           puts "----------"
           puts "result: #{result.inspect}"
           puts "----------"
@@ -97,7 +97,7 @@ class HomeController < ApplicationController
     respond_to do |format|
       if valid_email? @email
         gb = Gibbon::API.new
-        result = gb.lists.subscribe({id: 'b290d0011d', email: @email, double_optin: true})
+        result = gb.lists.subscribe({id: 'cd2eeedac8', email: @email, double_optin: true})
         status = 1
         message = "Thanks! We've sent you an email!"
       else
