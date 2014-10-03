@@ -45,7 +45,7 @@ class HomeController < ApplicationController
     @body_class = "thanks_body"
   end
 
-  #this method will attempt to subscribe the user mailchimpOnevio2014!
+  #this method will attempt to subscribe the user
   def subscribe
     gb = Gibbon::API.new
     @email = params[:EMAIL]
