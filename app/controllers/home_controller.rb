@@ -75,7 +75,7 @@ class HomeController < ApplicationController
           puts "----------"
           puts "result: #{result.inspect}"
           puts "----------"
-          message = "Thanks! We've sent you an email!"
+          message = "Thanks! We will be in touch!"
         end
 
       else
