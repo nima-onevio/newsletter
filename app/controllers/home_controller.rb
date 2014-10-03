@@ -72,6 +72,9 @@ class HomeController < ApplicationController
         else
           # attempt to subscribe the user
           result = gb.lists.subscribe({ id: 'b290d0011d', email: { email: @email }, merge_vars: { }, double_optin: false })
+          puts "----------"
+          puts "result: #{result.inspect}"
+          puts "----------"
           message = "Thanks! We've sent you an email!"
         end
 
@@ -79,6 +82,10 @@ class HomeController < ApplicationController
         status = 0
         message = "Invalid E-mail"
       end
+      puts "----------"
+      puts "#{status.inspect}"
+      puts "#{message.inspect}"
+      puts "----------"
       format.json { render json: {email: @email, status: status, message: message} }
     end
   end
